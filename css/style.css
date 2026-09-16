@@ -517,6 +517,21 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   align-items: start;
 }
 
+.check-list li {
+  position: relative;
+  padding-left: var(--space-md);
+  margin-bottom: var(--space-xs);
+  color: var(--color-gray-700);
+}
+
+.check-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
 .contact-info {
   background-color: var(--color-gray-100);
   border-radius: var(--radius);
