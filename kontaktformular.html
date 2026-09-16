@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anfahrt | TSV Hessental</title>
-  <meta name="description" content="So findest du zum Sportgelände des TSV Hessental in Schwäbisch Hall-Hessental – mit Lageplan und Adresse.">
+  <title>Kontaktformular | TSV Hessental</title>
+  <meta name="description" content="Schreib uns eine Nachricht über das Kontaktformular des TSV Hessental 1923 e.V.">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
@@ -117,7 +117,7 @@
               Kontakt <span class="nav-caret">▾</span>
             </button>
             <ul class="submenu">
-              <li><a href="kontaktformular.html">Kontaktformular</a></li>
+              <li><a href="kontaktformular.html" aria-current="page">Kontaktformular</a></li>
               <li><a href="#">Mitglied werden</a></li>
               <li><a href="#">Engagement &amp; Ehrenamt</a></li>
             </ul>
@@ -142,40 +142,61 @@
     <!-- ============================= Seitenkopf ============================= -->
     <header class="page-header">
       <div class="container">
-        <p class="breadcrumb"><a href="index.html">Startseite</a> / Anfahrt</p>
-        <span class="eyebrow">Sportgelände</span>
-        <h1>Anfahrt</h1>
-        <p>So findest du zu unserem Sportgelände mit Vereinsheim und drei Sportplätzen unterhalb des Einkorns.</p>
+        <p class="breadcrumb"><a href="index.html">Startseite</a> / Kontakt / Kontaktformular</p>
+        <span class="eyebrow">Kontakt</span>
+        <h1>Kontaktformular</h1>
+        <p>Schreib uns eine Nachricht – wir melden uns so schnell wie möglich zurück.</p>
       </div>
     </header>
 
     <section class="section">
       <div class="container">
         <div class="two-col">
+          <form id="contact-form" novalidate style="max-width: 560px;">
+            <div class="form-field">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
 
-          <div class="map-embed">
-            <iframe
-              src="https://maps.google.com/maps?q=TSV%20Hessental%20Sportplatz&output=embed&z=15"
-              title="Lageplan TSV Hessental Sportplatz"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
+            <div class="form-field">
+              <label for="email">E-Mail *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-field">
+              <label for="thema">Thema *</label>
+              <input type="text" id="thema" name="thema" required>
+            </div>
+
+            <div class="form-field">
+              <label for="anlage">Anlage</label>
+              <input type="file" id="anlage" name="anlage">
+            </div>
+
+            <div class="form-field">
+              <label for="nachricht">Nachricht *</label>
+              <textarea id="nachricht" name="nachricht" required></textarea>
+            </div>
+
+            <div class="form-field form-field--checkbox">
+              <input type="checkbox" id="datenschutz" name="datenschutz" required>
+              <label for="datenschutz">
+                Ich habe die Hinweise zum
+                <a href="datenschutzerklaerung.html">Datenschutz</a> gelesen. *
+              </label>
+            </div>
+
+            <button class="btn btn--primary" type="submit">Nachricht senden</button>
+            <p class="form-status" role="status"></p>
+          </form>
 
           <aside class="contact-info">
-            <h3>Adresse</h3>
-            <address>
-              TSV Hessental 1923 e.V.<br>
-              Sportgelände &amp; Vereinsheim<br>
-              Im Wachholder<br>
-              74523 Schwäbisch Hall
-            </address>
-            <h3>Telefon Vereinsheim</h3>
-            <p style="margin-bottom: 0;">
-              <a href="tel:+497913787">0791 / 37 87</a>
+            <h3>Direkter Kontakt</h3>
+            <p>
+              Du erreichst uns auch direkt per E-Mail:<br>
+              <a href="mailto:verwaltung@tsv-hessental.de">verwaltung@tsv-hessental.de</a>
             </p>
           </aside>
-
         </div>
       </div>
     </section>
@@ -229,7 +250,7 @@
         <ul class="footer-legal">
           <li><a href="datenschutzerklaerung.html">Datenschutzerklärung</a></li>
           <li><a href="impressum.html">Impressum</a></li>
-          <li><a href="anfahrt.html" aria-current="page">Anfahrt</a></li>
+          <li><a href="anfahrt.html">Anfahrt</a></li>
         </ul>
       </div>
     </div>
