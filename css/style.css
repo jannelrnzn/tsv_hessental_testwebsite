@@ -352,6 +352,19 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   height: 44px;
 }
 
+/* Rechteckige Foto-Variante (z. B. Vorstand) statt Kreis */
+.person-card__photo--rect {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius);
+}
+
+.person-card__photo--rect svg {
+  width: 64px;
+  height: 64px;
+}
+
 .person-card h3 { margin-bottom: 0.2rem; }
 
 @media (max-width: 720px) {
