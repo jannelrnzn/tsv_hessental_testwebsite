@@ -472,6 +472,29 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 .page-header h1 { color: var(--color-white); margin-bottom: var(--space-xs); }
 .page-header p { color: rgba(255, 255, 255, 0.85); max-width: 640px; margin-bottom: 0; }
 
+.page-header__grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.page-header__grid > div:first-child {
+  flex: 1 1 420px;
+}
+
+/* Weiße Karten-Box auf rotem Seitenkopf-Hintergrund */
+.person-card--boxed {
+  flex: 0 0 220px;
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-card);
+}
+
+.person-card--boxed h3 { color: var(--color-anthracite); }
+
 .breadcrumb { font-size: 0.85rem; color: rgba(255, 255, 255, 0.8); margin-bottom: var(--space-sm); }
 .breadcrumb a { color: rgba(255, 255, 255, 0.8); }
 .breadcrumb a:hover { color: var(--color-white); }
