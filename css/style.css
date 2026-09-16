@@ -315,6 +315,34 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   margin-bottom: var(--space-xs);
 }
 
+/* Aktuelle Mitteilungen (nicht anklickbare Kurznachrichten) */
+.news-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-item {
+  padding-block: var(--space-md);
+  border-bottom: 1px solid var(--color-gray-300);
+}
+
+.news-item:first-child { padding-top: 0; }
+.news-item:last-child { border-bottom: none; }
+
+.news-item__date {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.3rem;
+}
+
+.news-item__title {
+  margin-bottom: var(--space-xs);
+}
+
+.news-item p:last-child { margin-bottom: 0; }
+
 /* Seitenkopf für Unterseiten */
 .page-header {
   background-color: var(--color-primary);
