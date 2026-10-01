@@ -40,6 +40,10 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Saisons ohne Mannschaft (z. B. A-Junioren 2018/19, aktuell 2026/27): kein
   Foto-Platzhalter, nur der Hinweistext.
 - D-Junioren und jünger bekommen kein Archiv.
+- D- und E-Junioren: nur aktuelle Seite (Trainer + fussball.de-Widget), kein
+  Archiv. Trainerfotos unter `assets/images/team/vorname-nachname.jpg`; fehlt
+  ein Foto, erscheint automatisch ein Platzhalter. E-Junioren-Widget folgt noch,
+  F-Junioren und Bambini kommen noch.
 
 ### Saisonwechsel (Janne meldet sich dazu)
 
