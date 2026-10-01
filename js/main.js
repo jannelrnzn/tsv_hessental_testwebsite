@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initContactForm();
   updateFooterYear();
   initNews();
+  initSponsorBar();
 });
 
 function updateFooterYear() {
@@ -169,4 +170,82 @@ function renderNewsImages(bilder) {
 
   var modifier = bilder.length === 1 ? " news-item__images--single" : "";
   return '<div class="news-item__images' + modifier + '">' + images + "</div>";
+}
+
+/**
+ * Leiste „Danke an unsere Sponsoren“ unter dem Menü auf allen Seiten.
+ * Die Sponsoren stehen in js/sponsoren.js (Liste SPONSOREN) und werden hier
+ * nachgeladen, damit nicht jede HTML-Seite ein eigenes <script> braucht.
+ */
+var SPONSOR_INTERVAL_MS = 4000;
+
+function initSponsorBar() {
+  var header = document.querySelector(".site-header");
+  if (!header) {
+    return;
+  }
+
+  var script = document.createElement("script");
+  script.src = "js/sponsoren.js";
+  script.onload = function () {
+    if (typeof SPONSOREN === "undefined" || !SPONSOREN.length) {
+      return;
+    }
+    renderSponsorBar(header, shuffle(SPONSOREN.slice()));
+  };
+  document.head.appendChild(script);
+}
+
+function renderSponsorBar(header, sponsors) {
+  var bar = document.createElement("aside");
+  bar.className = "sponsor-bar";
+  bar.setAttribute("aria-label", "Unsere Sponsoren");
+  bar.innerHTML =
+    '<div class="container">' +
+      '<span class="sponsor-bar__label">Danke an unsere Sponsoren</span>' +
+      '<a class="sponsor-bar__item" href="werbepartner.html">' +
+        '<strong class="sponsor-bar__name"></strong>' +
+        '<span class="sponsor-bar__address"></span>' +
+      "</a>" +
+    "</div>";
+  header.insertAdjacentElement("afterend", bar);
+
+  var item = bar.querySelector(".sponsor-bar__item");
+  var name = bar.querySelector(".sponsor-bar__name");
+  var address = bar.querySelector(".sponsor-bar__address");
+  var index = 0;
+  var paused = false;
+
+  function show(i) {
+    name.textContent = sponsors[i].name;
+    address.textContent = sponsors[i].adresse;
+  }
+
+  show(index);
+
+  // Beim Drüberfahren mit der Maus anhalten, damit man in Ruhe lesen kann
+  bar.addEventListener("mouseenter", function () { paused = true; });
+  bar.addEventListener("mouseleave", function () { paused = false; });
+
+  setInterval(function () {
+    if (paused || document.hidden) {
+      return;
+    }
+    item.classList.add("is-fading");
+    setTimeout(function () {
+      index = (index + 1) % sponsors.length;
+      show(index);
+      item.classList.remove("is-fading");
+    }, 300);
+  }, SPONSOR_INTERVAL_MS);
+}
+
+function shuffle(list) {
+  for (var i = list.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = list[i];
+    list[i] = list[j];
+    list[j] = tmp;
+  }
+  return list;
 }

@@ -22,6 +22,15 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   Bilder liegen unter `assets/images/mitteilungen/`. Ein Bild wird groß, mehrere
   als Raster angezeigt; Klick öffnet das Bild in voller Größe.
 
+## Sponsorenleiste
+
+- Leiste „Danke an unsere Sponsoren“ unter dem Menü auf allen Seiten; wird von
+  `js/main.js` (`initSponsorBar`) automatisch eingefügt, HTML-Seiten brauchen
+  nichts. Daten in `js/sponsoren.js` (Liste `SPONSOREN`, `name` + `adresse`),
+  zufällige Reihenfolge, Wechsel alle 4 s, Pause beim Drüberfahren.
+- Bei neuen/entfallenen Werbepartnern `werbepartner.html` UND `js/sponsoren.js`
+  anpassen.
+
 ## Mannschaftsarchiv Fußball Herren (1. & 2. Mannschaft)
 
 - 1. und 2. Mannschaft sind auf demselben Mannschaftsfoto; beide Seiten
