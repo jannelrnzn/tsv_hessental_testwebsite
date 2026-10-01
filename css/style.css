@@ -236,6 +236,12 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   font-weight: 700;
 }
 
+/* Bereich der aktuellen Seite (z. B. "Fußball Herren") hervorheben, ohne das Untermenü aufzuklappen */
+.main-nav__list .has-submenu.is-active > button.nav-link {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
 .nav-caret { font-size: 0.6rem; transition: transform var(--transition); }
 .has-submenu.is-open .nav-caret { transform: rotate(180deg); }
 
