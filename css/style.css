@@ -551,6 +551,15 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 
 .archive-title { margin-bottom: var(--space-md); }
 
+/* Liga / Erfolge der Saison unter der Ueberschrift */
+.archive-title:has(+ .archive-subtitle) { margin-bottom: 0.25rem; }
+
+.archive-subtitle {
+  margin-bottom: var(--space-md);
+  font-size: 1.05rem;
+  color: var(--color-gray-500);
+}
+
 .archive-hint {
   margin: var(--space-md) 0 var(--space-xs);
   font-size: 0.95rem;
