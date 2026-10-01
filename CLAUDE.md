@@ -27,6 +27,11 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Aufstellung unter dem Foto als `<dl class="archive-lineup">`
   (Stehend hinten / Stehend mittig / Sitzend, jeweils v.l.n.r.).
 
+## Senioren
+
+- `fussball-herren-senioren.html` unter „Fußball Herren“ im Menü; vorerst nur
+  Platzhalter „Informationen folgen“, Inhalte liefert Janne später.
+
 ## Mannschaftsarchiv Jugend (A-, B-, C-Junioren)
 
 - Hauptseiten `fussball-jugend-a.html`, `-b.html`, `-c.html`: aktuelle Saison
