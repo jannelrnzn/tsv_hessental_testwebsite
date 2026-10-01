@@ -6,6 +6,13 @@
  * unter Archiv -> Mitteilungen (archiv-mitteilungen.html).
  *
  * Im "text" ist einfaches HTML erlaubt, z. B. Links: <a href="vorstand.html">…</a>
+ *
+ * Optional Bilder: Dateien nach assets/images/mitteilungen/ hochladen und angeben:
+ *   bilder: [
+ *     { datei: "assets/images/mitteilungen/sieg-vellberg.jpg", beschreibung: "Jubel nach dem 2:4" },
+ *     "assets/images/mitteilungen/zweites-bild.jpg"
+ *   ]
+ * Ohne "bilder" wird einfach keine Bildleiste angezeigt.
  */
 
 var MITTEILUNGEN = [

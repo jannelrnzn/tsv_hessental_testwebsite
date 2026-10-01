@@ -140,8 +140,33 @@ function initNews() {
           '<span class="news-item__date">' + item.datum + "</span>" +
           '<h3 class="news-item__title">' + item.titel + "</h3>" +
           "<p>" + item.text + "</p>" +
+          renderNewsImages(item.bilder) +
         "</article>"
       );
     }).join("");
   });
+}
+
+/**
+ * Optionale Bilder einer Mitteilung. Jedes Bild ist entweder nur der Pfad
+ * ("assets/images/mitteilungen/foto.jpg") oder { datei: "...", beschreibung: "..." }.
+ * Ein Klick öffnet das Bild in voller Größe.
+ */
+function renderNewsImages(bilder) {
+  if (!bilder || !bilder.length) {
+    return "";
+  }
+
+  var images = bilder.map(function (bild) {
+    var datei = typeof bild === "string" ? bild : bild.datei;
+    var beschreibung = (typeof bild === "string" ? "" : bild.beschreibung || "").replace(/"/g, "&quot;");
+    return (
+      '<a href="' + datei + '" target="_blank" rel="noopener">' +
+        '<img src="' + datei + '" alt="' + beschreibung + '" loading="lazy">' +
+      "</a>"
+    );
+  }).join("");
+
+  var modifier = bilder.length === 1 ? " news-item__images--single" : "";
+  return '<div class="news-item__images' + modifier + '">' + images + "</div>";
 }

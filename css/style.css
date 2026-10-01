@@ -416,6 +416,25 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 
 .news-item p:last-child { margin-bottom: 0; }
 
+/* Optionale Bilder in einer Mitteilung */
+.news-item__images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+}
+
+.news-item__images--single { grid-template-columns: minmax(0, 560px); }
+
+.news-item__images img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.news-item__images--single img { aspect-ratio: auto; }
+
 /* Sponsoren-/Werbepartnerliste */
 .sponsor-columns {
   columns: 1;
