@@ -509,6 +509,77 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   box-shadow: var(--shadow-card);
 }
 
+/* Mannschaftsarchiv (Nummern-Buttons + Mannschaftsfoto) */
+.archive-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.archive-tab {
+  min-width: 44px;
+  height: 44px;
+  padding: 0 0.75rem;
+  border: 2px solid var(--color-gray-300);
+  border-radius: var(--radius);
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.archive-tab:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+.archive-tab[aria-selected="true"] {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.archive-panel {
+  margin: 0;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.archive-panel__photo {
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-gray-100);
+}
+
+.archive-panel__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.archive-panel__placeholder {
+  display: none;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  color: var(--color-gray-500);
+}
+
+.archive-panel__placeholder svg { width: 64px; height: 64px; }
+
+.archive-panel__photo.is-missing img { display: none; }
+.archive-panel__photo.is-missing .archive-panel__placeholder { display: flex; }
+
+.archive-panel__caption {
+  padding: var(--space-sm) var(--space-md);
+  font-weight: 600;
+  color: var(--color-anthracite);
+}
+
 /* Zweispaltiges Layout (z. B. Impressum, Anfahrt) */
 .two-col {
   display: grid;

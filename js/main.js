@@ -1,12 +1,13 @@
 /**
  * TSV Hessental – gemeinsames Frontend-Skript für alle Seiten.
- * Enthält: mobiles Navigations-Menü, Dropdown-Untermenüs.
+ * Enthält: mobiles Navigations-Menü, Dropdown-Untermenüs, Mannschaftsarchiv.
  */
 
 document.addEventListener("DOMContentLoaded", function () {
   initMobileNav();
   initSubmenus();
   initContactForm();
+  initTeamArchive();
   updateFooterYear();
 });
 
@@ -106,5 +107,50 @@ function initContactForm() {
     }
 
     form.reset();
+  });
+}
+
+/**
+ * Mannschaftsarchiv: Die Nummern-Buttons tauschen Foto und Bildunterschrift
+ * aus (Bildpfad in data-src, Text in data-title). Fehlt ein Foto noch,
+ * wird stattdessen ein Platzhalter "Foto folgt" angezeigt.
+ */
+function initTeamArchive() {
+  var tabs = document.querySelectorAll(".archive-tab");
+  var panel = document.querySelector(".archive-panel");
+
+  if (!tabs.length || !panel) {
+    return;
+  }
+
+  var photo = panel.querySelector(".archive-panel__photo");
+  var img = photo.querySelector("img");
+  var caption = panel.querySelector(".archive-panel__caption");
+
+  img.addEventListener("error", function () {
+    photo.classList.add("is-missing");
+  });
+  img.addEventListener("load", function () {
+    photo.classList.remove("is-missing");
+  });
+
+  // Falls das erste Bild schon vor dem Skript fehlgeschlagen ist
+  if (img.complete && img.naturalWidth === 0) {
+    photo.classList.add("is-missing");
+  }
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      tabs.forEach(function (other) {
+        other.setAttribute("aria-selected", "false");
+      });
+      tab.setAttribute("aria-selected", "true");
+
+      var title = tab.getAttribute("data-title");
+      photo.classList.remove("is-missing");
+      img.src = tab.getAttribute("data-src");
+      img.alt = "Mannschaftsfoto: " + title;
+      caption.textContent = title;
+    });
   });
 }
