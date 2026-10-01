@@ -509,7 +509,7 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   box-shadow: var(--shadow-card);
 }
 
-/* Mannschaftsarchiv (Nummern-Buttons + Mannschaftsfoto) */
+/* Mannschaftsarchiv (Nummern-Links auf die Saisonseiten + Mannschaftsfoto) */
 .archive-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -518,6 +518,9 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 }
 
 .archive-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-width: 44px;
   height: 44px;
   padding: 0 0.75rem;
@@ -527,17 +530,19 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   color: var(--color-gray-900);
   font-weight: 600;
   font-size: 1rem;
-  cursor: pointer;
   transition: background-color var(--transition), border-color var(--transition), color var(--transition);
 }
 
-.archive-tab:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.archive-tab:hover,
+.archive-tab:focus-visible { border-color: var(--color-primary); color: var(--color-primary); text-decoration: none; }
 
-.archive-tab[aria-selected="true"] {
+.archive-tab[aria-current="page"] {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
   color: var(--color-white);
 }
+
+.archive-back { margin: var(--space-md) 0 0; }
 
 .archive-panel {
   margin: 0;
