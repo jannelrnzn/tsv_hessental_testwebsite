@@ -609,6 +609,29 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 .fee-table tbody tr:last-child th, .fee-table tbody tr:last-child td { border-bottom: none; }
 .fee-notes { margin-top: var(--space-sm); font-size: 0.9rem; }
 
+/* Text links, Ansprechpartner-Kasten rechts (z. B. Mitglied werden) */
+.intro-contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: var(--space-xl);
+  align-items: start;
+}
+.intro-contact .section-head { margin-bottom: var(--space-md); }
+
+.contact-box {
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  text-align: center;
+}
+.contact-box .person-card__photo--rect { width: 150px; margin-inline: auto; }
+.contact-box .person-card p { font-size: 0.92rem; }
+.contact-box__note { margin: var(--space-sm) 0 0; font-size: 0.9rem; }
+
+@media (max-width: 860px) {
+  .intro-contact { grid-template-columns: 1fr; gap: var(--space-lg); }
+}
+
 /* Widget-Einbindung (FuPa) */
 .widget-block {
   background-color: var(--color-white);
