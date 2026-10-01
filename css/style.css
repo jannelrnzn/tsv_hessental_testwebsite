@@ -554,15 +554,16 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 }
 
 .archive-panel__photo {
-  aspect-ratio: 16 / 9;
   background-color: var(--color-gray-100);
 }
 
+/* Foto in voller Höhe zeigen, damit niemand abgeschnitten wird */
 .archive-panel__photo img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
+
+.archive-panel__photo.is-missing { aspect-ratio: 16 / 9; }
 
 .archive-panel__placeholder {
   display: none;
