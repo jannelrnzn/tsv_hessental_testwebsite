@@ -27,6 +27,20 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Aufstellung unter dem Foto als `<dl class="archive-lineup">`
   (Stehend hinten / Stehend mittig / Sitzend, jeweils v.l.n.r.).
 
+## Mannschaftsarchiv Jugend (A-, B-, C-Junioren)
+
+- Hauptseiten `fussball-jugend-a.html`, `-b.html`, `-c.html`: aktuelle Saison
+  (Text/Liga und ggf. Foto) und unten „Frühere Mannschaften“ (`#archiv`).
+- 10 Buttons: 1 = aktuelle Saison (Hauptseite), 2–10 = Saisonseiten
+  `fussball-jugend-X-JJJJ.html` (z. B. `fussball-jugend-a-2526.html`).
+- Saisonseiten wie bei den Herren: Überschrift „A-Junioren JJJJ/JJ“, darunter
+  Liga als `<p class="archive-subtitle">`, Foto, Buttons.
+- Fotos: `assets/images/archiv/jugend-X/JJJJ.jpg`. Aufstellungen mit Namen nur,
+  wenn Janne sie liefert (nicht alle Jugendjahrgänge bekommen Namen).
+- Saisons ohne Mannschaft (z. B. A-Junioren 2018/19, aktuell 2026/27): kein
+  Foto-Platzhalter, nur der Hinweistext.
+- D-Junioren und jünger bekommen kein Archiv.
+
 ### Saisonwechsel (Janne meldet sich dazu)
 
 Beispiel Wechsel von 2026/27 auf 2027/28:
@@ -39,3 +53,5 @@ Beispiel Wechsel von 2026/27 auf 2027/28:
 3. Button-Leisten auf allen Seiten neu setzen: 1 = aktuelle Seite,
    2 = 2026/27, … 13 = älteste Saison; die dann älteste Saisonseite entfällt.
 4. Menütexte „1./2. Mannschaft 2026/27“ in der Navigation aller Seiten anpassen.
+5. Jugend-Archive (A/B/C) analog umstellen: neue Saisonseite für 2026/27,
+   Buttons neu setzen, älteste Saisonseite entfällt.
