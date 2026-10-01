@@ -26,7 +26,10 @@ var MITTEILUNGEN = [
       "erzielten Dennis Schuller, Steffen Schweikert, Tim Di Mattia per " +
       "Handelfmeter und ein Eigentor. Die zweite Mannschaft musste sich " +
       "bei der SSV Schwäbisch Hall mit 1:6 geschlagen geben. Torschütze " +
-      "für den TSV war Daniel Fedoruk."
+      "für den TSV war Daniel Fedoruk.",
+    bilder: [
+      { datei: "assets/images/mitteilungen/2026-09-28-erster-saisonsieg.jpg", beschreibung: "Jubel in der Kabine nach dem ersten Saisonsieg in Vellberg" }
+    ]
   },
   {
     datum: "14. September 2026",
