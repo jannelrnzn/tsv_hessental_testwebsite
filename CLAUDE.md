@@ -11,6 +11,14 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   Repo-Root oder mit Originalnamen – an die richtige Stelle verschieben,
   sinnvoll umbenennen und auf max. 2400 px Breite verkleinern.
 
+## Mitteilungen
+
+- Alle Mitteilungen stehen nur in `js/mitteilungen.js` (Liste `MITTEILUNGEN`,
+  neueste zuerst). Neue Mitteilung = neuer Eintrag ganz oben.
+- `js/main.js` (`initNews`) zeigt auf der Startseite die drei neuesten
+  (`data-news="latest"`), `archiv-mitteilungen.html` alle älteren
+  (`data-news="archive"`). Nichts von Hand verschieben.
+
 ## Mannschaftsarchiv Fußball Herren (1. & 2. Mannschaft)
 
 - 1. und 2. Mannschaft sind auf demselben Mannschaftsfoto; beide Seiten

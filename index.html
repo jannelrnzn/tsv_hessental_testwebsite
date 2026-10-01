@@ -7,6 +7,7 @@
   <meta name="description" content="TSV Hessental 1923 e.V. – Fußball, Turnen, Kurse und Dart in Schwäbisch Hall-Hessental.">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/mitteilungen.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -130,7 +131,7 @@
             </button>
             <ul class="submenu">
               <li><a href="#">Bilder</a></li>
-              <li><a href="#">Mitteilungen</a></li>
+              <li><a href="archiv-mitteilungen.html">Mitteilungen</a></li>
               <li><a href='#'>Vereinsjubiläen</a></li>
             </ul>
           </li>
@@ -185,49 +186,13 @@
           <h2>Aktuelle Mitteilungen</h2>
           <p class="lead">
             Die neuesten Nachrichten rund um den TSV Hessental. Ältere
-            Mitteilungen findest du im <a href="#">Archiv</a>.
+            Mitteilungen findest du im <a href="archiv-mitteilungen.html">Archiv</a>.
           </p>
         </div>
 
-        <div class="news-list">
-          <article class="news-item">
-            <span class="news-item__date">28. September 2026</span>
-            <h3 class="news-item__title">Erste Mannschaft feiert den ersten Saisonsieg</h3>
-            <p>
-              Die erste Mannschaft konnte in Vellberg gegen die neue SGM
-              Obersontheim/Vellberg 2 den ersten Saisonsieg einfahren. Nach
-              zweimaligem Rückstand gewann die Erste am Ende mit 2:4. Die Tore
-              erzielten Dennis Schuller, Steffen Schweikert, Tim Di Mattia per
-              Handelfmeter und ein Eigentor. Die zweite Mannschaft musste sich
-              bei der SSV Schwäbisch Hall mit 1:6 geschlagen geben. Torschütze
-              für den TSV war Daniel Fedoruk.
-            </p>
-          </article>
-
-          <article class="news-item">
-            <span class="news-item__date">14. September 2026</span>
-            <h3 class="news-item__title">Hessentaler erste Mannschaft mit schwierigem Saisonstart</h3>
-            <p>
-              Nach vier Spieltagen in der Kreisliga A3 (Hall) wartet die Erste
-              noch auf den ersten Sieg: Auf ein 1:1 zum Auftakt gegen SC
-              Bühlertann folgte eine 1:4-Niederlage bei den Spfr Bühlerzell, dann
-              ein 2:2 gegen die SGM Rosengarten – und zuletzt ein deutliches
-              0:7 beim TSV Michelfeld. Die Mannschaft arbeitet weiter hart am
-              ersten Saisonsieg. Die zweite Mannschaft ist nach dem 2:2 in Bühlerzell
-              immernoch ungeschlagen und konnte aus drei Spielen 5 Punkte einfahren.
-            </p>
-          </article>
-
-          <article class="news-item">
-            <span class="news-item__date">April 2026</span>
-            <h3 class="news-item__title">Neuer 2. Vorstand: Marco Ebinger folgt auf Jens Ritter</h3>
-            <p>
-              Bei der Hauptversammlung im April 2026 wurde Marco Ebinger zum
-              neuen 2. Vorstand gewählt und tritt die Nachfolge von Jens
-              Ritter an. Wer sich für den kompletten Vorstand interessiert,
-              findet alle Ansprechpartner auf der <a href="vorstand.html">Vorstand-Seite</a>.
-            </p>
-          </article>
+        <!-- Inhalte kommen aus js/mitteilungen.js (die drei neuesten) -->
+        <div class="news-list" data-news="latest">
+          <noscript><p>Zum Anzeigen der Mitteilungen wird JavaScript benötigt.</p></noscript>
         </div>
       </div>
     </section>

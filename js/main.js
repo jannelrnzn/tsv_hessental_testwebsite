@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initSubmenus();
   initContactForm();
   updateFooterYear();
+  initNews();
 });
 
 function updateFooterYear() {
@@ -106,5 +107,41 @@ function initContactForm() {
     }
 
     form.reset();
+  });
+}
+
+/**
+ * Mitteilungen aus js/mitteilungen.js (Liste MITTEILUNGEN, neueste zuerst).
+ * Startseite:  <div class="news-list" data-news="latest">  -> die drei neuesten
+ * Archivseite: <div class="news-list" data-news="archive"> -> alle älteren
+ */
+var NEWS_ON_HOMEPAGE = 3;
+
+function initNews() {
+  var lists = document.querySelectorAll("[data-news]");
+
+  if (!lists.length || typeof MITTEILUNGEN === "undefined") {
+    return;
+  }
+
+  lists.forEach(function (list) {
+    var items = list.getAttribute("data-news") === "latest"
+      ? MITTEILUNGEN.slice(0, NEWS_ON_HOMEPAGE)
+      : MITTEILUNGEN.slice(NEWS_ON_HOMEPAGE);
+
+    if (!items.length) {
+      list.innerHTML = "<p>Derzeit gibt es keine älteren Mitteilungen.</p>";
+      return;
+    }
+
+    list.innerHTML = items.map(function (item) {
+      return (
+        '<article class="news-item">' +
+          '<span class="news-item__date">' + item.datum + "</span>" +
+          '<h3 class="news-item__title">' + item.titel + "</h3>" +
+          "<p>" + item.text + "</p>" +
+        "</article>"
+      );
+    }).join("");
   });
 }
