@@ -586,6 +586,25 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   color: var(--color-anthracite);
 }
 
+/* Spieleraufstellung unter dem Mannschaftsfoto (v.l.n.r.) */
+.archive-lineup {
+  margin: var(--space-sm) 0 0;
+  font-weight: 400;
+  font-size: 0.95rem;
+}
+
+.archive-lineup div + div { margin-top: var(--space-xs); }
+
+.archive-lineup dt {
+  font-weight: 600;
+  color: var(--color-anthracite);
+}
+
+.archive-lineup dd {
+  margin: 0;
+  color: var(--color-gray-700);
+}
+
 /* Zweispaltiges Layout (z. B. Impressum, Anfahrt) */
 .two-col {
   display: grid;
