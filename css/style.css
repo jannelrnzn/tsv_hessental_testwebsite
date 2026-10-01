@@ -506,6 +506,11 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 .breadcrumb a { color: rgba(255, 255, 255, 0.8); }
 .breadcrumb a:hover { color: var(--color-white); }
 
+/* Kleiner Download-Link (z. B. aktuelles Mannschaftsfoto) */
+.download-link { margin: calc(-1 * var(--space-sm)) 0 var(--space-md); font-size: 0.95rem; }
+.download-link a { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 600; }
+.download-link svg { width: 18px; height: 18px; }
+
 /* Widget-Einbindung (FuPa) */
 .widget-block {
   background-color: var(--color-white);

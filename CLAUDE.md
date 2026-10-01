@@ -23,8 +23,11 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 
 - 1. und 2. Mannschaft sind auf demselben Mannschaftsfoto; beide Seiten
   (`fussball-herren-1.html`, `fussball-herren-2.html`) zeigen das aktuelle
-  Foto mit Aufstellung über dem FuPa-Widget; die Archiv-Buttons 1–13 stehen dort
-  in einem eigenen Bereich „Frühere Mannschaften“ ganz unten (`#archiv`).
+  Foto NICHT (ist im FuPa-Widget enthalten), sondern nur einen kleinen Link
+  „Mannschaftsfoto JJJJ/JJ herunterladen“ (`.download-link`) über dem Widget.
+  Die Aufstellung der aktuellen Saison liegt als HTML-Kommentar in
+  `fussball-herren-1.html` bereit. Die Archiv-Buttons 1–13 stehen in einem
+  eigenen Bereich „Frühere Mannschaften“ ganz unten (`#archiv`).
 - Saisonseiten (Archiv): Überschrift „Fußball Herren JJJJ/JJ“ über dem Foto,
   darunter Foto + Aufstellung, darunter die Archiv-Buttons 1–13.
 - Button 1 = aktuelle Saison und verweist auf die aktuelle Mannschaftsseite selbst
@@ -63,10 +66,10 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 Beispiel Wechsel von 2026/27 auf 2027/28:
 
 1. Neue Archivseite `fussball-herren-1-2627.html` aus einer bestehenden
-   Saisonseite erzeugen, mit Foto `2627.jpg` und der Aufstellung, die bisher
-   auf den Hauptseiten steht.
-2. Neues Foto `2728.jpg` mit neuer Aufstellung auf beiden Hauptseiten einsetzen
-   (Eyebrow „Saison 2027/28“, Bildunterschrift anpassen).
+   Saisonseite erzeugen, mit Foto `2627.jpg`, Liga-Unterzeile und der
+   Aufstellung aus dem HTML-Kommentar in `fussball-herren-1.html`.
+2. Neues Foto `2728.jpg` ablegen, Download-Link auf beiden Hauptseiten auf
+   2027/28 umstellen, neue Aufstellung wieder als Kommentar hinterlegen.
 3. Button-Leisten auf allen Seiten neu setzen: 1 = aktuelle Seite,
    2 = 2026/27, … 13 = älteste Saison; die dann älteste Saisonseite entfällt.
 4. Menütexte „1./2. Mannschaft 2026/27“ in der Navigation aller Seiten anpassen.
