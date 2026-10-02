@@ -23,7 +23,7 @@ var ERFOLGE = [
     mannschaft: "2. Mannschaft",
     erfolg: "Reservemeister",
     liga: "Kreisliga A3 Rems/Murr/Hall",
-    bild: "assets/images/archiv/herren-1/2425.jpg",
+    bild: "assets/images/erfolge/2425-reservemeister.jpg",
     link: "fussball-herren-1-2425.html"
   },
   {
