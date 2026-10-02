@@ -47,6 +47,15 @@ var ERFOLGE = [
     mannschaft: "B-Junioren",
     erfolg: "Meister",
     liga: "B-Junioren Leistungsstaffel Hohenlohe",
+    text:
+      "Ungeschlagen wurde das Team der Jahrgänge 2005/06 Meister in der " +
+      "B-Junioren Leistungsstaffel Hohenlohe. Mit einem souveränen " +
+      "Torverhältnis von 15:5 Toren und 21 Punkten aus 9 Spielen grüßt die " +
+      "B-Jugend, trainiert von Dimitri Stergiou, nach dem letzten Spieltag " +
+      "von der Tabellenspitze. Mit zwei Punkten Abstand auf die SGM " +
+      "Mulfingen/Hollenbach wurde der Aufstieg in die Regionenstaffel wegen " +
+      "der Corona-Regelungen leider verwehrt.",
+    bild: "assets/images/archiv/jugend-b/2122.jpg",
     link: "fussball-jugend-b-2122.html"
   }
 ];
