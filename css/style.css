@@ -653,7 +653,9 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   overflow: hidden;
 }
 .success-card--with-image { grid-template-columns: 320px minmax(0, 1fr); }
-.success-card__image img { width: 100%; height: 100%; object-fit: cover; min-height: 180px; }
+.success-card__image { display: flex; align-items: center; background-color: var(--color-gray-100); }
+/* ganzes Foto zeigen, nichts abschneiden (Mannschaftsfotos sind oft sehr breit) */
+.success-card__image img { width: 100%; height: auto; }
 .success-card__body { padding: var(--space-md); }
 .success-card__season { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-primary); }
 .success-card__title { margin: 0.2rem 0 0.1rem; }
@@ -664,7 +666,6 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 
 @media (max-width: 720px) {
   .success-card--with-image { grid-template-columns: 1fr; }
-  .success-card__image img { aspect-ratio: 16 / 9; height: auto; min-height: 0; }
 }
 
 /* Widget-Einbindung (FuPa) */
