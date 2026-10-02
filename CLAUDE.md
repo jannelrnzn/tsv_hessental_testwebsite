@@ -34,7 +34,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 ## Erfolge (Archiv)
 
 - `archiv-erfolge.html` zeigt alle Erfolge aus `js/erfolge.js` (Liste `ERFOLGE`:
-  `saison`, `mannschaft`, `erfolg`, optional `liga`, `text`, `bild`, `link`).
+  `saison`, `mannschaft`, `erfolg`, optional `datum`, `liga`, `text`, `bild`, `link`).
   Reihenfolge egal – `initSuccesses` in `js/main.js` sortiert nach Saison und
   gruppiert nach Jahrzehnten (mit Sprungleiste). Bilder unter `assets/images/erfolge/`.
 - Archiv-Menü auf allen Seiten: Bilder, Mitteilungen, Vereinsjubiläen, Erfolge.

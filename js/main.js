@@ -316,7 +316,7 @@ function renderSuccess(item) {
     '<article class="success-card' + (item.bild ? " success-card--with-image" : "") + '">' +
       image +
       '<div class="success-card__body">' +
-        '<span class="success-card__season">' + item.saison + "</span>" +
+        '<span class="success-card__season">' + item.saison + (item.datum ? " · " + item.datum : "") + "</span>" +
         '<h3 class="success-card__title">' + item.erfolg + "</h3>" +
         '<p class="success-card__team">' + item.mannschaft + "</p>" +
         (item.liga ? '<p class="success-card__league">' + item.liga + "</p>" : "") +

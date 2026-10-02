@@ -11,6 +11,7 @@
  *   erfolg:     "Meister der Reserverunde"
  *
  * Optional:
+ *   datum: "Juni 2025"   (erscheint neben der Saison)
  *   liga:  "Kreisliga A3 Rems/Murr/Hall"
  *   text:  "Kurzer Bericht …"   (einfaches HTML erlaubt, z. B. Links)
  *   bild:  "assets/images/erfolge/2425-reservemeister.jpg"
@@ -20,9 +21,17 @@
 var ERFOLGE = [
   {
     saison: "2024/25",
+    datum: "Juni 2025",
     mannschaft: "2. Mannschaft",
     erfolg: "Reservemeister",
     liga: "Kreisliga A3 Rems/Murr/Hall",
+    text:
+      "Mit 32 Punkten aus 12 Spielen, einem Torverhältnis von 44:10 und ohne " +
+      "Niederlage holte sich die zweite Mannschaft den Meistertitel in der " +
+      "Reserveliga. Das Team, das von Endrit Memeti und Michael Kolegov " +
+      "trainiert wurde, erhielt am letzten Spieltag mit einem beeindruckenden " +
+      "5:3-Derbysieg über den SC Steinbach-Comburg den Meisterwimpel beim " +
+      "Saisonabschluss unterm Einkorn.",
     bild: "assets/images/erfolge/2425-reservemeister.jpg",
     link: "fussball-herren-1-2425.html"
   },
