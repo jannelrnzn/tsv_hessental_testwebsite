@@ -626,6 +626,47 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   .intro-contact { grid-template-columns: 1fr; gap: var(--space-lg); }
 }
 
+/* Archiv -> Erfolge */
+.success-nav { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin-bottom: var(--space-lg); }
+.success-nav a {
+  padding: 0.35rem 0.9rem;
+  border: 2px solid var(--color-gray-300);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-gray-900);
+}
+.success-nav a:hover, .success-nav a:focus-visible { border-color: var(--color-primary); color: var(--color-primary); text-decoration: none; }
+
+.success-decade + .success-decade { margin-top: var(--space-xl); }
+.success-decade__title { padding-bottom: var(--space-xs); border-bottom: 3px solid var(--color-primary); margin-bottom: var(--space-md); }
+
+.success-list { display: grid; gap: var(--space-md); }
+
+.success-card {
+  display: grid;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-left: 5px solid var(--color-primary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+.success-card--with-image { grid-template-columns: 320px minmax(0, 1fr); }
+.success-card__image img { width: 100%; height: 100%; object-fit: cover; min-height: 180px; }
+.success-card__body { padding: var(--space-md); }
+.success-card__season { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-primary); }
+.success-card__title { margin: 0.2rem 0 0.1rem; }
+.success-card__title::before { content: "🏆 "; }
+.success-card__team { font-weight: 600; color: var(--color-gray-900); margin-bottom: 0.2rem; }
+.success-card__league { color: var(--color-gray-500); font-size: 0.95rem; }
+.success-card__link { font-weight: 600; font-size: 0.95rem; }
+
+@media (max-width: 720px) {
+  .success-card--with-image { grid-template-columns: 1fr; }
+  .success-card__image img { aspect-ratio: 16 / 9; height: auto; min-height: 0; }
+}
+
 /* Widget-Einbindung (FuPa) */
 .widget-block {
   background-color: var(--color-white);

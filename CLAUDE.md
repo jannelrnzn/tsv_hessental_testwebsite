@@ -31,6 +31,14 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Bei neuen/entfallenen Werbepartnern `werbepartner.html` UND `js/sponsoren.js`
   anpassen.
 
+## Erfolge (Archiv)
+
+- `archiv-erfolge.html` zeigt alle Erfolge aus `js/erfolge.js` (Liste `ERFOLGE`:
+  `saison`, `mannschaft`, `erfolg`, optional `liga`, `text`, `bild`, `link`).
+  Reihenfolge egal – `initSuccesses` in `js/main.js` sortiert nach Saison und
+  gruppiert nach Jahrzehnten (mit Sprungleiste). Bilder unter `assets/images/erfolge/`.
+- Archiv-Menü auf allen Seiten: Bilder, Mitteilungen, Vereinsjubiläen, Erfolge.
+
 ## Mannschaftsarchiv Fußball Herren (1. & 2. Mannschaft)
 
 - 1. und 2. Mannschaft sind auf demselben Mannschaftsfoto; beide Seiten

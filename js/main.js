@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   updateFooterYear();
   initNews();
   initSponsorBar();
+  initSuccesses();
 });
 
 function updateFooterYear() {
@@ -248,4 +249,80 @@ function shuffle(list) {
     list[j] = tmp;
   }
   return list;
+}
+
+/**
+ * Archiv -> Erfolge: rendert ERFOLGE aus js/erfolge.js in <div data-successes>,
+ * sortiert nach Saison (neueste zuerst) und gruppiert nach Jahrzehnten.
+ */
+function initSuccesses() {
+  var root = document.querySelector("[data-successes]");
+
+  if (!root || typeof ERFOLGE === "undefined") {
+    return;
+  }
+
+  if (!ERFOLGE.length) {
+    root.innerHTML = "<p>Hier werden bald unsere Erfolge aufgelistet.</p>";
+    return;
+  }
+
+  function startYear(item) {
+    return parseInt(String(item.saison).slice(0, 4), 10) || 0;
+  }
+
+  var items = ERFOLGE.slice().sort(function (a, b) {
+    return startYear(b) - startYear(a);
+  });
+
+  var decades = [];
+  var groups = {};
+  items.forEach(function (item) {
+    var decade = Math.floor(startYear(item) / 10) * 10;
+    if (!groups[decade]) {
+      groups[decade] = [];
+      decades.push(decade);
+    }
+    groups[decade].push(item);
+  });
+
+  var nav =
+    '<nav class="success-nav" aria-label="Jahrzehnte">' +
+      decades.map(function (d) {
+        return '<a href="#erfolge-' + d + '">' + d + "er</a>";
+      }).join("") +
+    "</nav>";
+
+  var sections = decades.map(function (d) {
+    return (
+      '<section class="success-decade" id="erfolge-' + d + '">' +
+        '<h2 class="success-decade__title">' + d + "er Jahre</h2>" +
+        '<div class="success-list">' + groups[d].map(renderSuccess).join("") + "</div>" +
+      "</section>"
+    );
+  }).join("");
+
+  root.innerHTML = nav + sections;
+}
+
+function renderSuccess(item) {
+  var image = item.bild
+    ? '<a class="success-card__image" href="' + item.bild + '" target="_blank" rel="noopener">' +
+        '<img src="' + item.bild + '" alt="' + (item.mannschaft + " " + item.saison).replace(/"/g, "&quot;") + '" loading="lazy">' +
+      "</a>"
+    : "";
+
+  return (
+    '<article class="success-card' + (item.bild ? " success-card--with-image" : "") + '">' +
+      image +
+      '<div class="success-card__body">' +
+        '<span class="success-card__season">' + item.saison + "</span>" +
+        '<h3 class="success-card__title">' + item.erfolg + "</h3>" +
+        '<p class="success-card__team">' + item.mannschaft + "</p>" +
+        (item.liga ? '<p class="success-card__league">' + item.liga + "</p>" : "") +
+        (item.text ? "<p>" + item.text + "</p>" : "") +
+        (item.link ? '<a class="success-card__link" href="' + item.link + '">Zur Saison ' + item.saison + " →</a>" : "") +
+      "</div>" +
+    "</article>"
+  );
 }
