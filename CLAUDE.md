@@ -15,7 +15,6 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 
 - **Inhalte, die Janne noch liefert:**
   - Bilder → Spielerlegenden (Seite + Menülink fehlen noch)
-  - Senioren-Seite (bisher Platzhalter)
   - Antworten zu den offenen Fragen der Zeitreise (siehe Abschnitt Bilder)
 - **Fehlende Fotos** (Platzhalter erscheint automatisch, Dateiname = vorname-nachname.jpg):
   - Trainer `assets/images/team/`: Benjamin Bradtke (D + F), Julian Schneider (D),
@@ -25,13 +24,12 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   - Schiedsrichter `assets/images/schiedsrichter/`: Erik Kronmüller, Ricardo
     Kosche, Rolf Baumann
   - Marvin Lamm (`assets/images/dart/`), Christine Schmidt (`assets/images/kurse/`)
-- **Unbestätigte Schreibweisen:** Mattias Teinert (Matthias?), Ralf Tsibert und
-  Luca Cunzemann (A-Junioren 2021/22).
 - **Prüfen:** FuPa- und fussball.de-Widgets auf der Live-Seite (hier im Container
   nicht testbar); Datenschutzerklärung gegenlesen lassen, v. a. Rechtsgrundlage
   lit. f für die direkt eingebundenen Dienste.
 - **Go-live / danach:** siehe nächster Abschnitt (Strato, AVV, Kontaktformular-Test,
-  GitHub Action, Pages abschalten, Tarifwechsel).
+  GitHub Action, Pages abschalten).
+- **Ganz zum Schluss (nach allem anderen):** Tarifwechsel bei Strato prüfen.
 
 ## Hosting / Go-live (geplant 17.10.2026)
 
@@ -48,8 +46,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   bei jedem Push auf `main`, nur geänderte Dateien. Zugangsdaten trägt Janne
   selbst als Repository-Secrets ein (nie in Chat oder Code). Keine eigene
   Testumgebung; Änderungen vorher lokal prüfen. Action zum Go-live einrichten.
-- **Nach dem Go-live erinnern:** Tarifwechsel bei Strato prüfen (alter Tarif,
-  vergleichsweise teuer). Erst nach dem Go-live, nicht vorher.
+- **Ganz am Ende erinnern:** Tarifwechsel bei Strato prüfen (alter Tarif,
+  vergleichsweise teuer) – erst wenn alles andere erledigt ist.
 
 ## Mitteilungen
 
@@ -159,8 +157,10 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 
 ## Senioren
 
-- `fussball-herren-senioren.html` unter „Fußball Herren“ im Menü; vorerst nur
-  Platzhalter „Informationen folgen“, Inhalte liefert Janne später.
+- `fussball-herren-senioren.html` unter „Fußball Herren“ im Menü: Trainer Michael
+  Frey (Foto aus `abteilungsleitung_fußball_aktive/`, Kontakt) und Patrick Walz
+  (`team/patrick-walz.jpg`), Mannschaftsfoto `assets/images/senioren/` mit
+  Aufstellung (Hallenstadtmeisterschaft 18.01.2025, Vize-Stadtmeister).
 
 ## Mannschaftsarchiv Jugend (A-, B-, C-Junioren)
 
