@@ -63,12 +63,12 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 ## Bilder (Fotoalben)
 
 - Menü „Bilder“: je Rubrik eine Seite `bilder-<rubrik>.html` (bisher:
-  `bilder-hauptversammlung.html`), darin pro Anlass ein `.gallery-album`
+  `bilder-hauptversammlung.html`, `bilder-dorfpokal.html`), darin pro Anlass ein `.gallery-album`
   (neuestes oben) mit Datum, Titel, „Fotos: …“ und `<div class="gallery">`.
 - Bilder: `assets/images/bilder/<rubrik>/<jahr oder anlass>/01.jpg …` plus
   Vorschaubilder in `thumbs/` (400 px hoch). Link = großes Bild, img = Vorschau.
 - `initGalleries` (js/main.js) macht daraus die Großansicht (Pfeile, Esc, Wischen).
-- Noch offen: Dorfpokal, Trainingslager, Vereinsheimbau 1970-1973, Zeitreise,
+- Noch offen: Trainingslager, Vereinsheimbau 1970-1973, Zeitreise,
   Spielerlegenden (Menülinks noch `#`).
 
 ## Kontaktformular
