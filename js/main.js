@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initSuccesses();
   initConsentEmbeds();
   initConsentReset();
+  initGalleries();
 });
 
 function updateFooterYear() {
@@ -539,5 +540,105 @@ function initConsentReset() {
     if (status) {
       status.textContent += " Deine Zustimmungen wurden widerrufen.";
     }
+  });
+}
+
+/**
+ * Bildergalerien (.gallery): Klick auf ein Vorschaubild öffnet die Großansicht
+ * mit Vor/Zurück (Pfeiltasten, Wischen) und Schließen (Esc). Ohne JavaScript
+ * öffnen die Links einfach das Bild.
+ */
+function initGalleries() {
+  var galerien = document.querySelectorAll(".gallery");
+  if (!galerien.length) {
+    return;
+  }
+
+  var box = document.createElement("div");
+  box.className = "lightbox";
+  box.hidden = true;
+  box.setAttribute("role", "dialog");
+  box.setAttribute("aria-modal", "true");
+  box.setAttribute("aria-label", "Bild in Großansicht");
+  box.innerHTML =
+    '<img class="lightbox__img" alt="">' +
+    '<button type="button" class="lightbox__btn lightbox__close" aria-label="Schließen">&times;</button>' +
+    '<button type="button" class="lightbox__btn lightbox__prev" aria-label="Vorheriges Bild">&#8249;</button>' +
+    '<button type="button" class="lightbox__btn lightbox__next" aria-label="Nächstes Bild">&#8250;</button>' +
+    '<p class="lightbox__count" aria-live="polite"></p>';
+  document.body.appendChild(box);
+
+  var bild = box.querySelector(".lightbox__img");
+  var zaehler = box.querySelector(".lightbox__count");
+  var links = [];
+  var index = 0;
+  var ausloeser = null;
+
+  function zeigen(i) {
+    index = (i + links.length) % links.length;
+    var link = links[index];
+    bild.src = link.href;
+    bild.alt = link.querySelector("img").alt;
+    zaehler.textContent = (index + 1) + " / " + links.length;
+  }
+
+  function oeffnen(galerie, link) {
+    links = Array.prototype.slice.call(galerie.querySelectorAll("a"));
+    ausloeser = link;
+    zeigen(links.indexOf(link));
+    box.hidden = false;
+    document.body.style.overflow = "hidden";
+    box.querySelector(".lightbox__close").focus();
+  }
+
+  function schliessen() {
+    box.hidden = true;
+    bild.removeAttribute("src");
+    document.body.style.overflow = "";
+    if (ausloeser) {
+      ausloeser.focus();
+    }
+  }
+
+  galerien.forEach(function (galerie) {
+    galerie.addEventListener("click", function (e) {
+      var link = e.target.closest("a");
+      if (!link) {
+        return;
+      }
+      e.preventDefault();
+      oeffnen(galerie, link);
+    });
+  });
+
+  box.querySelector(".lightbox__close").addEventListener("click", schliessen);
+  box.querySelector(".lightbox__prev").addEventListener("click", function () { zeigen(index - 1); });
+  box.querySelector(".lightbox__next").addEventListener("click", function () { zeigen(index + 1); });
+  box.addEventListener("click", function (e) {
+    if (e.target === box) {
+      schliessen();
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (box.hidden) {
+      return;
+    }
+    if (e.key === "Escape") { schliessen(); }
+    if (e.key === "ArrowLeft") { zeigen(index - 1); }
+    if (e.key === "ArrowRight") { zeigen(index + 1); }
+  });
+
+  var startX = null;
+  box.addEventListener("touchstart", function (e) { startX = e.touches[0].clientX; }, { passive: true });
+  box.addEventListener("touchend", function (e) {
+    if (startX === null) {
+      return;
+    }
+    var dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 50) {
+      zeigen(dx < 0 ? index + 1 : index - 1);
+    }
+    startX = null;
   });
 }

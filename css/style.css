@@ -1134,3 +1134,93 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   .container { padding-inline: var(--space-sm); }
   .section { padding-block: var(--space-xl); }
 }
+
+/* =============================== Bildergalerien =============================== */
+.gallery-album + .gallery-album { margin-top: var(--space-xl); }
+
+.gallery-album__meta {
+  color: var(--color-gray-600, #5b6670);
+  margin-top: -0.5rem;
+  margin-bottom: var(--space-md, 1.5rem);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.gallery a {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--color-gray-100);
+  box-shadow: var(--shadow-card);
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;   /* Hochformat: Köpfe bleiben sichtbar */
+  transition: transform 0.25s ease;
+}
+
+.gallery a:hover img,
+.gallery a:focus-visible img { transform: scale(1.04); }
+
+@media (max-width: 480px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+}
+
+/* Großansicht */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 12, 16, 0.92);
+  padding: 3.5rem 1rem;
+}
+
+.lightbox[hidden] { display: none; }
+
+.lightbox__img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.lightbox__btn {
+  position: absolute;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox__btn:hover,
+.lightbox__btn:focus-visible { background: var(--color-primary); }
+
+.lightbox__close { top: 0.75rem; right: 0.75rem; }
+.lightbox__prev { left: 0.75rem; top: 50%; transform: translateY(-50%); }
+.lightbox__next { right: 0.75rem; top: 50%; transform: translateY(-50%); }
+
+.lightbox__count {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
