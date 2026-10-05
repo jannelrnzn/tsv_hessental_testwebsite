@@ -76,8 +76,14 @@ if ($ts > 0 && (time() - $ts) < $MIN_SEKUNDEN) {
     spam();
 }
 
+// Sendelimit: IP-Adresse nur als Hash, Einträge werden nach 1 Stunde gelöscht
+foreach (glob(sys_get_temp_dir() . '/tsv-kontakt-*') ?: [] as $alteDatei) {
+    if (filemtime($alteDatei) < time() - 3600) {
+        @unlink($alteDatei);
+    }
+}
 $ip = $_SERVER['REMOTE_ADDR'] ?? 'unbekannt';
-$limitDatei = sys_get_temp_dir() . '/tsv-kontakt-' . md5($ip);
+$limitDatei = sys_get_temp_dir() . '/tsv-kontakt-' . hash('sha256', 'tsv-hessental|' . $ip);
 $zeitpunkte = [];
 if (is_file($limitDatei)) {
     $zeitpunkte = array_filter(
