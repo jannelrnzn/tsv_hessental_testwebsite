@@ -76,6 +76,14 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   `assets/images/bilder/zeitreise/JJJJ-mannschaft.jpg`. Großansicht über
   gemeinsames `data-gallery` um beide Abschnitte.
 - Noch offen: Spielerlegenden (Menülink noch `#`).
+- Offene Fragen Zeitreise (Janne klärt noch; bis dahin KEINEN Erfolge-Eintrag
+  anlegen, nur Zeitstrahl):
+  - 2008/09 1. Mannschaft: Feier mit Fahnen – welcher Titel/Liga?
+  - „Ohne Jahr“ ab 2000, Bild C (`ab-2000-ohne-jahr-herren-1-c.jpg`) mit
+    Meisterschale – welches Jahr, welcher Titel?
+  - 2005/06 und 2006/07: Erfolg oder normale Mannschaftsfotos?
+  - Jahreszahlen der drei „Ohne Jahr“-Fotos bis 1970 und der drei ab 2000;
+    Saison 1948 (1947/48 oder 1948/49?) und Jahr des zweiten B-Klasse-Meisters.
 - Bewusst NICHT übernommen (Janne): Trainingslager, Stadtmeisterschaft,
   Feiern, Arbeitsdienst.
 
