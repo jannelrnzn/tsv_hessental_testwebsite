@@ -96,7 +96,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   `assets/images/bilder/zeitreise/JJJJ-mannschaft.jpg`. Großansicht über
   gemeinsames `data-gallery` um beide Abschnitte.
 - `bilder-spielerlegenden.html`: Inhalt 1:1 von der alten Seite (Vereinsleben mit
-  3 Bildern + 25 Passfotos nach Jahrgang), Bilder unter
+  3 Bildern + 25 Passfotos nach Jahrgang, unter jedem Namen „Jg. JJJJ“), Bilder unter
   `assets/images/bilder/spielerlegenden/nachname-vorname-jahrgang.jpg`.
 - Offene Fragen Zeitreise (Janne klärt noch; bis dahin KEINEN Erfolge-Eintrag
   anlegen, nur Zeitstrahl):

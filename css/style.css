@@ -1363,6 +1363,7 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 }
 
 .legend-card figcaption { margin-top: 0.5rem; font-weight: 600; }
+.legend-card figcaption small { display: block; font-weight: 400; font-size: 0.85rem; color: var(--color-gray-700); }
 
 @media (max-width: 720px) {
   .legends-intro { grid-template-columns: 1fr; }
