@@ -61,6 +61,7 @@ var ERFOLGE = [
     mannschaft: "C-Junioren",
     erfolg: "Meister",
     liga: "C-Junioren Kreisstaffel 3 Hohenlohe",
+    bild: "assets/images/archiv/jugend-c/2324.jpg",
     link: "fussball-jugend-c-2324.html"
   },
   {
