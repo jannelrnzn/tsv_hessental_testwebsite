@@ -21,6 +21,11 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   umstellen. Mail-Einstellungen der Domain nicht anfassen.
 - Danach: Strato als Hoster in der Datenschutzerklärung + AVV, kontakt.php
   echt testen, `noreply@` anlegen, GitHub Pages abschalten.
+- **Entschieden (Janne):** Änderungen nach dem Go-live laufen weiter über GitHub
+  und werden **automatisch per GitHub Action (SFTP) zu Strato** hochgeladen –
+  bei jedem Push auf `main`, nur geänderte Dateien. Zugangsdaten trägt Janne
+  selbst als Repository-Secrets ein (nie in Chat oder Code). Keine eigene
+  Testumgebung; Änderungen vorher lokal prüfen. Action zum Go-live einrichten.
 - **Nach dem Go-live erinnern:** Tarifwechsel bei Strato prüfen (alter Tarif,
   vergleichsweise teuer). Erst nach dem Go-live, nicht vorher.
 
