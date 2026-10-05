@@ -549,7 +549,8 @@ function initConsentReset() {
  * öffnen die Links einfach das Bild.
  */
 function initGalleries() {
-  var galerien = document.querySelectorAll(".gallery");
+  // .gallery = Bilderraster, [data-gallery] = beliebiger Bereich mit Bildlinks (z. B. Zeitstrahl)
+  var galerien = document.querySelectorAll(".gallery, [data-gallery]");
   if (!galerien.length) {
     return;
   }
