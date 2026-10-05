@@ -960,6 +960,13 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   display: block;
 }
 
+.form-status.is-error { color: var(--color-primary); background-color: #fdecee; border-color: var(--color-primary); }
+
+/* Spamschutz-Feld: für Menschen unsichtbar, für Bots ein normales Eingabefeld */
+.hp-field { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
+.form-hint { display: block; margin-top: 0.3rem; font-size: 0.85rem; color: var(--color-gray-500); }
+
 /* Footer */
 .site-footer {
   background-color: var(--color-anthracite);

@@ -40,6 +40,16 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   gruppiert nach Jahrzehnten (mit Sprungleiste). Bilder unter `assets/images/erfolge/`.
 - Archiv-Menü auf allen Seiten: Bilder, Mitteilungen, Vereinsjubiläen, Erfolge.
 
+## Kontaktformular
+
+- `kontaktformular.html` sendet an `kontakt.php` (PHP, läuft erst bei Strato, nicht
+  auf GitHub Pages – dort zeigt `initContactForm` nur eine Testmeldung).
+- Empfänger `verwaltung@tsv-hessental.de`, Absender `noreply@tsv-hessental.de`
+  (oben in `kontakt.php` einstellbar; Absender muss eine Adresse der eigenen
+  Domain bei Strato sein). Antworten gehen per Reply-To an den Besucher.
+- Spamschutz: Honeypot-Feld `website`, Mindestzeit 3 s (`ts`), max. 3 Links,
+  max. 5 Nachrichten/Stunde/IP. Anlage optional: PDF/JPG/PNG/Word, max. 5 MB.
+
 ## Mannschaftsarchiv Fußball Herren (1. & 2. Mannschaft)
 
 - 1. und 2. Mannschaft sind auf demselben Mannschaftsfoto; beide Seiten

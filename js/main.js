@@ -76,10 +76,9 @@ function initSubmenus() {
 }
 
 /**
- * Da dieses Projekt (noch) kein Backend besitzt, wird das Absenden des
- * Kontaktformulars clientseitig abgefangen und dem Nutzer eine
- * Bestätigung angezeigt. Sobald ein Formular-Endpunkt zur Verfügung
- * steht, kann hier der echte Versand (fetch/POST) ergänzt werden.
+ * Kontaktformular: Versand über kontakt.php (PHP, z. B. bei Strato).
+ * Auf GitHub Pages bzw. lokal ohne Server gibt es kein PHP – dort wird
+ * nur eine Testmeldung angezeigt und nichts verschickt.
  */
 function initContactForm() {
   var form = document.querySelector("#contact-form");
@@ -89,6 +88,30 @@ function initContactForm() {
   }
 
   var status = form.querySelector(".form-status");
+  var button = form.querySelector('button[type="submit"]');
+  var ts = form.querySelector("#form-ts");
+  var ohnePhp = location.protocol === "file:" || /github\.io$/.test(location.hostname);
+
+  if (ts) {
+    ts.value = Math.floor(Date.now() / 1000);
+  }
+
+  function zeige(text, ok) {
+    if (!status) {
+      return;
+    }
+    status.textContent = text;
+    status.classList.toggle("is-error", !ok);
+    status.classList.add("is-visible");
+  }
+
+  // Rückmeldung nach Versand ohne JavaScript (kontakt.php leitet mit ?status=… zurück)
+  var params = new URLSearchParams(location.search);
+  if (params.get("status") === "ok") {
+    zeige("Vielen Dank! Ihre Nachricht wurde gesendet.", true);
+  } else if (params.get("status") === "fehler") {
+    zeige("Ihre Nachricht konnte leider nicht gesendet werden. Bitte prüfen Sie Ihre Angaben.", false);
+  }
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -98,17 +121,36 @@ function initContactForm() {
       return;
     }
 
-    var name = form.querySelector("#name").value.trim();
-
-    if (status) {
-      status.textContent =
-        "Vielen Dank, " + name + "! Deine Nachricht wurde erfasst. " +
-        "Hinweis: Dieses Formular ist noch nicht an ein Backend angebunden – " +
-        "die Anbindung folgt in einem späteren Schritt.";
-      status.classList.add("is-visible");
+    if (ohnePhp) {
+      zeige("Testversion: Auf dieser Vorschau-Seite werden keine Nachrichten verschickt. " +
+            "Auf der fertigen Website geht die Nachricht an verwaltung@tsv-hessental.de.", true);
+      return;
     }
 
-    form.reset();
+    button.disabled = true;
+    zeige("Nachricht wird gesendet …", true);
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { "X-Requested-With": "fetch" }
+    })
+      .then(function (response) { return response.json(); })
+      .then(function (data) {
+        zeige(data.meldung, data.ok);
+        if (data.ok) {
+          form.reset();
+          if (ts) {
+            ts.value = Math.floor(Date.now() / 1000);
+          }
+        }
+      })
+      .catch(function () {
+        zeige("Ihre Nachricht konnte leider nicht gesendet werden. Bitte schreiben Sie uns direkt an verwaltung@tsv-hessental.de.", false);
+      })
+      .then(function () {
+        button.disabled = false;
+      });
   });
 }
 

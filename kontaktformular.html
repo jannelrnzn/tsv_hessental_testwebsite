@@ -155,7 +155,7 @@
     <section class="section">
       <div class="container">
         <div class="two-col">
-          <form id="contact-form" novalidate style="max-width: 560px;">
+          <form id="contact-form" action="kontakt.php" method="post" enctype="multipart/form-data" novalidate style="max-width: 560px;">
             <div class="form-field">
               <label for="name">Name *</label>
               <input type="text" id="name" name="name" required>
@@ -173,7 +173,8 @@
 
             <div class="form-field">
               <label for="anlage">Anlage</label>
-              <input type="file" id="anlage" name="anlage">
+              <input type="file" id="anlage" name="anlage" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+              <small class="form-hint">PDF, JPG, PNG oder Word, höchstens 5 MB</small>
             </div>
 
             <div class="form-field">
@@ -188,6 +189,13 @@
                 <a href="datenschutzerklaerung.html">Datenschutz</a> gelesen. *
               </label>
             </div>
+
+            <!-- Spamschutz: Honeypot (für Menschen unsichtbar) und Zeitstempel, siehe kontakt.php -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="website">Website (bitte leer lassen)</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            <input type="hidden" name="ts" id="form-ts" value="">
 
             <button class="btn btn--primary" type="submit">Nachricht senden</button>
             <p class="form-status" role="status"></p>
