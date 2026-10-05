@@ -160,7 +160,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - `fussball-herren-senioren.html` unter „Fußball Herren“ im Menü: Trainer Michael
   Frey (Foto aus `abteilungsleitung_fußball_aktive/`, Kontakt) und Patrick Walz
   (`team/patrick-walz.jpg`), Mannschaftsfoto `assets/images/senioren/` mit
-  Aufstellung (Hallenstadtmeisterschaft 18.01.2025, Vize-Stadtmeister).
+  Aufstellung (Hallenstadtmeisterschaft 18.01.2025; Vize-Titel bewusst NICHT
+  unter Erfolge), fussball.de-Tabelle Kreisliga 4.
 
 ## Mannschaftsarchiv Jugend (A-, B-, C-Junioren)
 
