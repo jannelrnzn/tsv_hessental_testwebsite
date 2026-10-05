@@ -321,6 +321,11 @@ function renderSuccess(item) {
         '<p class="success-card__team">' + item.mannschaft + "</p>" +
         (item.liga ? '<p class="success-card__league">' + item.liga + "</p>" : "") +
         (item.text ? "<p>" + item.text + "</p>" : "") +
+        (item.aufstellung && item.aufstellung.length
+          ? '<dl class="archive-lineup">' + item.aufstellung.map(function (row) {
+              return "<div><dt>" + row.titel + "</dt><dd>" + row.namen + "</dd></div>";
+            }).join("") + "</dl>"
+          : "") +
         (item.link ? '<a class="success-card__link" href="' + item.link + '">Zur Saison ' + item.saison + " →</a>" : "") +
       "</div>" +
     "</article>"

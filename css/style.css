@@ -663,6 +663,7 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 .success-card__team { font-weight: 600; color: var(--color-gray-900); margin-bottom: 0.2rem; }
 .success-card__league { color: var(--color-gray-500); font-size: 0.95rem; }
 .success-card__link { font-weight: 600; font-size: 0.95rem; }
+.success-card .archive-lineup { margin: 0 0 var(--space-sm); }
 
 @media (max-width: 720px) {
   .success-card--with-image { grid-template-columns: 1fr; }

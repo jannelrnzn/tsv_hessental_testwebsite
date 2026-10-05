@@ -15,6 +15,7 @@
  *   liga:  "Kreisliga A3 Rems/Murr/Hall"
  *   text:  "Kurzer Bericht …"   (einfaches HTML erlaubt, z. B. Links)
  *   bild:  "assets/images/erfolge/2425-reservemeister.jpg"
+ *   aufstellung: [ { titel: "Stehend v.l.n.r.", namen: "Max Muster, …" }, … ]
  *   link:  "fussball-herren-1-2425.html"   (Archivseite der Saison)
  */
 
@@ -34,6 +35,26 @@ var ERFOLGE = [
       "Saisonabschluss unterm Einkorn.",
     bild: "assets/images/erfolge/2425-reservemeister.jpg",
     link: "fussball-herren-1-2425.html"
+  },
+  {
+    saison: "2024/25",
+    datum: "28. Mai 2025",
+    mannschaft: "C-Junioren (SGM Hessental-Sulzdorf)",
+    erfolg: "Meister",
+    liga: "C-Junioren Kreisstaffel 6 Rems/Murr/Hall",
+    text:
+      "Mit der vollen Ausbeute von 21 Punkten aus sieben Spielen und einem " +
+      "Torverhältnis von 33:4 krönt sich unsere C-Jugend SGM in der " +
+      "Kreisstaffel 6 Rems/Murr/Hall zum Meister! Gratulation an die " +
+      "Mannschaft und das Trainerteam rund um Michael Frey.",
+    bild: "assets/images/archiv/jugend-c/2425.jpg",
+    aufstellung: [
+      { titel: "Stehend v.l.n.r.", namen: "Erik Lay, Felix Beck, Robin Bölz, Paul Haman, Adrian Fabian, Michael Frey (Chefcoach), Ilja Kramlich, Joa Siegel, Rafael Ramirez, Markus Pröllochs (Trainer), Jamal Gilgi" },
+      { titel: "Kniend v.l.n.r.", namen: "Finn Mildner, Niels Nannerup, Fabio Scholl, Ianis Varan, Hanno Schimoneck, Mohammad Sorany, Karosch Musa Kadir" },
+      { titel: "Liegend", namen: "Leon Schulz" },
+      { titel: "Nicht auf dem Bild", namen: "Ledion Marovci, Jonas Pröllochs, Tom Scheurich, Heiko Pröllochs (Trainer), Morten Nannerup (Trainer)" }
+    ],
+    link: "fussball-jugend-c-2425.html"
   },
   {
     saison: "2023/24",
