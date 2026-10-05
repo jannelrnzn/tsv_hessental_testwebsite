@@ -52,7 +52,7 @@ var MITTEILUNGEN = [
     titel: "Hessentaler erste Mannschaft mit schwierigem Saisonstart",
     archiv: true,
     text:
-      "Nach vier Spieltagen in der Kreisliga A3 (Hall) wartet die Erste " +
+      "Nach vier Spieltagen in der Kreisliga A3 Rems/Murr/Hall (Haller Staffel) wartet die Erste " +
       "noch auf den ersten Sieg: Auf ein 1:1 zum Auftakt gegen SC " +
       "Bühlertann folgte eine 1:4-Niederlage bei den Spfr Bühlerzell, dann " +
       "ein 2:2 gegen die SGM Rosengarten – und zuletzt ein deutliches " +

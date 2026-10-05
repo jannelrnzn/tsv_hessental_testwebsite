@@ -54,6 +54,10 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 
 ## Datenschutz: externe Inhalte (2-Klick-Lösung)
 
+- **Derzeit AUSGESCHALTET** (Janne, Okt. 2026): `CONSENT_ABFRAGE = false` in
+  `js/main.js` – Inhalte laden direkt. Wieder einschalten: `true` setzen.
+  Markup (`data-consent…`) bleibt unverändert stehen.
+
 - FuPa, fussball.de und Google Maps werden NIE direkt geladen. Container bekommen
   `data-consent="fupa|fussballde|googlemaps"`, Skripte `type="text/plain"
   data-consent-src="…"`, iframes `data-consent-src="…"` statt `src`.

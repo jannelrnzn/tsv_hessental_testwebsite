@@ -418,6 +418,11 @@ var CONSENT_SERVICES = {
 };
 var CONSENT_PREFIX = "tsv-consent-";
 
+// Zustimmungsabfrage („Inhalt laden“) vor FuPa, fussball.de und Google Maps.
+// Vorerst ausgeschaltet: externe Inhalte werden direkt geladen.
+// Wieder einschalten: auf true setzen (Datenschutzerklärung dann wieder passend).
+var CONSENT_ABFRAGE = false;
+
 function consentGespeichert(dienst) {
   try {
     return localStorage.getItem(CONSENT_PREFIX + dienst) === "1";
@@ -465,7 +470,7 @@ function initConsentEmbeds() {
     if (!info) {
       return;
     }
-    if (consentGespeichert(dienst)) {
+    if (!CONSENT_ABFRAGE || consentGespeichert(dienst)) {
       laden(dienst);
       return;
     }
