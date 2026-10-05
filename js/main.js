@@ -109,6 +109,12 @@ function initContactForm() {
 
   // Rückmeldung nach Versand ohne JavaScript (kontakt.php leitet mit ?status=… zurück)
   var params = new URLSearchParams(location.search);
+
+  // Thema vorbelegen, z. B. kontaktformular.html?thema=Engagement%20%26%20Ehrenamt
+  var themaFeld = form.querySelector("#thema");
+  if (themaFeld && params.get("thema") && !themaFeld.value) {
+    themaFeld.value = params.get("thema").slice(0, 150);
+  }
   if (params.get("status") === "ok") {
     zeige("Vielen Dank! Ihre Nachricht wurde gesendet.", true);
   } else if (params.get("status") === "fehler") {
