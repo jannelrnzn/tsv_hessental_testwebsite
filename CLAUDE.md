@@ -57,6 +57,9 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - **Derzeit AUSGESCHALTET** (Janne, Okt. 2026): `CONSENT_ABFRAGE = false` in
   `js/main.js` – Inhalte laden direkt. Wieder einschalten: `true` setzen.
   Markup (`data-consent…`) bleibt unverändert stehen.
+  Die Datenschutzerklärung beschreibt derzeit die Direkteinbindung (lit. f);
+  die Texte zur Zustimmungsversion samt Widerruf-Button stehen dort als
+  HTML-Kommentar und müssen beim Wiedereinschalten zurückgetauscht werden.
 
 - FuPa, fussball.de und Google Maps werden NIE direkt geladen. Container bekommen
   `data-consent="fupa|fussballde|googlemaps"`, Skripte `type="text/plain"
