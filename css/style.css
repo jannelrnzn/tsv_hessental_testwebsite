@@ -671,7 +671,7 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 
 /* Kleine Logoleiste (z. B. Liga-/Partnerlogos in einer Karte) */
 .logo-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-md); margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--color-gray-300); }
-.logo-row img { height: 48px; width: auto; }
+.logo-row img { height: 64px; width: auto; max-width: 100%; }
 
 /* Widget-Einbindung (FuPa) */
 .widget-block {
