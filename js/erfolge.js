@@ -57,6 +57,29 @@ var ERFOLGE = [
     link: "fussball-jugend-c-2425.html"
   },
   {
+    saison: "2022/23",
+    datum: "Juli 2023",
+    mannschaft: "A-Junioren",
+    erfolg: "Erstmals Aufstieg in die Regionenstaffel",
+    liga: "A-Junioren Leistungsstaffel Hohenlohe (2. Platz, Aufstiegsspiel)",
+    text:
+      "Als Zweitplatzierter der Leistungsstaffel Hohenlohe ging es für unsere Jungs im " +
+      "vom Verein organisierten Fanbus mit vollem Kader nach Neuenstadt am Kocher zum " +
+      "Aufstiegsspiel. Dort wartete der Zweitplatzierte der Leistungsstaffel Unterland, " +
+      "die SGM Neuenstadt. Unsere Fans machten dieses Spiel zu einem Heimspiel und " +
+      "unterstützten uns bedingungslos dabei, das Spiel von 0:2 (nach 13 gespielten " +
+      "Minuten) auf 3:2 zu drehen. Zugleich wurde das Trainerteam um Ralf Hägele " +
+      "verabschiedet, und es war für beinahe alle Stammkräfte das letzte Jugendspiel " +
+      "und somit der krönende Abschluss.</p><p>" +
+      "In der kommenden Saison darf man sich nun in der Regionenstaffel Nord 1 mit " +
+      "Teams wie der Neckarsulmer Sport-Union, dem FC Union Heilbronn, dem SV Schluchtern " +
+      "oder Böckingen messen. Der Klassenerhalt wird bei drei Direktabsteigern und vielen " +
+      "abgehenden Stammkräften natürlich sehr schwer. Allerdings werden die Erfahrung und " +
+      "das deutlich höhere Niveau zur Entwicklung unserer Jungs beitragen.",
+    bild: "assets/images/erfolge/2223-a-junioren-aufstieg.jpg",
+    link: "fussball-jugend-a-2223.html"
+  },
+  {
     saison: "2021/22",
     mannschaft: "B-Junioren",
     erfolg: "Meister",
