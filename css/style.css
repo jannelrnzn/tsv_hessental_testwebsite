@@ -680,6 +680,23 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 .jersey-grid figcaption { margin-top: var(--space-xs); font-weight: 600; color: var(--color-gray-700); }
 @media (max-width: 640px) { .jersey-grid { grid-template-columns: 1fr; } }
 
+/* 2-Klick-Lösung: Hinweis vor externen Inhalten */
+.consent-box {
+  border: 2px dashed var(--color-gray-300);
+  border-radius: var(--radius);
+  background-color: var(--color-gray-100);
+  padding: var(--space-md);
+  font-size: 0.95rem;
+}
+.consent-box p { margin-bottom: var(--space-xs); }
+.consent-box__title { font-weight: 700; color: var(--color-gray-900); }
+.consent-box__remember { display: flex; align-items: center; gap: 0.4rem; margin: var(--space-sm) 0; font-size: 0.9rem; cursor: pointer; }
+.consent-box__alt { display: inline-block; margin-left: var(--space-sm); font-weight: 600; font-size: 0.9rem; }
+
+/* Solange nicht zugestimmt: nur den Hinweis zeigen */
+.consent-pending > :not(.consent-box) { display: none; }
+.map-embed.consent-pending { padding-top: 0; height: auto; }
+
 /* Widget-Einbindung (FuPa) */
 .widget-block {
   background-color: var(--color-white);

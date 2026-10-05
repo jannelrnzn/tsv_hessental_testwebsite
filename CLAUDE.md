@@ -50,6 +50,16 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Spamschutz: Honeypot-Feld `website`, Mindestzeit 3 s (`ts`), max. 3 Links,
   max. 5 Nachrichten/Stunde/IP. Anlage optional: PDF/JPG/PNG/Word, max. 5 MB.
 
+## Datenschutz: externe Inhalte (2-Klick-Lösung)
+
+- FuPa, fussball.de und Google Maps werden NIE direkt geladen. Container bekommen
+  `data-consent="fupa|fussballde|googlemaps"`, Skripte `type="text/plain"
+  data-consent-src="…"`, iframes `data-consent-src="…"` statt `src`.
+- `initConsentEmbeds` (js/main.js) zeigt einen Hinweis mit „Inhalt laden“ und
+  optional „merken“ (localStorage `tsv-consent-<dienst>`); Widerruf-Button
+  `#consent-reset` auf der Datenschutz-Seite. Neue Dienste in `CONSENT_SERVICES`
+  ergänzen UND in der Datenschutzerklärung beschreiben.
+
 ## Mannschaftsarchiv Fußball Herren (1. & 2. Mannschaft)
 
 - 1. und 2. Mannschaft sind auf demselben Mannschaftsfoto; beide Seiten

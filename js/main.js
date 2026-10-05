@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
   initNews();
   initSponsorBar();
   initSuccesses();
+  initConsentEmbeds();
+  initConsentReset();
 });
 
 function updateFooterYear() {
@@ -372,4 +374,153 @@ function renderSuccess(item) {
       "</div>" +
     "</article>"
   );
+}
+
+/**
+ * 2-Klick-Lösung für externe Inhalte (Datenschutz).
+ * Container mit data-consent="<dienst>" laden ihre Inhalte erst nach Zustimmung:
+ *   <script type="text/plain" data-consent-src="…">  -> wird zu echtem Skript
+ *   <iframe data-consent-src="…">                      -> bekommt src
+ * Ein Klick lädt alle Inhalte desselben Dienstes auf der Seite. Optional wird die
+ * Zustimmung im Browser gespeichert (localStorage, kein Cookie) und kann auf der
+ * Datenschutz-Seite widerrufen werden.
+ */
+var CONSENT_SERVICES = {
+  fupa: {
+    name: "FuPa",
+    anbieter: "FuPa GmbH",
+    datenschutz: "https://www.fupa.net/datenschutz",
+    alternative: { text: "TSV Hessental direkt auf FuPa ansehen", url: "https://www.fupa.net/club/tsv-hessental" }
+  },
+  fussballde: {
+    name: "fussball.de",
+    anbieter: "DFB Medien GmbH & Co. KG",
+    datenschutz: "https://www.fussball.de/datenschutz"
+  },
+  googlemaps: {
+    name: "Google Maps",
+    anbieter: "Google Ireland Limited",
+    datenschutz: "https://policies.google.com/privacy",
+    alternative: { text: "In Google Maps öffnen", url: "https://www.google.com/maps/search/?api=1&query=TSV+Hessental+Sportplatz" }
+  }
+};
+var CONSENT_PREFIX = "tsv-consent-";
+
+function consentGespeichert(dienst) {
+  try {
+    return localStorage.getItem(CONSENT_PREFIX + dienst) === "1";
+  } catch (e) {
+    return false;
+  }
+}
+
+function initConsentEmbeds() {
+  var container = document.querySelectorAll("[data-consent]");
+  var geladen = {};
+
+  if (!container.length) {
+    return;
+  }
+
+  function laden(dienst) {
+    if (geladen[dienst]) {
+      return;
+    }
+    geladen[dienst] = true;
+
+    document.querySelectorAll('[data-consent="' + dienst + '"]').forEach(function (box) {
+      var hinweis = box.querySelector(".consent-box");
+      if (hinweis) {
+        hinweis.remove();
+      }
+      box.classList.remove("consent-pending");
+
+      box.querySelectorAll("iframe[data-consent-src]").forEach(function (frame) {
+        frame.src = frame.getAttribute("data-consent-src");
+      });
+      box.querySelectorAll("script[data-consent-src]").forEach(function (alt) {
+        var skript = document.createElement("script");
+        skript.src = alt.getAttribute("data-consent-src");
+        alt.replaceWith(skript);
+      });
+    });
+  }
+
+  container.forEach(function (box) {
+    var dienst = box.getAttribute("data-consent");
+    var info = CONSENT_SERVICES[dienst];
+
+    if (!info) {
+      return;
+    }
+    if (consentGespeichert(dienst)) {
+      laden(dienst);
+      return;
+    }
+
+    box.classList.add("consent-pending");
+
+    var hinweis = document.createElement("div");
+    hinweis.className = "consent-box";
+    hinweis.innerHTML =
+      '<p class="consent-box__title">Externer Inhalt von ' + info.name + "</p>" +
+      "<p>An dieser Stelle wird ein Inhalt von " + info.name + " (" + info.anbieter + ") angezeigt. " +
+      "Beim Laden werden Daten, insbesondere deine IP-Adresse, an diesen Anbieter übertragen. " +
+      'Mehr dazu in unserer <a href="datenschutzerklaerung.html">Datenschutzerklärung</a> und bei ' +
+      '<a href="' + info.datenschutz + '" target="_blank" rel="noopener">' + info.name + " ↗</a>.</p>" +
+      '<label class="consent-box__remember"><input type="checkbox"> Für ' + info.name + " merken</label>" +
+      '<button type="button" class="btn btn--primary">Inhalt laden</button>' +
+      (info.alternative
+        ? ' <a class="consent-box__alt" href="' + info.alternative.url + '" target="_blank" rel="noopener">' + info.alternative.text + " ↗</a>"
+        : "");
+
+    hinweis.querySelector("button").addEventListener("click", function () {
+      if (hinweis.querySelector("input").checked) {
+        try {
+          localStorage.setItem(CONSENT_PREFIX + dienst, "1");
+        } catch (e) {
+          // Speichern nicht möglich (z. B. privater Modus) – Inhalt trotzdem laden
+        }
+      }
+      laden(dienst);
+    });
+
+    box.insertBefore(hinweis, box.firstChild);
+  });
+}
+
+/** Datenschutz-Seite: gespeicherte Zustimmungen widerrufen. */
+function initConsentReset() {
+  var button = document.querySelector("#consent-reset");
+  if (!button) {
+    return;
+  }
+
+  var status = document.querySelector("#consent-status");
+
+  function anzeigen() {
+    var aktiv = Object.keys(CONSENT_SERVICES).filter(consentGespeichert).map(function (d) {
+      return CONSENT_SERVICES[d].name;
+    });
+    if (status) {
+      status.textContent = aktiv.length
+        ? "Gespeicherte Zustimmungen in diesem Browser: " + aktiv.join(", ") + "."
+        : "In diesem Browser sind keine Zustimmungen gespeichert.";
+    }
+  }
+
+  anzeigen();
+  button.addEventListener("click", function () {
+    try {
+      Object.keys(CONSENT_SERVICES).forEach(function (d) {
+        localStorage.removeItem(CONSENT_PREFIX + d);
+      });
+    } catch (e) {
+      // nichts gespeichert oder Speicher nicht verfügbar
+    }
+    anzeigen();
+    if (status) {
+      status.textContent += " Deine Zustimmungen wurden widerrufen.";
+    }
+  });
 }
