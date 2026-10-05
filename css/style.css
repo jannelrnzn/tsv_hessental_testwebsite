@@ -1313,3 +1313,61 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   .timeline::before { left: 0.4rem; }
   .timeline-item__photos--2 { grid-template-columns: 1fr; }
 }
+
+/* =============================== Spielerlegenden =============================== */
+.legends-intro {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-md, 1.5rem);
+  align-items: start;
+}
+
+.legends-intro figure { margin: 0; }
+
+.legends-intro a {
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  background: var(--color-gray-100);
+}
+
+.legends-intro img { width: 100%; height: auto; display: block; }
+
+.legends-intro figcaption {
+  margin-top: 0.6rem;
+  font-weight: 600;
+}
+
+.legends-intro figcaption small {
+  display: block;
+  font-weight: 400;
+  color: var(--color-gray-700);
+}
+
+.legends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--space-md, 1.5rem) 1rem;
+}
+
+.legend-card { margin: 0; text-align: center; }
+
+.legend-card img {
+  width: 100%;
+  aspect-ratio: 270 / 350;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  background: var(--color-gray-100);
+}
+
+.legend-card figcaption { margin-top: 0.5rem; font-weight: 600; }
+
+@media (max-width: 720px) {
+  .legends-intro { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .legends-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

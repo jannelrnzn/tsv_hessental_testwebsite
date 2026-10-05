@@ -14,8 +14,6 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 ## Offene Punkte (Stand 5.10.2026 – beim Erledigen hier streichen)
 
 - **Inhalte, die Janne noch liefert:**
-  - Bilder → Spielerlegenden (Seite + Menülink fehlen noch; Inhalt wie alte Seite
-    https://tsv-hessental.de/bilder/spielerlegenden/ – vom Container aus gesperrt)
   - Antworten zu den offenen Fragen der Zeitreise (siehe Abschnitt Bilder)
 - **Fehlende Fotos** (Platzhalter erscheint automatisch, Dateiname = vorname-nachname.jpg):
   - Trainer `assets/images/team/`: Benjamin Bradtke (D + F), Julian Schneider (D),
@@ -97,7 +95,9 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   `dl.archive-lineup`; Sprungleiste `.timeline-jump`. Bilder unter
   `assets/images/bilder/zeitreise/JJJJ-mannschaft.jpg`. Großansicht über
   gemeinsames `data-gallery` um beide Abschnitte.
-- Noch offen: Spielerlegenden (Menülink noch `#`).
+- `bilder-spielerlegenden.html`: Inhalt 1:1 von der alten Seite (Vereinsleben mit
+  3 Bildern + 25 Passfotos nach Jahrgang), Bilder unter
+  `assets/images/bilder/spielerlegenden/nachname-vorname-jahrgang.jpg`.
 - Offene Fragen Zeitreise (Janne klärt noch; bis dahin KEINEN Erfolge-Eintrag
   anlegen, nur Zeitstrahl):
   - 2008/09 1. Mannschaft: Feier mit Fahnen – welcher Titel/Liga?
