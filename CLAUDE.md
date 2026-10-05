@@ -11,6 +11,28 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   Repo-Root oder mit Originalnamen – an die richtige Stelle verschieben,
   sinnvoll umbenennen und auf max. 2400 px Breite verkleinern.
 
+## Offene Punkte (Stand 5.10.2026 – beim Erledigen hier streichen)
+
+- **Inhalte, die Janne noch liefert:**
+  - Bilder → Spielerlegenden (Seite + Menülink fehlen noch)
+  - Senioren-Seite (bisher Platzhalter)
+  - Antworten zu den offenen Fragen der Zeitreise (siehe Abschnitt Bilder)
+- **Fehlende Fotos** (Platzhalter erscheint automatisch, Dateiname = vorname-nachname.jpg):
+  - Trainer `assets/images/team/`: Benjamin Bradtke (D + F), Julian Schneider (D),
+    Erik Nizezki, Johann Schwab (E), Berkan Celik, Adrian Haag, Sead Begtasevic,
+    Waldemar Fichter, Joah Bäumlisberger, Maxim Lotz, Mattias Teinert (F),
+    Andreas Schneider, Andrija Martinovic, Manuel Arcis (Bambini)
+  - Schiedsrichter `assets/images/schiedsrichter/`: Erik Kronmüller, Ricardo
+    Kosche, Rolf Baumann
+  - Marvin Lamm (`assets/images/dart/`), Christine Schmidt (`assets/images/kurse/`)
+- **Unbestätigte Schreibweisen:** Mattias Teinert (Matthias?), Ralf Tsibert und
+  Luca Cunzemann (A-Junioren 2021/22).
+- **Prüfen:** FuPa- und fussball.de-Widgets auf der Live-Seite (hier im Container
+  nicht testbar); Datenschutzerklärung gegenlesen lassen, v. a. Rechtsgrundlage
+  lit. f für die direkt eingebundenen Dienste.
+- **Go-live / danach:** siehe nächster Abschnitt (Strato, AVV, Kontaktformular-Test,
+  GitHub Action, Pages abschalten, Tarifwechsel).
+
 ## Hosting / Go-live (geplant 17.10.2026)
 
 - Strato-Paket „Hosting Pro“ (Vertrag des Vereins seit 2006), Domain
