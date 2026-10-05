@@ -17,6 +17,7 @@
  *   bild:  "assets/images/erfolge/2425-reservemeister.jpg"
  *   aufstellung: [ { titel: "Stehend v.l.n.r.", namen: "Max Muster, …" }, … ]
  *   link:  "fussball-herren-1-2425.html"   (Archivseite der Saison)
+ *   linktext: "Zur Zeitreise 1948"   (statt „Zur Saison …“)
  */
 
 var ERFOLGE = [
@@ -94,5 +95,13 @@ var ERFOLGE = [
       "der Corona-Regelungen leider verwehrt.",
     bild: "assets/images/archiv/jugend-b/2122.jpg",
     link: "fussball-jugend-b-2122.html"
+  },
+  {
+    saison: "1948",
+    mannschaft: "1. Mannschaft",
+    erfolg: "Meister der B-Klasse",
+    bild: "assets/images/bilder/zeitreise/1948-herren-1.jpg",
+    link: "bilder-zeitreise.html#j1948",
+    linktext: "Zur Zeitreise 1948"
   }
 ];

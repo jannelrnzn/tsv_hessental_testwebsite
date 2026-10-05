@@ -383,7 +383,7 @@ function renderSuccess(item) {
               return "<div><dt>" + row.titel + "</dt><dd>" + row.namen + "</dd></div>";
             }).join("") + "</dl>"
           : "") +
-        (item.link ? '<a class="success-card__link" href="' + item.link + '">Zur Saison ' + item.saison + " →</a>" : "") +
+        (item.link ? '<a class="success-card__link" href="' + item.link + '">' + (item.linktext || "Zur Saison " + item.saison) + " →</a>" : "") +
       "</div>" +
     "</article>"
   );
