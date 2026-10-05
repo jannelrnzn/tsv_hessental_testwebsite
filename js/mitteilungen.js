@@ -13,9 +13,25 @@
  *     "assets/images/mitteilungen/zweites-bild.jpg"
  *   ]
  * Ohne "bilder" wird einfach keine Bildleiste angezeigt.
+ *
+ * Optional archiv: true – Mitteilung erscheint sofort im Archiv statt auf der
+ * Startseite (die Startseite rückt dann mit der nächstälteren auf).
  */
 
 var MITTEILUNGEN = [
+  {
+    datum: "9. Oktober 2026",
+    titel: "Neue Website für unseren TSV ab dem 17. Oktober 2026",
+    text:
+      "Am Samstag, den 17. Oktober 2026, bekommt der TSV Hessental in Form " +
+      "einer neuen, selbst entwickelten Website einen moderneren und " +
+      "übersichtlicheren Webauftritt. Die Inhalte und Rubriken bleiben " +
+      "weitgehend wie auf der alten Website – vor allem Layout und Gestaltung " +
+      "bekommen einen ganz neuen Look! Ideen, Fragen oder Verbesserungsvorschläge " +
+      "gerne über das <a href=\"kontaktformular.html\">Kontaktformular</a> oder " +
+      "per E-Mail an <a href=\"mailto:jannelorenzen2005@gmail.com\">jannelorenzen2005@gmail.com</a>. " +
+      "Wir wünschen viel Spaß mit der neuen Website!"
+  },
   {
     datum: "28. September 2026",
     titel: "Erste Mannschaft feiert den ersten Saisonsieg",
@@ -34,6 +50,7 @@ var MITTEILUNGEN = [
   {
     datum: "14. September 2026",
     titel: "Hessentaler erste Mannschaft mit schwierigem Saisonstart",
+    archiv: true,
     text:
       "Nach vier Spieltagen in der Kreisliga A3 (Hall) wartet die Erste " +
       "noch auf den ersten Sieg: Auf ein 1:1 zum Auftakt gegen SC " +

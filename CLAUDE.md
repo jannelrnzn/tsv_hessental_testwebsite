@@ -18,6 +18,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - `js/main.js` (`initNews`) zeigt auf der Startseite die drei neuesten
   (`data-news="latest"`), `archiv-mitteilungen.html` alle älteren
   (`data-news="archive"`). Nichts von Hand verschieben.
+  Soll eine Mitteilung vorzeitig ins Archiv: `archiv: true` setzen.
 - Optional `bilder: [...]` pro Mitteilung (Pfad oder `{ datei, beschreibung }`),
   Bilder liegen unter `assets/images/mitteilungen/`. Ein Bild wird groß, mehrere
   als Raster angezeigt; Klick öffnet das Bild in voller Größe.

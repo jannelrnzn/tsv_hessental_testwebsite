@@ -177,9 +177,15 @@ function initNews() {
   }
 
   lists.forEach(function (list) {
+    // Startseite: die neuesten Mitteilungen ohne "archiv: true", Archiv: alle übrigen
+    var latest = MITTEILUNGEN.filter(function (item) {
+      return !item.archiv;
+    }).slice(0, NEWS_ON_HOMEPAGE);
     var items = list.getAttribute("data-news") === "latest"
-      ? MITTEILUNGEN.slice(0, NEWS_ON_HOMEPAGE)
-      : MITTEILUNGEN.slice(NEWS_ON_HOMEPAGE);
+      ? latest
+      : MITTEILUNGEN.filter(function (item) {
+          return latest.indexOf(item) === -1;
+        });
 
     if (!items.length) {
       list.innerHTML = "<p>Derzeit gibt es keine älteren Mitteilungen.</p>";
