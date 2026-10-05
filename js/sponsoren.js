@@ -46,6 +46,7 @@ var SPONSOREN = [
   { name: "Hessental Apotheke • Jochen de Lenardis", adresse: "Grauwiesenweg 2 · 74523 Schwäbisch Hall" },
   { name: "HGE Haller Grundstücks- und Erschließungsgesellschaft mbH", adresse: "Am Markt 7/8 · 74523 Schwäbisch Hall" },
   { name: "Hirsch & Wölfl GmbH", adresse: "Im Städtle 29 · 74541 Vellberg" },
+  { name: "Hochbau Kugele GmbH", adresse: "Beilsteinstraße 48/1, Gailenkirchen · 74523 Schwäbisch Hall" },
   { name: "Hohenloher Molkerei eG", adresse: "Raiffeisenstraße 4 · 74523 Schwäbisch Hall" },
   { name: "Holzbau Gruchmann", adresse: "Gerstenäcker 12 · 74523 Schwäbisch Hall" },
   { name: "Holzbau Lang Holzfachmarkt GmbH", adresse: "Mühlstraße 14-16 · 74545 Michelfeld" },
