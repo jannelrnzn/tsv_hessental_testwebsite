@@ -97,6 +97,14 @@ var ERFOLGE = [
     link: "fussball-jugend-b-2122.html"
   },
   {
+    saison: "2002/03",
+    mannschaft: "1. Mannschaft",
+    erfolg: "Meister und Aufstieg in die Bezirksliga",
+    bild: "assets/images/bilder/zeitreise/2002-03-herren-1-meister.jpg",
+    link: "bilder-zeitreise.html#j2002",
+    linktext: "Zur Zeitreise 2002/03"
+  },
+  {
     saison: "1948",
     mannschaft: "1. Mannschaft",
     erfolg: "Meister der B-Klasse",

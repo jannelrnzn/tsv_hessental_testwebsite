@@ -69,11 +69,12 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Bilder: `assets/images/bilder/<rubrik>/<jahr oder anlass>/01.jpg …` plus
   Vorschaubilder in `thumbs/` (400 px hoch). Link = großes Bild, img = Vorschau.
 - `initGalleries` (js/main.js) macht daraus die Großansicht (Pfeile, Esc, Wischen).
-- `bilder-zeitreise.html`: Zeitstrahl (älteste zuerst, „Ohne Jahr“ am Ende) aus
+- `bilder-zeitreise.html`: zwei Zeitstrahl-Abschnitte „Die Anfänge“ (bis 1968) und
+  „Ab 2000“, je älteste zuerst, „Ohne Jahr“ am Ende, aus
   `article.timeline-item` mit Jahr, Titel, Foto(s) und optional
   `dl.archive-lineup`; Sprungleiste `.timeline-jump`. Bilder unter
   `assets/images/bilder/zeitreise/JJJJ-mannschaft.jpg`. Großansicht über
-  `data-gallery` am Zeitstrahl.
+  gemeinsames `data-gallery` um beide Abschnitte.
 - Noch offen: Spielerlegenden (Menülink noch `#`).
 - Bewusst NICHT übernommen (Janne): Trainingslager, Stadtmeisterschaft,
   Feiern, Arbeitsdienst.
