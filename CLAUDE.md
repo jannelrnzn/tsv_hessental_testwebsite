@@ -55,7 +55,9 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   (keine eigene Archivseite).
 - Buttons 2–13 = Saisonseiten `fussball-herren-1-JJJJ.html` (z. B. `-2526` für
   2025/26), gemeinsam für beide Mannschaften.
-- Fotos: `assets/images/archiv/herren-1/JJJJ.jpg`.
+- Fotos: `assets/images/archiv/herren-1/JJJJ.jpg`. 2014/15–2018/19 gibt es getrennte
+  Fotos: 1. Mannschaft (`herren-1/`) und 2. Mannschaft (`herren-2/JJJJ.jpg`) als
+  zwei `figure`s untereinander; ab 2019/20 ein gemeinsames Foto.
 - Aufstellung unter dem Foto als `<dl class="archive-lineup">`
   (Stehend hinten / Stehend mittig / Sitzend, jeweils v.l.n.r.).
 
