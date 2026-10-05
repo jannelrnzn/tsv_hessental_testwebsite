@@ -11,6 +11,19 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   Repo-Root oder mit Originalnamen – an die richtige Stelle verschieben,
   sinnvoll umbenennen und auf max. 2400 px Breite verkleinern.
 
+## Hosting / Go-live (geplant 17.10.2026)
+
+- Strato-Paket „Hosting Pro“ (Vertrag des Vereins seit 2006), Domain
+  tsv-hessental.de inkl. E-Mail hängt daran. Zugang (Kundenlogin + SFTP)
+  bekommt Janne selbst.
+- Ablauf: alte Seite sichern → Dateien per SFTP in eigenen Ordner (ohne `.git`,
+  `.devserver`, `.gitignore`, `CLAUDE.md`) → Test über Subdomain → Domain-Ziel
+  umstellen. Mail-Einstellungen der Domain nicht anfassen.
+- Danach: Strato als Hoster in der Datenschutzerklärung + AVV, kontakt.php
+  echt testen, `noreply@` anlegen, GitHub Pages abschalten.
+- **Nach dem Go-live erinnern:** Tarifwechsel bei Strato prüfen (alter Tarif,
+  vergleichsweise teuer). Erst nach dem Go-live, nicht vorher.
+
 ## Mitteilungen
 
 - Alle Mitteilungen stehen nur in `js/mitteilungen.js` (Liste `MITTEILUNGEN`,
