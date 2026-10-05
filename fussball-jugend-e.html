@@ -172,17 +172,23 @@
     </section>
 
     <!-- ============================= fussball.de-Widgets ============================= -->
-    <!-- Sobald die Widgets da sind: wie auf fussball-jugend-d.html einbinden (widget-block mit data-consent="fussballde", Skript als type="text/plain" data-consent-src=…) -->
+    <!-- Wird über initConsentEmbeds (js/main.js) geladen; Skript nur einmal pro Seite nötig -->
     <section class="section">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Live von fussball.de</span>
           <h2>Tabelle der E1</h2>
+          <p>E-Junioren Quali-Staffel 19</p>
         </div>
 
-        <div class="widget-block">
-          <!-- fussball.de-Widget E1 folgt: <div class="fussballde_widget" data-id="..." data-type="table" style="width: 100%"></div> -->
-          <p>Tabelle folgt in Kürze.</p>
+        <div class="widget-block" data-consent="fussballde">
+          <script type="text/plain" data-consent-src="https://www.fussball.de/widgets.js"></script>
+          <div
+            class="fussballde_widget"
+            data-id="26e4adb9-c9ff-4c50-93fb-45a43c946ace"
+            data-type="table"
+            style="width: 100%"
+          ></div>
         </div>
 
         <!-- ============================= E2: Trainer + Tabelle ============================= -->
@@ -204,11 +210,16 @@
 
         <div class="section-head" style="margin-top: var(--space-xl);">
           <h2>Tabelle der E2</h2>
+          <p>E-Junioren Quali-Staffel 20</p>
         </div>
 
-        <div class="widget-block">
-          <!-- fussball.de-Widget E2 folgt: <div class="fussballde_widget" data-id="..." data-type="table" style="width: 100%"></div> -->
-          <p>Tabelle folgt in Kürze.</p>
+        <div class="widget-block" data-consent="fussballde">
+          <div
+            class="fussballde_widget"
+            data-id="913dcfff-091e-457e-8519-364d044ed55c"
+            data-type="table"
+            style="width: 100%"
+          ></div>
         </div>
       </div>
     </section>

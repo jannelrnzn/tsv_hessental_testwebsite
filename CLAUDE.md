@@ -128,7 +128,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - D-Junioren und jünger bekommen kein Archiv.
 - D- und E-Junioren: nur aktuelle Seite (Trainer + fussball.de-Widget), kein
   Archiv. Trainerfotos unter `assets/images/team/vorname-nachname.jpg`; fehlt
-  ein Foto, erscheint automatisch ein Platzhalter. E-Junioren-Widget folgt noch.
+  ein Foto, erscheint automatisch ein Platzhalter. E1 = Quali-Staffel 19,
+  E2 = Quali-Staffel 20 (Stand 2026/27).
 - F-Junioren (`fussball-jugend-f.html`) und Bambini (`fussball-jugend-bambini.html`):
   nur Trainerteam (gleiche Personenkarten mit Platzhalter), kein Widget, kein Archiv.
 
