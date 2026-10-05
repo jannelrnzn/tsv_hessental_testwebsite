@@ -14,7 +14,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 ## Offene Punkte (Stand 5.10.2026 – beim Erledigen hier streichen)
 
 - **Inhalte, die Janne noch liefert:**
-  - Bilder → Spielerlegenden (Seite + Menülink fehlen noch)
+  - Bilder → Spielerlegenden (Seite + Menülink fehlen noch; Inhalt wie alte Seite
+    https://tsv-hessental.de/bilder/spielerlegenden/ – vom Container aus gesperrt)
   - Antworten zu den offenen Fragen der Zeitreise (siehe Abschnitt Bilder)
 - **Fehlende Fotos** (Platzhalter erscheint automatisch, Dateiname = vorname-nachname.jpg):
   - Trainer `assets/images/team/`: Benjamin Bradtke (D + F), Julian Schneider (D),
@@ -24,6 +25,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   - Schiedsrichter `assets/images/schiedsrichter/`: Erik Kronmüller, Ricardo
     Kosche, Rolf Baumann
   - Marvin Lamm (`assets/images/dart/`), Christine Schmidt (`assets/images/kurse/`)
+  - Gisela Böhm (Vorstand, bisher `assets/images/Vorstand/platzhalter.png`)
 - **Prüfen:** FuPa- und fussball.de-Widgets auf der Live-Seite (hier im Container
   nicht testbar); Datenschutzerklärung gegenlesen lassen, v. a. Rechtsgrundlage
   lit. f für die direkt eingebundenen Dienste.
