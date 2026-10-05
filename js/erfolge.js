@@ -57,14 +57,6 @@ var ERFOLGE = [
     link: "fussball-jugend-c-2425.html"
   },
   {
-    saison: "2023/24",
-    mannschaft: "C-Junioren",
-    erfolg: "Meister",
-    liga: "C-Junioren Kreisstaffel 3 Hohenlohe",
-    bild: "assets/images/archiv/jugend-c/2324.jpg",
-    link: "fussball-jugend-c-2324.html"
-  },
-  {
     saison: "2021/22",
     mannschaft: "B-Junioren",
     erfolg: "Meister",
