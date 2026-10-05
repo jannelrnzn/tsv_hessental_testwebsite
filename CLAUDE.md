@@ -38,7 +38,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   `aufstellung` (Liste aus `titel` + `namen`), `link`).
   Reihenfolge egal – `initSuccesses` in `js/main.js` sortiert nach Saison und
   gruppiert nach Jahrzehnten (mit Sprungleiste). Bilder unter `assets/images/erfolge/`.
-- Archiv-Menü auf allen Seiten: Bilder, Mitteilungen, Vereinsjubiläen, Erfolge.
+- Archiv-Menü auf allen Seiten: Mitteilungen, Vereinsjubiläen, Erfolge (alte Bilder gehören
+  in den Hauptmenüpunkt „Bilder“).
 
 ## Kontaktformular
 
