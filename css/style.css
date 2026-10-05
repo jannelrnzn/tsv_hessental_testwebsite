@@ -673,6 +673,13 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 .logo-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-md); margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--color-gray-300); }
 .logo-row img { height: 64px; width: auto; max-width: 100%; }
 
+/* Trikot: Vorder- und Rückseite nebeneinander */
+.jersey-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-md); max-width: 960px; }
+.jersey-grid figure { margin: 0; text-align: center; }
+.jersey-grid img { width: 100%; height: auto; }
+.jersey-grid figcaption { margin-top: var(--space-xs); font-weight: 600; color: var(--color-gray-700); }
+@media (max-width: 640px) { .jersey-grid { grid-template-columns: 1fr; } }
+
 /* Widget-Einbindung (FuPa) */
 .widget-block {
   background-color: var(--color-white);
