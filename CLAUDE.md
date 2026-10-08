@@ -24,6 +24,10 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
     Kosche, Rolf Baumann
   - Marvin Lamm (`assets/images/dart/`), Christine Schmidt (`assets/images/kurse/`)
   - Gisela Böhm (Vorstand, bisher `assets/images/Vorstand/platzhalter.png`)
+- **Mit Janne klären (gibt es auf der alten Seite, auf der neuen nicht – Absicht?):**
+  Kurse Pilates + Rückenfit, Termine, Dorfpokal-Alben 2016–2023, Spiel-/Vorberichte
+  (ab 2016/17), Bezirks-/WFV-Pokal-Seiten, Bambini-Cup, Stadionhefte, Dart DLH-Pokal,
+  Vereinsjubiläen-Texte, Puzzles, Archiv Liga-Ergebnisse, Linkliste.
 - **Prüfen:** FuPa- und fussball.de-Widgets auf der Live-Seite (hier im Container
   nicht testbar); Datenschutzerklärung gegenlesen lassen, v. a. Rechtsgrundlage
   lit. f für die direkt eingebundenen Dienste.
