@@ -44,8 +44,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 4. fussball.de-Widgets für Jugend (später)
 5. Dart-Liga-Widget (?)
 6. Sponsoren in Klassen unterscheiden (siehe Tafel)
-7. Stadionhefte 2026/27 hochladen – Seite `fussball-herren-stadionhefte.html`
-   (Fußball Herren, nach 2. Mannschaft) angelegt, wartet auf PDFs
+7. ~~Stadionhefte 2026/27~~ erledigt (5 Hefte FANPOST, von der alten Seite übernommen)
 8. Kalender für den Monat (mit Fahrradausfahrt)
 9. Werbepartner werden (Änderung?)
 10. Fahrradgruppe
@@ -133,7 +132,9 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 
 - Jubiläumszeitschriften: `archiv-jubilaeumszeitschriften.html`, Dateien unter
   `assets/downloads/jubilaeum/`. Stadionhefte: `fussball-herren-stadionhefte.html`,
-  Dateien unter `assets/downloads/stadionhefte/JJJJ/` (nur aktuelle Saison).
+  Dateien unter `assets/downloads/stadionhefte/JJJJ/fanpost-JJJJ-MM-TT.pdf` (nur aktuelle
+  Saison), Titelbild = Seite 1 per `pdftoppm -r 60` nach `cover/`; Karte mit Datum,
+  „Gäste: …“, Größe/Seiten, neuestes zuerst.
 - Je Datei eine `article.doc-card` in `.doc-grid` (Vorlage als Kommentar in der
   Seite), optional Cover-Bild; Platzhalter `.doc-empty` entfernen, sobald Dateien da sind.
 
