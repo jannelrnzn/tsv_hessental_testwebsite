@@ -12,6 +12,11 @@
 
 var TERMINE = [
   {
+    datum: "2026-10-17",
+    titel: "TSV Hessental – SC Bibersfeld",
+    info: "Anstoß 17:30 Uhr · Ü32 Kreisliga 4 RMH, 2. Spieltag"
+  },
+  {
     datum: "2026-10-18",
     titel: "TSV Hessental II – TuRa Untermünkheim II",
     info: "15:00 Uhr · Heimspiel"

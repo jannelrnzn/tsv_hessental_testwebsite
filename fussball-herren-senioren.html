@@ -6,8 +6,8 @@
   <title>Senioren Fußball | TSV Hessental</title>
   <meta name="description" content="Die Fußball-Senioren des TSV Hessental.">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="stylesheet" href="css/style.css?v=202610130937">
-  <script src="js/main.js?v=202610130937" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=202610131028">
+  <script src="js/main.js?v=202610131028" defer></script>
 </head>
 <body>
 
@@ -187,8 +187,26 @@
       </div>
     </section>
 
-    <!-- ============================= fussball.de-Widget ============================= -->
+    <!-- ============================= FuPa-Widget ============================= -->
     <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Live von FuPa</span>
+          <h2>Spielplan &amp; Ergebnisse der Senioren</h2>
+        </div>
+
+        <!-- Wird über initConsentEmbeds (js/main.js) geladen -->
+        <div class="widget-block" data-consent="fupa">
+          <div id="fp-widget_root-3KdQIjkSiu4UU1dOTEbBMUToylN">
+            <a href="https://www.fupa.net/club/tsv-hessental" target="_blank" rel="noopener">TSV Hessental auf FuPa</a>
+          </div>
+          <script type="text/plain" data-consent-src="https://widget-api.fupa.net/vendor/widget.js?v1"></script>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= fussball.de-Widget ============================= -->
+    <section class="section section--muted">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Live von fussball.de</span>
@@ -209,7 +227,7 @@
     </section>
 
     <!-- ============================= Mannschaftsfoto ============================= -->
-    <section class="section section--muted">
+    <section class="section">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Mannschaft</span>
