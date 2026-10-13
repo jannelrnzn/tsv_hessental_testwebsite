@@ -5,6 +5,11 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 
 ## Arbeitsweise
 
+- **Cache-Busting:** CSS/JS werden mit `?v=JJJJMMTTHHMM` eingebunden. Nach JEDER Änderung an
+  `css/` oder `js/` die Version in allen HTML-Seiten erhöhen:
+  `V=$(date -u +%Y%m%d%H%M); sed -i -E "s/\?v=[0-9]{12}/?v=$V/g" *.html`
+  (sponsoren.js übernimmt die Version von main.js automatisch).
+
 - Änderungen direkt auf `main` pushen, damit sie unter GitHub Pages sichtbar sind.
 - Antworten und Commit-Messages auf Deutsch.
 - Bilder, die über die GitHub-Weboberfläche hochgeladen werden, landen oft im

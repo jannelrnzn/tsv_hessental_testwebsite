@@ -244,7 +244,10 @@ function initSponsorBar() {
   }
 
   var script = document.createElement("script");
-  script.src = "js/sponsoren.js";
+  // Version aus dem eigenen <script src="js/main.js?v=…"> übernehmen (Cache-Busting)
+  var self = document.querySelector('script[src*="js/main.js"]');
+  var version = self && self.src.indexOf("?v=") > -1 ? self.src.split("?v=")[1] : "";
+  script.src = "js/sponsoren.js" + (version ? "?v=" + version : "");
   script.onload = function () {
     if (typeof SPONSOREN === "undefined" || !SPONSOREN.length) {
       return;
