@@ -28,7 +28,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   - Antworten zu den offenen Fragen der Zeitreise (siehe Abschnitt Bilder)
   - Spielbericht A3-Abstiegsrunde (`2026-10-12-a3-abstiegsrunde`): letztes Quali-Spiel
     SG Eutendorf/Ottendorf – TSV Hessental (wird noch ausgetragen, vermutlich vor Go-live)
-    → Ergebnis + Text am Ende der Ergebnisliste ergänzen (vor dem Link zur 1. Mannschaft).
+    → Ergebnis + Text am Ende der Ergebnisliste der Ersten ergänzen (vor dem Abschnitt „Die zweite Mannschaft in der Kreisliga B6“).
 - **Fehlende Fotos** (Platzhalter erscheint automatisch, Dateiname = vorname-nachname.jpg):
   - Trainer `assets/images/team/`: Benjamin Bradtke (D + F), Julian Schneider (D),
     Erik Nizezki, Johann Schwab (E), Berkan Celik, Adrian Haag, Sead Begtasevic,
