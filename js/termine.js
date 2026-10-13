@@ -20,5 +20,10 @@ var TERMINE = [
     datum: "2026-10-18",
     titel: "TSV Hessental II – TuRa Untermünkheim II",
     info: "Anstoß 15:00 Uhr · Heimspiel · Kreisliga B6 Rems/Murr/Hall, 9. Spieltag"
+  },
+  {
+    datum: "2026-11-06",
+    titel: "Besenausfahrt 2026 zum Weingut Birkert (Adolzfurt)",
+    info: "Abfahrt 17:30 Uhr · Sportplatz Hessental · 15 € · Anmeldung bis 16.10. bei Marcel Fischer"
   }
 ];

@@ -46,6 +46,25 @@ var MITTEILUNGEN = [
       "Wir wünschen viel Spaß mit der neuen Website!"
   },
   {
+    id: "2026-10-13-besenausfahrt",
+    datum: "13. Oktober 2026",
+    titel: "Einladung zur Besenausfahrt 2026",
+    text:
+      "Liebe Freunde, Familien und Fans, es ist wieder soweit – die Besenausfahrt 2026 " +
+      "steht vor der Tür! Gemeinsam machen wir uns mit dem Bus vom Sportplatz in Hessental " +
+      "auf den Weg nach Adolzfurt. Zum dritten Mal dürfen wir dabei die gemütliche " +
+      "Besenwirtschaft des Weinguts Birkert besuchen und freuen uns auf einen " +
+      "stimmungsvollen Abend mit euch allen.</p><p>" +
+      "📅 Freitag, 6. November 2026<br>" +
+      "🚌 Abfahrt 17:30 Uhr am Sportplatz Hessental, Rückfahrt ca. 0:00 Uhr<br>" +
+      "💶 Kosten für die Fahrt: 15 €</p><p>" +
+      "Bitte meldet euch bis spätestens <strong>16. Oktober 2026</strong> bei Marcel Fischer an. " +
+      "Sei dabei – gemeinsam ist's am schönsten!",
+    bilder: [
+      { datei: "assets/images/mitteilungen/2026-10-13-besenausfahrt.jpg", beschreibung: "Einladung zur Besenausfahrt 2026 zum Weingut Birkert in Adolzfurt" }
+    ]
+  },
+  {
     id: "2026-10-12-a3-abstiegsrunde",
     datum: "12. Oktober 2026",
     kategorie: "spielbericht",
