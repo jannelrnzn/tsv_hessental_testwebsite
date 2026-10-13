@@ -113,20 +113,6 @@ var MITTEILUNGEN = [
     ]
   },
   {
-    id: "2026-09-14-schwieriger-saisonstart",
-    datum: "14. September 2026",
-    kategorie: "spielbericht",
-    titel: "Hessentaler erste Mannschaft mit schwierigem Saisonstart",
-    text:
-      "Nach vier Spieltagen in der Kreisliga A3 Rems/Murr/Hall (Haller Staffel) wartet die Erste " +
-      "noch auf den ersten Sieg: Auf ein 1:1 zum Auftakt gegen SC " +
-      "Bühlertann folgte eine 1:4-Niederlage bei den Spfr Bühlerzell, dann " +
-      "ein 2:2 gegen die SGM Rosengarten – und zuletzt ein deutliches " +
-      "0:7 beim TSV Michelfeld. Die Mannschaft arbeitet weiter hart am " +
-      "ersten Saisonsieg. Die zweite Mannschaft ist nach dem 2:2 in Bühlerzell " +
-      "immernoch ungeschlagen und konnte aus drei Spielen 5 Punkte einfahren."
-  },
-  {
     id: "2026-04-neuer-2-vorstand",
     datum: "April 2026",
     archiv: true,
