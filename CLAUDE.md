@@ -51,12 +51,13 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
    nötig (Janne). Impressum: Steuernummer-Zeile entfernt (keine USt-IdNr.), Verantwortlich
    nach § 18 Abs. 2 MStV = Janne, „Gestaltung & Umsetzung“ Janne + Dieter Erdmann (alt).
    **AVV mit Strato muss vor Go-live wirklich abgeschlossen sein** (Text behauptet es).
-4. fussball.de-Widgets für Jugend (später)
-5. Dart-Liga-Widget (?)
+4. fussball.de-Widgets für Jugend – WARTEN, Janne meldet sich mit den Codes
+5. Dart-Liga-Widget – WARTEN, Janne meldet sich
 6. ~~Sponsoren in Klassen~~ erledigt (Hauptsponsor / Exklusiv-Partner / Teampartner)
 7. ~~Stadionhefte 2026/27~~ erledigt (5 Hefte FANPOST, von der alten Seite übernommen)
 8. Kalender für den Monat (mit Fahrradausfahrt)
-9. Werbepartner werden (Änderung?)
+9. Werbepartner werden: Preisbild (`assets/images/sponsoren/Werbekosten-890x245.png`)
+   aktualisieren – WARTEN, Janne schickt neues Bild
 10. Fahrradgruppe
 11. Gasteltern-Beitrag
 
