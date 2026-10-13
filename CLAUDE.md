@@ -60,7 +60,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 5. Dart-Liga-Widget – WARTEN, Janne meldet sich
 6. ~~Sponsoren in Klassen~~ erledigt (Hauptsponsor / Exklusiv-Partner / Teampartner)
 7. ~~Stadionhefte 2026/27~~ erledigt (5 Hefte FANPOST, von der alten Seite übernommen)
-8. Kalender für den Monat (mit Fahrradausfahrt)
+8. Kalender: vorerst NICHT. Stattdessen Box „Nächste Termine“ auf der Startseite (erledigt)
 9. Werbepartner werden: Preisbild (`assets/images/sponsoren/Werbekosten-890x245.png`)
    aktualisieren – WARTEN, Janne schickt neues Bild
 10. Fahrradgruppe – Seite `freizeit-fahrradgruppe.html` angelegt (Platzhalter), Menü „Kurse“
@@ -96,6 +96,13 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Optional `bilder: [...]` pro Mitteilung (Pfad oder `{ datei, beschreibung }`),
   Bilder liegen unter `assets/images/mitteilungen/`. Ein Bild wird groß, mehrere
   als Raster angezeigt; Klick öffnet das Bild in voller Größe.
+
+## Nächste Termine (Startseite)
+
+- Termine nur in `js/termine.js` (Liste `TERMINE`: `datum` JJJJ-MM-TT, `titel`, optional
+  `info`), nur Text, Janne schickt sie. `initTermine` (js/main.js) zeigt die nächsten 3 als
+  feste Liste nebeneinander (keine Slideshow), Wochentag automatisch, vergangene
+  verschwinden ab dem Folgetag, ohne Termine bleibt die Box ausgeblendet.
 
 ## Sponsorenleiste
 

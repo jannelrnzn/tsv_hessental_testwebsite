@@ -6,9 +6,10 @@
   <title>TSV Hessental 1923 e.V. | Startseite</title>
   <meta name="description" content="TSV Hessental 1923 e.V. – Fußball, Turnen, Kurse und Dart in Schwäbisch Hall-Hessental.">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="stylesheet" href="css/style.css?v=202610130928">
-  <script src="js/mitteilungen.js?v=202610130928" defer></script>
-  <script src="js/main.js?v=202610130928" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=202610130937">
+  <script src="js/mitteilungen.js?v=202610130937" defer></script>
+  <script src="js/termine.js?v=202610130937" defer></script>
+  <script src="js/main.js?v=202610130937" defer></script>
 </head>
 <body>
 
@@ -158,6 +159,18 @@
             <a class="btn btn--outline" href="werbepartner-werden.html">Werbepartner werden</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ============================= Nächste Termine ============================= -->
+    <!-- Inhalte kommen aus js/termine.js (die nächsten drei); ohne kommende Termine bleibt die Box ausgeblendet -->
+    <section class="section section--muted termine" data-termine hidden>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Was steht an?</span>
+          <h2>Nächste Termine</h2>
+        </div>
+        <div class="termine-list"></div>
       </div>
     </section>
 

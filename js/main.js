@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initContactForm();
   updateFooterYear();
   initNews();
+  initTermine();
   initSponsorBar();
   initSuccesses();
   initConsentEmbeds();
@@ -645,4 +646,49 @@ function initGalleries() {
     }
     startX = null;
   });
+}
+
+/**
+ * Startseite: die nächsten drei Termine aus js/termine.js als feste Liste.
+ * Vergangene Termine (vor heute) werden nicht angezeigt.
+ */
+function initTermine() {
+  var box = document.querySelector("[data-termine]");
+  if (!box || typeof TERMINE === "undefined") {
+    return;
+  }
+
+  var heute = new Date();
+  heute.setHours(0, 0, 0, 0);
+  var tage = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+
+  var kommende = TERMINE.map(function (termin) {
+    var teile = termin.datum.split("-");
+    return { termin: termin, tag: new Date(+teile[0], +teile[1] - 1, +teile[2]) };
+  }).filter(function (eintrag) {
+    return eintrag.tag >= heute;
+  }).sort(function (a, b) {
+    return a.tag - b.tag;
+  }).slice(0, 3);
+
+  if (!kommende.length) {
+    return;
+  }
+
+  function zweistellig(zahl) {
+    return (zahl < 10 ? "0" : "") + zahl;
+  }
+
+  box.querySelector(".termine-list").innerHTML = kommende.map(function (eintrag) {
+    var d = eintrag.tag;
+    return (
+      '<article class="termin-card">' +
+        '<p class="termin-card__date">' + tage[d.getDay()] + ", " +
+          zweistellig(d.getDate()) + "." + zweistellig(d.getMonth() + 1) + "." + d.getFullYear() + "</p>" +
+        '<h3 class="termin-card__title">' + eintrag.termin.titel + "</h3>" +
+        (eintrag.termin.info ? '<p class="termin-card__info">' + eintrag.termin.info + "</p>" : "") +
+      "</article>"
+    );
+  }).join("");
+  box.hidden = false;
 }
