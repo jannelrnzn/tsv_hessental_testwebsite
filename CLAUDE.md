@@ -40,7 +40,11 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 1. Jubiläumszeitschriften – Seite `archiv-jubilaeumszeitschriften.html` (Archiv-Menü),
    100 Jahre (2023) online; 50/75 Jahre folgen ggf.
 2. Beitrag über Überdachung
-3. Impressum + Datenschutz verifizieren
+3. Impressum + Datenschutz verifizieren – erledigt: fussball.de im Haftungshinweis,
+   Strato als Hoster + AVV-Satz, „Stand: Oktober 2026“. Kein Datenschutzbeauftragter
+   nötig (Janne). **Offen:** USt-IdNr./Steuernummer (84062/00129 ist eine Steuernummer),
+   „Verantwortlich nach § 18 Abs. 2 MStV“, Credit „Gestaltung & Umsetzung“.
+   **AVV mit Strato muss vor Go-live wirklich abgeschlossen sein** (Text behauptet es).
 4. fussball.de-Widgets für Jugend (später)
 5. Dart-Liga-Widget (?)
 6. Sponsoren in Klassen unterscheiden (siehe Tafel)
