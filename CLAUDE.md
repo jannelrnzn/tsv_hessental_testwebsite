@@ -94,8 +94,9 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   (`data-news="archive"`). Nichts von Hand verschieben.
   Soll eine Mitteilung vorzeitig ins Archiv: `archiv: true` setzen.
 - Optional `bilder: [...]` pro Mitteilung (Pfad oder `{ datei, beschreibung }`),
-  Bilder liegen unter `assets/images/mitteilungen/`. Ein Bild wird groß, mehrere
-  als Raster angezeigt; Klick öffnet das Bild in voller Größe.
+  Bilder liegen unter `assets/images/mitteilungen/`. Mit Bild steht die Mitteilung
+  zweispaltig: Text links, Bild(er) rechts (max. 320 px, 4:3-Vorschau), am Handy darunter;
+  Klick öffnet das Bild in voller Größe.
 
 ## Nächste Termine (Startseite)
 

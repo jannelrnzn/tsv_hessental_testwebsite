@@ -492,7 +492,7 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   margin-top: var(--space-sm);
 }
 
-.news-item__images--single { grid-template-columns: minmax(0, 560px); }
+.news-item__images--single { grid-template-columns: minmax(0, 400px); }
 
 .news-item__images img {
   width: 100%;
@@ -501,7 +501,24 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   border-radius: var(--radius);
 }
 
-.news-item__images--single img { aspect-ratio: auto; }
+/* Einzelbild: kompakte Vorschau im Format 4:3 (Hochformat wird mittig beschnitten), Klick öffnet das ganze Bild */
+.news-item__images--single img { aspect-ratio: 4 / 3; object-position: center 60%; }
+
+/* Mitteilung mit Bild(ern): Text links, Bilder rechts daneben; am Handy untereinander */
+.news-item--media {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
+  gap: var(--space-md, 1.5rem);
+  align-items: start;
+}
+.news-item--media .news-item__images { margin-top: 0; grid-template-columns: 1fr; }
+.news-item--media .news-item__images--single { grid-template-columns: 1fr; }
+
+@media (max-width: 720px) {
+  .news-item--media { grid-template-columns: 1fr; gap: var(--space-sm, 1rem); }
+  .news-item--media .news-item__images { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  .news-item--media .news-item__images--single { grid-template-columns: minmax(0, 400px); }
+}
 
 /* Sponsoren-/Werbepartnerliste */
 .sponsor-columns {

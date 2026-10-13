@@ -195,12 +195,15 @@ function initNews() {
     }
 
     list.innerHTML = items.map(function (item) {
+      var bilder = renderNewsImages(item.bilder);
       return (
-        '<article class="news-item">' +
-          '<span class="news-item__date">' + item.datum + "</span>" +
-          '<h3 class="news-item__title">' + item.titel + "</h3>" +
-          "<p>" + item.text + "</p>" +
-          renderNewsImages(item.bilder) +
+        '<article class="news-item' + (bilder ? " news-item--media" : "") + '">' +
+          '<div class="news-item__body">' +
+            '<span class="news-item__date">' + item.datum + "</span>" +
+            '<h3 class="news-item__title">' + item.titel + "</h3>" +
+            "<p>" + item.text + "</p>" +
+          "</div>" +
+          bilder +
         "</article>"
       );
     }).join("");
