@@ -37,8 +37,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 
 ## Finale Abstimmung vor Go-live (13.10.2026) – NOCH NICHT UMSETZEN, erst Rückfragen klären
 
-1. Jubiläumszeitschriften hochladen – Seite `archiv-jubilaeumszeitschriften.html`
-   (Archiv-Menü) angelegt, wartet auf PDFs
+1. Jubiläumszeitschriften – Seite `archiv-jubilaeumszeitschriften.html` (Archiv-Menü),
+   100 Jahre (2023) online; 50/75 Jahre folgen ggf.
 2. Beitrag über Überdachung
 3. Impressum + Datenschutz verifizieren
 4. fussball.de-Widgets für Jugend (später)
@@ -135,6 +135,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   Dateien unter `assets/downloads/stadionhefte/JJJJ/fanpost-JJJJ-MM-TT.pdf` (nur aktuelle
   Saison), Titelbild = Seite 1 per `pdftoppm -r 60` nach `cover/`; Karte mit Datum,
   „Gäste: …“, Größe/Seiten, neuestes zuerst.
+  **Neue Stadionhefte schickt Janne direkt** (PDF + Datum + Gäste) → Karte oben ergänzen.
 - Je Datei eine `article.doc-card` in `.doc-grid` (Vorlage als Kommentar in der
   Seite), optional Cover-Bild; Platzhalter `.doc-empty` entfernen, sobald Dateien da sind.
 
