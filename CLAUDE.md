@@ -135,7 +135,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Menü „Bilder“: je Rubrik eine Seite `bilder-<rubrik>.html` (bisher:
   `bilder-hauptversammlung.html`, `bilder-dorfpokal.html` (Alben 2024, 2023, 2019, 2018,
   2017, 2016 – ältere von der alten Seite übernommen),
-  `bilder-vereinsheimbau.html`), darin pro Anlass ein `.gallery-album`
+  `bilder-vereinsheimbau.html`, `bilder-terrassenueberdachung.html` (Bau 2026, verlinkt aus der
+  Mitteilung 30.09.2026)), darin pro Anlass ein `.gallery-album`
   (neuestes oben) mit Datum, Titel, „Fotos: …“ und `<div class="gallery">`.
 - Bilder: `assets/images/bilder/<rubrik>/<jahr oder anlass>/01.jpg …` plus
   Vorschaubilder in `thumbs/` (400 px hoch). Link = großes Bild, img = Vorschau.

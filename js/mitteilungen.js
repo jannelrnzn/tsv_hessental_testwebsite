@@ -62,7 +62,8 @@ var MITTEILUNGEN = [
       "📩 Interesse geweckt? Melde dich gerne bei unserem Vereinsvorstand Rainer Brandtner " +
       "unter <a href=\"tel:+491706330310\">0170 / 633 03 10</a> oder über unser " +
       "<a href=\"kontaktformular.html?thema=Terrassen%C3%BCberdachung\">Kontaktformular</a>. " +
-      "Spenden gerne direkt an: Volksbank, IBAN DE97 6229 0110 0002 0000 08.",
+      "Spenden gerne direkt an: Volksbank, IBAN DE97 6229 0110 0002 0000 08.</p><p>" +
+      "📸 Bilder vom Bau gibt es in unserer <a href=\"bilder-terrassenueberdachung.html\">Bildergalerie</a>.",
     bilder: [
       { datei: "assets/images/mitteilungen/2026-09-30-terrassenueberdachung.jpg", beschreibung: "Die neue Terrassenüberdachung über der Haupttribüne am Vereinsheim" }
     ]
