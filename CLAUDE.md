@@ -36,7 +36,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   - Marvin Lamm (`assets/images/dart/`), Christine Schmidt (`assets/images/kurse/`)
   - Gisela Böhm (Vorstand, bisher `assets/images/Vorstand/platzhalter.png`)
 - **Mit Janne klären (gibt es auf der alten Seite, auf der neuen nicht – Absicht?):**
-  Kurse Pilates + Rückenfit, Termine, Dorfpokal-Alben 2016–2023, Spiel-/Vorberichte
+  Kurse Pilates + Rückenfit, Termine, Spiel-/Vorberichte
   (ab 2016/17), Bezirks-/WFV-Pokal-Seiten, Bambini-Cup, Stadionhefte, Dart DLH-Pokal,
   Vereinsjubiläen-Texte, Puzzles, Archiv Liga-Ergebnisse, Linkliste.
 - **Prüfen:** FuPa- und fussball.de-Widgets auf der Live-Seite (hier im Container
@@ -133,7 +133,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 ## Bilder (Fotoalben)
 
 - Menü „Bilder“: je Rubrik eine Seite `bilder-<rubrik>.html` (bisher:
-  `bilder-hauptversammlung.html`, `bilder-dorfpokal.html`,
+  `bilder-hauptversammlung.html`, `bilder-dorfpokal.html` (Alben 2024, 2023, 2019, 2018,
+  2017, 2016 – ältere von der alten Seite übernommen),
   `bilder-vereinsheimbau.html`), darin pro Anlass ein `.gallery-album`
   (neuestes oben) mit Datum, Titel, „Fotos: …“ und `<div class="gallery">`.
 - Bilder: `assets/images/bilder/<rubrik>/<jahr oder anlass>/01.jpg …` plus
