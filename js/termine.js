@@ -14,11 +14,11 @@ var TERMINE = [
   {
     datum: "2026-10-17",
     titel: "TSV Hessental – SC Bibersfeld",
-    info: "Anstoß 17:30 Uhr · Ü32 Kreisliga 4 Rems/Murr/Hall, 2. Spieltag"
+    info: "Anstoß 17:30 Uhr · Heimspiel · Ü32 Kreisliga 4 Rems/Murr/Hall, 2. Spieltag"
   },
   {
     datum: "2026-10-18",
     titel: "TSV Hessental II – TuRa Untermünkheim II",
-    info: "Anstoß 15:00 Uhr · Kreisliga B6 Rems/Murr/Hall, 9. Spieltag"
+    info: "Anstoß 15:00 Uhr · Heimspiel · Kreisliga B6 Rems/Murr/Hall, 9. Spieltag"
   }
 ];
