@@ -99,8 +99,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Bei neuen/entfallenen Werbepartnern `werbepartner.html` UND `js/sponsoren.js`
   anpassen.
 - `werbepartner.html` nach Klassen (Tafel, Stand 10/2026): **Hauptsponsor** Stadtwerke
-  (Logo + Link), **Exklusiv-Partner** (`.partner-card`, Name + Homepage verlinkt; Café am
-  Markt und Holzbau Gruchmann ohne Website; Stadtwerke auch hier), **Teampartner** =
+  (Logo + Link), **Exklusiv-Partner** (`.partner-card`, Name + Homepage verlinkt; nur Holzbau
+  Gruchmann ohne Website; Bricks & Mortar → Instagram; Stadtwerke auch hier), **Teampartner** =
   alle übrigen alphabetisch. Die frühere Einteilung Trikots/Bande/Fanpost/Spielerhütte
   ist entfallen.
 
