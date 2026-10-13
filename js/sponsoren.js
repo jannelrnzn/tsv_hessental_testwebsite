@@ -24,7 +24,7 @@ var SPONSOREN = [
   { name: "Bioladen Kleincomburg", adresse: "Kleincomburger Weg 50 · 74523 Schwäbisch Hall" },
   { name: "Bronner GmbH • Spedition – Baustoffe", adresse: "Schmollerstraße 11 · 74523 Schwäbisch Hall" },
   { name: "Bäuerliche Erzeugergemeinschaft SHA AG", adresse: "Raiffeisenstraße 16 · 74523 Schwäbisch Hall" },
-  { name: "Bricks & Mortar Immobilien", adresse: "Schwäbisch Hall" },
+  { name: "Bricks & Mortar Immobilien", adresse: "Daimlerstraße 19 · 86368 Gersthofen" },
   { name: "Café am Markt", adresse: "Am Markt 10 · 74523 Schwäbisch Hall" },
   { name: "Candan Mizrak • Vorwerk Kobold-Handelsvertreter", adresse: "Auf der Lerchenhöhe 18 · 74523 Schwäbisch Hall" },
   { name: "CTS Metallbau GmbH", adresse: "Lise-Meitner-Straße 3 · 74523 Schwäbisch Hall" },
