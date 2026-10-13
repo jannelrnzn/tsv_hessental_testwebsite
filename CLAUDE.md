@@ -42,8 +42,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 2. Beitrag über Überdachung
 3. Impressum + Datenschutz verifizieren – erledigt: fussball.de im Haftungshinweis,
    Strato als Hoster + AVV-Satz, „Stand: Oktober 2026“. Kein Datenschutzbeauftragter
-   nötig (Janne). **Offen:** USt-IdNr./Steuernummer (84062/00129 ist eine Steuernummer),
-   „Verantwortlich nach § 18 Abs. 2 MStV“, Credit „Gestaltung & Umsetzung“.
+   nötig (Janne). Impressum: Steuernummer-Zeile entfernt (keine USt-IdNr.), Verantwortlich
+   nach § 18 Abs. 2 MStV = Janne, „Gestaltung & Umsetzung“ Janne + Dieter Erdmann (alt).
    **AVV mit Strato muss vor Go-live wirklich abgeschlossen sein** (Text behauptet es).
 4. fussball.de-Widgets für Jugend (später)
 5. Dart-Liga-Widget (?)
