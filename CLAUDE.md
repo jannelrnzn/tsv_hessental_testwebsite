@@ -50,7 +50,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 
 1. Jubiläumszeitschriften – Seite `archiv-jubilaeumszeitschriften.html` (Archiv-Menü),
    100 Jahre (2023) online; 50/75 Jahre folgen ggf.
-2. Beitrag über Überdachung
+2. ~~Beitrag über Überdachung~~ erledigt (Mitteilung 30.09.2026 mit Foto)
 3. Impressum + Datenschutz verifizieren – erledigt: fussball.de im Haftungshinweis,
    Strato als Hoster + AVV-Satz, „Stand: Oktober 2026“. Kein Datenschutzbeauftragter
    nötig (Janne). Impressum: Steuernummer-Zeile entfernt (keine USt-IdNr.), Verantwortlich
