@@ -109,8 +109,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   `archiv: true` = nicht mehr auf der Startseite.
 - `archiv-mitteilungen.html` zeigt ALLE Einträge als Teaser mit Filter Alle/Mitteilungen/Spielberichte.
 - Links im `text` so schreiben wie von der Startseite aus (`vorstand.html`) – das Skript passt sie an.
-- Bilder unter `assets/images/mitteilungen/`. Einzelseite: erstes Bild groß über die volle
-  Breite nach dem ersten Absatz (max. 80 % Bildschirmhöhe, Hochformat schmaler), weitere als
+- Bilder unter `assets/images/mitteilungen/`. Einzelseite: erstes Bild groß in Textbreite (760 px)
+  nach dem ersten Absatz (max. 80 % Bildschirmhöhe, Hochformat schmaler), weitere als
   Raster am Ende; Klick = Großansicht. Startseite/Archiv: kleines Vorschaubild neben dem Teaser.
 - `SITE_URL` oben in `tools/mitteilungen.js` = Adresse für Linkvorschau; beim Go-live auf die
   echte Domain umstellen und Skript neu ausführen.

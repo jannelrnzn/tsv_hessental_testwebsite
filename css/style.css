@@ -1634,7 +1634,9 @@ a.partner-card__name:hover { color: var(--color-primary); }
 .news-filter button:hover { border-color: var(--color-primary); }
 .news-filter button[aria-pressed="true"] { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-white); }
 
-.news-detail__text { font-size: 1.05rem; max-width: 760px; }
+/* Text und Bilder gleich breit (wie eine Zeitungsspalte) */
+.news-detail { max-width: 760px; }
+.news-detail__text { font-size: 1.05rem; }
 .news-detail__figure { margin: var(--space-md) 0 var(--space-lg, 2rem); }
 .news-detail__figure img {
   display: block;
