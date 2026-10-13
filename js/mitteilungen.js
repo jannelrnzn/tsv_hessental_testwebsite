@@ -68,7 +68,7 @@ var MITTEILUNGEN = [
     id: "2026-10-12-a3-abstiegsrunde",
     datum: "12. Oktober 2026",
     kategorie: "spielbericht",
-    titel: "Die Fußball-Herren des TSV müssen in die A3-Abstiegsrunde",
+    titel: "Die Fußball-Herren des TSV Hessental müssen in die A3-Abstiegsrunde",
     text:
       "Nach dem achten Spieltag der Haller Staffel der Kreisliga A3 ist es nun amtlich: Die erste Mannschaft " +
       "des TSV Hessental muss zusammen mit allen Teams bis einschließlich zum vierten Tabellenplatz " +
@@ -86,7 +86,10 @@ var MITTEILUNGEN = [
       "<strong>SGM Vellberg/Obersontheim II – TSV Hessental 2:4</strong><br>Nach der Führung der Gastgeber kam Hessental durch ein Eigentor zum 1:1-Ausgleich (38.). Nach erneutem Rückstand staubte Dennis Schuller kurz vor dem Halbzeitpfiff zum 2:2 ab (45.). Nach der Pause brachte Steffen Schweikert seine Farben erstmals in Führung (48.), und Tim Di Mattia erhöhte per Handelfmeter auf 2:4 (69.).</p><p>" +
       "<strong>TSV Hessental – TSV Sulzdorf 1:0</strong><br>Den goldenen und einzigen Treffer des Tages erzielte Steffen Schweikert in der 70. Minute nach starker Vorarbeit von Kapitän Yannik Frey. Er sicherte damit den Derbysieg und nährte die Hoffnungen auf die Aufstiegsrunde. Zuvor war Tim Di Mattia in der 41. Minute per Foulelfmeter am Gästetorwart gescheitert.</p><p>" +
       "<strong>TSV Hessental – SV Tüngental 5:5</strong><br>Die Gäste aus Tüngental gingen fünfmal in Führung, und Hessental fand jedes Mal eine Antwort – das Unentschieden bedeutete aber schon vor dem letzten Spieltag den Gang in die Abstiegsrunde. Nur drei Minuten nach der Gästeführung glich Tim Di Mattia nach Vorlage von Mathis Kritsch zum 1:1 aus (13.). Tüngental ging in der 45. Minute erneut in Führung, doch direkt nach dem Wiederanpfiff glich Dino Ventura in der Nachspielzeit der ersten Halbzeit nach Hereingabe von Yannik Frey zum 2:2 aus (45.+3). Tüngental legte nach der Pause zum 3:2 vor, ehe Ventura nur vier Minuten später mit seinem zweiten Treffer das 3:3 herstellte. In der 78. Minute führte wieder Tüngental. Doch auch diesmal antworteten die Gastgeber: Oliver Köhler köpfte in der 84. Minute nach Yannik Freys bereits dritter Vorlage zum 4:4 ein. Die Schlussphase hielt noch zwei weitere Treffer bereit. Tüngental ging in der 90. Minute mit 5:4 in Führung. Als alles auf einen Auswärtssieg hindeutete, wurde Ventura im Strafraum zu Fall gebracht. Köhler verwandelte den Foulelfmeter in der 95. Minute zum 5:5 – das zehnte Tor dieser Partie.</p><p>" +
-      "Spielplan, Tabelle und Kader gibt es auf der Seite unserer <a href=\"fussball-herren-1.html\">1. Mannschaft</a>."
+      "Spielplan, Tabelle und Kader gibt es auf der Seite unserer <a href=\"fussball-herren-1.html\">1. Mannschaft</a>.",
+    bilder: [
+      { datei: "assets/images/mitteilungen/2026-10-12-a3-abstiegsrunde.jpg", beschreibung: "Die Mannschaften vor dem Anpfiff" }
+    ]
   },
   {
     id: "2026-09-30-terrassenueberdachung",
