@@ -1525,3 +1525,61 @@ a.partner-card__name:hover { color: var(--color-primary); }
 @media (max-width: 720px) {
   .termine-list { grid-template-columns: 1fr; gap: var(--space-sm, 1rem); }
 }
+
+/* =============================== Preisübersicht „Werbepartner werden“ =============================== */
+.price-heading { margin: var(--space-lg, 2rem) 0 var(--space-sm, 1rem); font-size: 1.25rem; }
+.price-heading:first-of-type { margin-top: 0; }
+
+.price-table-wrap {
+  overflow-x: auto;
+  background: var(--color-white, #fff);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+
+.price-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.price-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+}
+.price-table th:last-child, .price-table td:last-child { text-align: right; white-space: nowrap; width: 1%; }
+.price-table td { padding: 0.8rem 1rem; border-top: 1px solid var(--color-gray-100); vertical-align: top; }
+.price-table tbody tr:nth-child(even) td { background: var(--color-gray-100); }
+.price-table td strong { display: block; }
+.price-table td span { display: block; font-size: 0.82rem; color: var(--color-gray-700); margin-top: 0.15rem; white-space: normal; }
+.price-table td:last-child { font-weight: 700; color: var(--color-primary); }
+.price-table td:last-child span { font-weight: 400; }
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-sm, 1rem);
+}
+
+.package-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md, 1.25rem);
+  background: var(--color-white, #fff);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  border-top: 5px solid var(--color-gray-300);
+}
+.package-card h4 { margin: 0 0 0.4rem; font-size: 1.15rem; }
+.package-card p { margin: 0 0 0.6rem; font-size: 0.92rem; color: var(--color-gray-700); }
+.package-card__price { margin-top: auto !important; font-weight: 700; color: var(--color-primary) !important; }
+.package-card--bronze { border-top-color: #b0703c; }
+.package-card--silber { border-top-color: #a7adb4; }
+.package-card--gold { border-top-color: #d4a72c; }
+.package-card--diamant { border-top-color: #5fb3d6; }
+.package-card--individual { border-top-color: var(--color-primary); }
+
+.price-notes { margin: 0; padding-left: 1.2rem; color: var(--color-gray-700); font-size: 0.92rem; }
+.price-notes li + li { margin-top: 0.35rem; }
+
+@media (max-width: 560px) {
+  .price-table th, .price-table td { padding: 0.65rem 0.7rem; }
+}

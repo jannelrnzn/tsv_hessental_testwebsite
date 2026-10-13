@@ -61,8 +61,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 6. ~~Sponsoren in Klassen~~ erledigt (Hauptsponsor / Exklusiv-Partner / Teampartner)
 7. ~~Stadionhefte 2026/27~~ erledigt (5 Hefte FANPOST, von der alten Seite übernommen)
 8. Kalender: vorerst NICHT. Stattdessen Box „Nächste Termine“ auf der Startseite (erledigt)
-9. Werbepartner werden: Preisbild (`assets/images/sponsoren/Werbekosten-890x245.png`)
-   aktualisieren – WARTEN, Janne schickt neues Bild
+9. ~~Werbepartner werden~~ erledigt: Preisbild ersetzt durch HTML-Preistabelle + Pakete
+   (Bronze/Silber/Gold/Diamant/Individual, Preise „auf Anfrage“) aus Werbevertrag 2026.
 10. Fahrradgruppe – Seite `freizeit-fahrradgruppe.html` angelegt (Platzhalter), Menü „Kurse“
     heißt jetzt „Kurse & Freizeit“. Wartet auf Ansprechpartner, Termine, Treffpunkt.
 11. Gasteltern-Beitrag
