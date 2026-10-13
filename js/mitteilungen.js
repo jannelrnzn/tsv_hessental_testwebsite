@@ -20,6 +20,19 @@
 
 var MITTEILUNGEN = [
   {
+    datum: "17. Oktober 2026",
+    titel: "Neue Website für unseren TSV ab dem 17. Oktober 2026",
+    text:
+      "Am Samstag, den 17. Oktober 2026, bekommt der TSV Hessental in Form " +
+      "einer neuen, selbst entwickelten Website einen moderneren und " +
+      "übersichtlicheren Webauftritt. Die Inhalte und Rubriken bleiben " +
+      "weitgehend wie auf der alten Website – vor allem Layout und Gestaltung " +
+      "bekommen einen ganz neuen Look! Ideen, Fragen oder Verbesserungsvorschläge " +
+      "gerne über das <a href=\"kontaktformular.html\">Kontaktformular</a> oder " +
+      "per E-Mail an <a href=\"mailto:jannelorenzen2005@gmail.com\">jannelorenzen2005@gmail.com</a>. " +
+      "Wir wünschen viel Spaß mit der neuen Website!"
+  },
+  {
     datum: "12. Oktober 2026",
     titel: "Die Fußball-Herren des TSV müssen in die A3-Abstiegsrunde",
     text:
@@ -31,19 +44,6 @@ var MITTEILUNGEN = [
       "eine Aufholjagd begraben. In der Abstiegsrunde steigen von elf Mannschaften " +
       "mindestens sechs (!) direkt ab. Diese Zahl kann sich im Falle weiterer " +
       "Bezirksliga-Absteiger, die regional der A3 zugeordnet wären, sogar noch erhöhen."
-  },
-  {
-    datum: "9. Oktober 2026",
-    titel: "Neue Website für unseren TSV ab dem 17. Oktober 2026",
-    text:
-      "Am Samstag, den 17. Oktober 2026, bekommt der TSV Hessental in Form " +
-      "einer neuen, selbst entwickelten Website einen moderneren und " +
-      "übersichtlicheren Webauftritt. Die Inhalte und Rubriken bleiben " +
-      "weitgehend wie auf der alten Website – vor allem Layout und Gestaltung " +
-      "bekommen einen ganz neuen Look! Ideen, Fragen oder Verbesserungsvorschläge " +
-      "gerne über das <a href=\"kontaktformular.html\">Kontaktformular</a> oder " +
-      "per E-Mail an <a href=\"mailto:jannelorenzen2005@gmail.com\">jannelorenzen2005@gmail.com</a>. " +
-      "Wir wünschen viel Spaß mit der neuen Website!"
   },
   {
     datum: "14. September 2026",
