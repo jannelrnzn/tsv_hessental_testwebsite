@@ -123,19 +123,29 @@ function seite(item, neuer, aelter) {
     '  <meta property="og:url" content="' + url + '">\n' +
     '  <meta property="og:image" content="' + SITE_URL + encodeURI(ogBild) + '">';
 
-  var bilderHtml = "";
+  // Erstes Bild groß nach dem ersten Absatz, weitere Bilder als Raster am Ende
+  var figur = function (bild) {
+    return (
+      '              <a href="../' + bild.datei + '"><img src="../' + bild.datei + '" alt="' + attr(bild.beschreibung) + '"></a>\n' +
+      (bild.beschreibung ? "              <figcaption>" + bild.beschreibung + "</figcaption>\n" : "")
+    );
+  };
+  var absaetze = relativ(item.text).split("</p><p>");
+  var inhalt = '          <div class="news-detail__text">\n            <p>' + absaetze[0] + "</p>\n          </div>\n";
   if (bilder.length) {
-    bilderHtml =
-      '\n          <div class="news-detail__images" data-gallery>\n' +
-      bilder.map(function (bild) {
-        return (
-          "            <figure>\n" +
-          '              <a href="../' + bild.datei + '"><img src="../' + bild.datei + '" alt="' + attr(bild.beschreibung) + '"></a>\n' +
-          (bild.beschreibung ? "              <figcaption>" + bild.beschreibung + "</figcaption>\n" : "") +
-          "            </figure>\n"
-        );
+    inhalt +=
+      '          <figure class="news-detail__figure" data-gallery>\n' + figur(bilder[0]) + "          </figure>\n";
+  }
+  if (absaetze.length > 1) {
+    inhalt += '          <div class="news-detail__text">\n            <p>' + absaetze.slice(1).join("</p><p>") + "</p>\n          </div>\n";
+  }
+  if (bilder.length > 1) {
+    inhalt +=
+      '          <div class="news-detail__images" data-gallery>\n' +
+      bilder.slice(1).map(function (bild) {
+        return "            <figure>\n" + figur(bild) + "            </figure>\n";
       }).join("") +
-      "          </div>";
+      "          </div>\n";
   }
 
   var pager = "";
@@ -163,11 +173,8 @@ function seite(item, neuer, aelter) {
     "    </header>\n\n" +
     '    <section class="section">\n' +
     '      <div class="container">\n' +
-    '        <article class="news-detail' + (bilder.length ? " news-detail--media" : "") + '">\n' +
-    '          <div class="news-detail__text">\n' +
-    "            <p>" + relativ(item.text) + "</p>\n" +
-    "          </div>" +
-    bilderHtml + "\n" +
+    '        <article class="news-detail">\n' +
+    inhalt +
     "        </article>\n\n" +
     '        <div class="news-detail__actions">\n' +
     '          <a class="btn btn--ghost" href="../archiv-mitteilungen.html">← Alle Mitteilungen</a>\n' +
