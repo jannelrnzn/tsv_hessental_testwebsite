@@ -11,6 +11,12 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   Repo-Root oder mit Originalnamen – an die richtige Stelle verschieben,
   sinnvoll umbenennen und auf max. 2400 px Breite verkleinern.
 
+## Termine
+
+- **Am 01.10.2027:** Jannes Anschrift im Impressum (`impressum.html`, „Verantwortlich
+  für den Inhalt nach § 18 Abs. 2 MStV“) ändern auf **Annemarie-Griesinger-Ring 23,
+  74523 Schwäbisch Hall** (bisher Wirtsgasse 25). Nicht vorher ändern.
+
 ## Offene Punkte (Stand 5.10.2026 – beim Erledigen hier streichen)
 
 - **Inhalte, die Janne noch liefert:**
