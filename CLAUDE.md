@@ -37,13 +37,15 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 
 ## Finale Abstimmung vor Go-live (13.10.2026) – NOCH NICHT UMSETZEN, erst Rückfragen klären
 
-1. Jubiläumszeitschriften hochladen
+1. Jubiläumszeitschriften hochladen – Seite `archiv-jubilaeumszeitschriften.html`
+   (Archiv-Menü) angelegt, wartet auf PDFs
 2. Beitrag über Überdachung
 3. Impressum + Datenschutz verifizieren
 4. fussball.de-Widgets für Jugend (später)
 5. Dart-Liga-Widget (?)
 6. Sponsoren in Klassen unterscheiden (siehe Tafel)
-7. Stadionhefte 2026/27 hochladen
+7. Stadionhefte 2026/27 hochladen – Seite `fussball-herren-stadionhefte.html`
+   (Fußball Herren, nach 2. Mannschaft) angelegt, wartet auf PDFs
 8. Kalender für den Monat (mit Fahrradausfahrt)
 9. Werbepartner werden (Änderung?)
 10. Fahrradgruppe
@@ -95,7 +97,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   `aufstellung` (Liste aus `titel` + `namen`), `link`, `linktext`).
   Reihenfolge egal – `initSuccesses` in `js/main.js` sortiert nach Saison und
   gruppiert nach Jahrzehnten (mit Sprungleiste). Bilder unter `assets/images/erfolge/`.
-- Archiv-Menü auf allen Seiten: Mitteilungen, Erfolge (alte Bilder gehören
+- Archiv-Menü auf allen Seiten: Mitteilungen, Erfolge, Jubiläumszeitschriften (alte Bilder gehören
   in den Hauptmenüpunkt „Bilder“).
 
 ## Bilder (Fotoalben)
@@ -126,6 +128,14 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
     Saison 1948 (1947/48 oder 1948/49?) und Jahr des zweiten B-Klasse-Meisters.
 - Bewusst NICHT übernommen (Janne): Trainingslager, Stadtmeisterschaft,
   Feiern, Arbeitsdienst.
+
+## Downloads (PDF)
+
+- Jubiläumszeitschriften: `archiv-jubilaeumszeitschriften.html`, Dateien unter
+  `assets/downloads/jubilaeum/`. Stadionhefte: `fussball-herren-stadionhefte.html`,
+  Dateien unter `assets/downloads/stadionhefte/JJJJ/` (nur aktuelle Saison).
+- Je Datei eine `article.doc-card` in `.doc-grid` (Vorlage als Kommentar in der
+  Seite), optional Cover-Bild; Platzhalter `.doc-empty` entfernen, sobald Dateien da sind.
 
 ## Kontaktformular
 

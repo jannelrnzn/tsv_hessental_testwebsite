@@ -1372,3 +1372,44 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 @media (max-width: 480px) {
   .legends-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* =============================== Dokumente zum Download (Jubiläumszeitschriften, Stadionhefte) =============================== */
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-md, 1.5rem);
+}
+
+.doc-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white, #fff);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.doc-card__cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 3 / 4;
+  background: var(--color-gray-100);
+  color: var(--color-primary);
+}
+
+.doc-card__cover img { width: 100%; height: 100%; object-fit: cover; }
+.doc-card__cover svg { width: 64px; height: 64px; }
+
+.doc-card__body { padding: var(--space-sm, 1rem); display: flex; flex-direction: column; gap: 0.35rem; flex: 1; }
+.doc-card__body h3 { margin: 0; font-size: 1.05rem; }
+.doc-card__meta { margin: 0; font-size: 0.85rem; color: var(--color-gray-700); }
+.doc-card__body .btn { margin-top: auto; align-self: flex-start; }
+
+.doc-empty {
+  padding: var(--space-md, 1.5rem);
+  border: 2px dashed var(--color-gray-300);
+  border-radius: var(--radius);
+  color: var(--color-gray-700);
+  text-align: center;
+}
