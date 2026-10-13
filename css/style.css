@@ -1679,3 +1679,4 @@ a.partner-card__name:hover { color: var(--color-primary); }
 .stats-table th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); border-bottom-width: 2px; }
 .stats-table td:nth-child(n+2), .stats-table th:nth-child(n+2) { text-align: right; width: 5.5rem; font-variant-numeric: tabular-nums; }
 .stats-table tbody tr:nth-child(even) { background: var(--color-gray-100); }
+.stats-note { font-size: 0.85rem; color: var(--color-gray-700); margin-top: calc(-1 * var(--space-sm)); }
