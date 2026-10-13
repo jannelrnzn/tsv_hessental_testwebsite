@@ -203,6 +203,13 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 
 .main-nav__list > li { position: relative; }
 
+/* Etwas engeres Menü zwischen Tablet und großem Bildschirm, damit es einzeilig bleibt */
+@media (min-width: 961px) and (max-width: 1200px) {
+  .main-nav__list { gap: 0.3rem 0.6rem; }
+  .main-nav__list a,
+  .main-nav__list button.nav-link { font-size: 0.84rem; }
+}
+
 .main-nav__list a,
 .main-nav__list button.nav-link {
   display: inline-flex;

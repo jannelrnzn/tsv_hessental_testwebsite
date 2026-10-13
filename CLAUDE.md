@@ -58,7 +58,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 8. Kalender für den Monat (mit Fahrradausfahrt)
 9. Werbepartner werden: Preisbild (`assets/images/sponsoren/Werbekosten-890x245.png`)
    aktualisieren – WARTEN, Janne schickt neues Bild
-10. Fahrradgruppe
+10. Fahrradgruppe – Seite `freizeit-fahrradgruppe.html` angelegt (Platzhalter), Menü „Kurse“
+    heißt jetzt „Kurse & Freizeit“. Wartet auf Ansprechpartner, Termine, Treffpunkt.
 11. Gasteltern-Beitrag
 
 ## Hosting / Go-live (geplant 17.10.2026)
