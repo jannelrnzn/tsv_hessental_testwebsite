@@ -35,6 +35,20 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   GitHub Action, Pages abschalten).
 - **Ganz zum Schluss (nach allem anderen):** Tarifwechsel bei Strato prüfen.
 
+## Finale Abstimmung vor Go-live (13.10.2026) – NOCH NICHT UMSETZEN, erst Rückfragen klären
+
+1. Jubiläumszeitschriften hochladen
+2. Beitrag über Überdachung
+3. Impressum + Datenschutz verifizieren
+4. fussball.de-Widgets für Jugend (später)
+5. Dart-Liga-Widget (?)
+6. Sponsoren in Klassen unterscheiden (siehe Tafel)
+7. Stadionhefte 2026/27 hochladen
+8. Kalender für den Monat (mit Fahrradausfahrt)
+9. Werbepartner werden (Änderung?)
+10. Fahrradgruppe
+11. Gasteltern-Beitrag
+
 ## Hosting / Go-live (geplant 17.10.2026)
 
 - Strato-Paket „Hosting Pro“ (Vertrag des Vereins seit 2006), Domain
