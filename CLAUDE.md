@@ -53,7 +53,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
    **AVV mit Strato muss vor Go-live wirklich abgeschlossen sein** (Text behauptet es).
 4. fussball.de-Widgets für Jugend (später)
 5. Dart-Liga-Widget (?)
-6. Sponsoren in Klassen unterscheiden (siehe Tafel)
+6. ~~Sponsoren in Klassen~~ erledigt (Hauptsponsor / Exklusiv-Partner / Teampartner)
 7. ~~Stadionhefte 2026/27~~ erledigt (5 Hefte FANPOST, von der alten Seite übernommen)
 8. Kalender für den Monat (mit Fahrradausfahrt)
 9. Werbepartner werden (Änderung?)
@@ -98,6 +98,11 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   zufällige Reihenfolge, Wechsel alle 4 s, Pause beim Drüberfahren.
 - Bei neuen/entfallenen Werbepartnern `werbepartner.html` UND `js/sponsoren.js`
   anpassen.
+- `werbepartner.html` nach Klassen (Tafel, Stand 10/2026): **Hauptsponsor** Stadtwerke
+  (Logo + Link), **Exklusiv-Partner** (`.partner-card`, Name + Homepage verlinkt; Café am
+  Markt und Holzbau Gruchmann ohne Website; Stadtwerke auch hier), **Teampartner** =
+  alle übrigen alphabetisch. Die frühere Einteilung Trikots/Bande/Fanpost/Spielerhütte
+  ist entfallen.
 
 ## Erfolge (Archiv)
 
