@@ -88,7 +88,7 @@ var MITTEILUNGEN = [
       "<strong>TSV Hessental – SV Tüngental 5:5</strong><br>Die Gäste aus Tüngental gingen fünfmal in Führung, und Hessental fand jedes Mal eine Antwort – das Unentschieden bedeutete aber schon vor dem letzten Spieltag den Gang in die Abstiegsrunde. Nur drei Minuten nach der Gästeführung glich Tim Di Mattia nach Vorlage von Mathis Kritsch zum 1:1 aus (13.). Tüngental ging in der 45. Minute erneut in Führung, doch direkt nach dem Wiederanpfiff glich Dino Ventura in der Nachspielzeit der ersten Halbzeit nach Hereingabe von Yannik Frey zum 2:2 aus (45.+3). Tüngental legte nach der Pause zum 3:2 vor, ehe Ventura nur vier Minuten später mit seinem zweiten Treffer das 3:3 herstellte. In der 78. Minute führte wieder Tüngental. Doch auch diesmal antworteten die Gastgeber: Oliver Köhler köpfte in der 84. Minute nach Yannik Freys bereits dritter Vorlage zum 4:4 ein. Die Schlussphase hielt noch zwei weitere Treffer bereit. Tüngental ging in der 90. Minute mit 5:4 in Führung. Als alles auf einen Auswärtssieg hindeutete, wurde Ventura im Strafraum zu Fall gebracht. Köhler verwandelte den Foulelfmeter in der 95. Minute zum 5:5 – das zehnte Tor dieser Partie.</p><p>" +
       "Spielplan, Tabelle und Kader gibt es auf der Seite unserer <a href=\"fussball-herren-1.html\">1. Mannschaft</a>.",
     bilder: [
-      { datei: "assets/images/mitteilungen/2026-10-12-a3-abstiegsrunde.jpg", beschreibung: "Die Mannschaften vor dem Anpfiff" }
+      { datei: "assets/images/mitteilungen/2026-10-12-a3-abstiegsrunde.jpg", beschreibung: "Der TSV Hessental und der SV Tüngental beim Einlaufen vor dem 5:5-Spektakel. Bild: SV Tüngental (Instagram)" }
     ]
   },
   {
