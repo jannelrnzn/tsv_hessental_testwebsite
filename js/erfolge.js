@@ -35,7 +35,8 @@ var ERFOLGE = [
       "5:3-Derbysieg über den SC Steinbach-Comburg den Meisterwimpel beim " +
       "Saisonabschluss unterm Einkorn.",
     bild: "assets/images/erfolge/2425-reservemeister.jpg",
-    link: "fussball-herren-1-2425.html"
+    link: "mitteilungen/2025-06-09-reservemeister.html",
+    linktext: "Zum Bericht mit allen Spielern"
   },
   {
     saison: "2024/25",
