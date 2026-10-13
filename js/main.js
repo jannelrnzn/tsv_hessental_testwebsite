@@ -184,7 +184,7 @@ function siteUrl(path) {
  * Archivseite: data-news="archive"       -> alle, mit Filter [data-news-filter]
  */
 var NEWS_ON_HOMEPAGE = 3;
-var NEWS_TEASER_LENGTH = 220;
+var NEWS_TEASER_LENGTH = 100;
 
 function isSpielbericht(item) {
   return item.kategorie === "spielbericht";
@@ -251,15 +251,17 @@ function renderNewsTeaser(item, mitKategorie) {
       '<div class="news-item__body">' +
         '<span class="news-item__date">' + item.datum + kategorie + "</span>" +
         '<h3 class="news-item__title"><a href="' + url + '">' + item.titel + "</a></h3>" +
-        "<p>" + newsTeaser(item) + "</p>" +
-        '<a class="news-item__more" href="' + url + '">Weiterlesen <span aria-hidden="true">→</span></a>' +
+        (item.komplett
+          ? "<p>" + item.text + "</p>"
+          : "<p>" + newsTeaser(item) + "</p>" +
+            '<a class="news-item__more" href="' + url + '">Weiterlesen <span aria-hidden="true">→</span></a>') +
       "</div>" +
       bildHtml +
     "</article>"
   );
 }
 
-/** Eigener Teaser oder die ersten Zeichen des Textes (ohne HTML), am Wortende gekürzt. */
+/** Eigener Teaser oder die ersten NEWS_TEASER_LENGTH Zeichen des Textes (ohne HTML), am Wortende gekürzt. */
 function newsTeaser(item) {
   if (item.teaser) {
     return item.teaser;

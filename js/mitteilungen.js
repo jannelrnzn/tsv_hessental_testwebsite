@@ -16,7 +16,8 @@
  *   kategorie optional "spielbericht" – erscheint auf der Startseite im eigenen
  *             Bereich „Spielberichte“ statt unter „Aktuelle Mitteilungen“
  *   teaser    optional eigener Kurztext für Startseite/Archiv
- *             (sonst automatisch die ersten Zeilen des Textes)
+ *             (sonst automatisch die ersten ca. 100 Zeichen des Textes + „Weiterlesen“)
+ *   komplett  optional true – auf Startseite/Archiv den ganzen Text zeigen statt Teaser
  *   bilder    optional, Dateien unter assets/images/mitteilungen/:
  *               bilder: [
  *                 { datei: "assets/images/mitteilungen/sieg-vellberg.jpg", beschreibung: "Jubel nach dem 2:4" },
@@ -32,6 +33,7 @@ var MITTEILUNGEN = [
   {
     id: "2026-10-17-neue-website",
     datum: "17. Oktober 2026",
+    komplett: true,
     titel: "Neue Website für unseren TSV ab dem 17. Oktober 2026",
     text:
       "Am Samstag, den 17. Oktober 2026, bekommt der TSV Hessental in Form " +
