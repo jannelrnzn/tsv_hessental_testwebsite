@@ -20,6 +20,19 @@
 
 var MITTEILUNGEN = [
   {
+    datum: "12. Oktober 2026",
+    titel: "Die Fußball-Herren des TSV müssen in die A3-Abstiegsrunde",
+    text:
+      "Nach dem achten Spieltag der Haller Staffel der Kreisliga A3 ist es nun " +
+      "amtlich: Der TSV Hessental muss zusammen mit allen Teams bis einschließlich " +
+      "zum vierten Tabellenplatz (aktuell SGM Rosengarten) in die Abstiegsrunde mit " +
+      "den fünf letztplatzierten Mannschaften der Crailsheimer A3-Staffel. Das " +
+      "5:5-Spektakel gegen den SV Tüngental hat leider die letzten Hoffnungen auf " +
+      "eine Aufholjagd begraben. In der Abstiegsrunde steigen von elf Mannschaften " +
+      "mindestens sechs (!) direkt ab. Diese Zahl kann sich im Falle weiterer " +
+      "Bezirksliga-Absteiger, die regional der A3 zugeordnet wären, sogar noch erhöhen."
+  },
+  {
     datum: "9. Oktober 2026",
     titel: "Neue Website für unseren TSV ab dem 17. Oktober 2026",
     text:
@@ -31,21 +44,6 @@ var MITTEILUNGEN = [
       "gerne über das <a href=\"kontaktformular.html\">Kontaktformular</a> oder " +
       "per E-Mail an <a href=\"mailto:jannelorenzen2005@gmail.com\">jannelorenzen2005@gmail.com</a>. " +
       "Wir wünschen viel Spaß mit der neuen Website!"
-  },
-  {
-    datum: "28. September 2026",
-    titel: "Erste Mannschaft feiert den ersten Saisonsieg",
-    text:
-      "Die erste Mannschaft konnte in Vellberg gegen die neue SGM " +
-      "Obersontheim/Vellberg 2 den ersten Saisonsieg einfahren. Nach " +
-      "zweimaligem Rückstand gewann die Erste am Ende mit 2:4. Die Tore " +
-      "erzielten Dennis Schuller, Steffen Schweikert, Tim Di Mattia per " +
-      "Handelfmeter und ein Eigentor. Die zweite Mannschaft musste sich " +
-      "bei der SSV Schwäbisch Hall mit 1:6 geschlagen geben. Torschütze " +
-      "für den TSV war Daniel Fedoruk.",
-    bilder: [
-      { datei: "assets/images/mitteilungen/2026-09-28-erster-saisonsieg.jpg", beschreibung: "Jubel in der Kabine nach dem ersten Saisonsieg in Vellberg" }
-    ]
   },
   {
     datum: "14. September 2026",
