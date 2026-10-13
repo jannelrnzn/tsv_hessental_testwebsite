@@ -223,7 +223,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   Frey (Foto aus `abteilungsleitung_fußball_aktive/`, Kontakt) und Patrick Walz
   (`team/patrick-walz.jpg`), Mannschaftsfoto `assets/images/senioren/` mit
   Aufstellung (Hallenstadtmeisterschaft 18.01.2025; Vize-Titel bewusst NICHT
-  unter Erfolge), FuPa-Widget (Spielplan/Ergebnisse) + fussball.de-Tabelle Kreisliga 4.
+  unter Erfolge), FuPa-Widget (Spielplan/Ergebnisse), kein fussball.de-Widget mehr.
 
 ## Mannschaftsarchiv Jugend (A-, B-, C-Junioren)
 
