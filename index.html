@@ -6,10 +6,10 @@
   <title>TSV Hessental 1923 e.V. | Startseite</title>
   <meta name="description" content="TSV Hessental 1923 e.V. – Fußball, Turnen, Kurse und Dart in Schwäbisch Hall-Hessental.">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="stylesheet" href="css/style.css?v=202610131155">
-  <script src="js/mitteilungen.js?v=202610131155" defer></script>
-  <script src="js/termine.js?v=202610131155" defer></script>
-  <script src="js/main.js?v=202610131155" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=202610131219">
+  <script src="js/mitteilungen.js?v=202610131219" defer></script>
+  <script src="js/termine.js?v=202610131219" defer></script>
+  <script src="js/main.js?v=202610131219" defer></script>
 </head>
 <body>
 
@@ -187,10 +187,23 @@
           </p>
         </div>
 
-        <!-- Inhalte kommen aus js/mitteilungen.js (die drei neuesten) -->
+        <!-- Inhalte kommen aus js/mitteilungen.js (die drei neuesten ohne Spielberichte, als Teaser) -->
         <div class="news-list" data-news="latest">
           <noscript><p>Zum Anzeigen der Mitteilungen wird JavaScript benötigt.</p></noscript>
         </div>
+      </div>
+    </section>
+
+    <!-- ============================= Spielberichte ============================= -->
+    <!-- Inhalte kommen aus js/mitteilungen.js (kategorie: "spielbericht", die drei neuesten); ohne Einträge ausgeblendet -->
+    <section class="section section--divider" id="spielberichte" data-news-section hidden>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Fußball</span>
+          <h2>Spielberichte</h2>
+          <p class="lead">Berichte und Neuigkeiten rund um unsere Spiele. Ältere Berichte findest du im <a href="archiv-mitteilungen.html">Archiv</a>.</p>
+        </div>
+        <div class="news-list" data-news="spielberichte"></div>
       </div>
     </section>
 

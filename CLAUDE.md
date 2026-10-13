@@ -7,7 +7,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 
 - **Cache-Busting:** CSS/JS werden mit `?v=JJJJMMTTHHMM` eingebunden. Nach JEDER Änderung an
   `css/` oder `js/` die Version in allen HTML-Seiten erhöhen:
-  `V=$(date -u +%Y%m%d%H%M); sed -i -E "s/\?v=[0-9]{12}/?v=$V/g" *.html`
+  `V=$(date -u +%Y%m%d%H%M); sed -i -E "s/\?v=[0-9]{12}/?v=$V/g" *.html && node tools/mitteilungen.js`
   (sponsoren.js übernimmt die Version von main.js automatisch).
 
 - Änderungen direkt auf `main` pushen, damit sie unter GitHub Pages sichtbar sind.
@@ -75,6 +75,9 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Ablauf: alte Seite sichern → Dateien per SFTP in eigenen Ordner (ohne `.git`,
   `.devserver`, `.gitignore`, `CLAUDE.md`) → Test über Subdomain → Domain-Ziel
   umstellen. Mail-Einstellungen der Domain nicht anfassen.
+- Beim Go-live: `SITE_URL` in `tools/mitteilungen.js` auf die Domain umstellen; die
+  GitHub Action soll vor dem Upload `node tools/mitteilungen.js` ausführen und `tools/`
+  nicht hochladen.
 - Danach: Strato als Hoster in der Datenschutzerklärung + AVV, kontakt.php
   echt testen, `noreply@` anlegen, GitHub Pages abschalten.
 - **Entschieden (Janne):** Änderungen nach dem Go-live laufen weiter über GitHub
@@ -85,18 +88,26 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - **Ganz am Ende erinnern:** Tarifwechsel bei Strato prüfen (alter Tarif,
   vergleichsweise teuer) – erst wenn alles andere erledigt ist.
 
-## Mitteilungen
+## Mitteilungen & Spielberichte
 
-- Alle Mitteilungen stehen nur in `js/mitteilungen.js` (Liste `MITTEILUNGEN`,
-  neueste zuerst). Neue Mitteilung = neuer Eintrag ganz oben.
-- `js/main.js` (`initNews`) zeigt auf der Startseite die drei neuesten
-  (`data-news="latest"`), `archiv-mitteilungen.html` alle älteren
-  (`data-news="archive"`). Nichts von Hand verschieben.
-  Soll eine Mitteilung vorzeitig ins Archiv: `archiv: true` setzen.
-- Optional `bilder: [...]` pro Mitteilung (Pfad oder `{ datei, beschreibung }`),
-  Bilder liegen unter `assets/images/mitteilungen/`. Mit Bild steht die Mitteilung
-  zweispaltig: Text links, Bild(er) rechts (max. 320 px, 4:3-Vorschau), am Handy darunter;
-  Klick öffnet das Bild in voller Größe.
+- Inhalt nur in `js/mitteilungen.js` (Liste `MITTEILUNGEN`, neueste zuerst). Neue Mitteilung =
+  neuer Eintrag ganz oben mit `id` (`JJJJ-MM-TT-stichwort`, später nie ändern), `datum`,
+  `titel`, `text`; optional `kategorie: "spielbericht"`, `teaser`, `bilder`, `archiv: true`.
+- **Danach immer `node tools/mitteilungen.js`** ausführen: erzeugt je Eintrag
+  `mitteilungen/<id>.html` (Kopf/Menü/Fuß aus `archiv-mitteilungen.html`, Pfade mit `../`,
+  Linkvorschau-Tags, Neuer/Älter-Navigation, „Link kopieren“) und löscht veraltete.
+  Dateien in `mitteilungen/` nie von Hand bearbeiten. Auch nach Menü-Änderungen und
+  nach dem Cache-Busting erneut ausführen.
+- Startseite (`initNews`, Teaser mit „Weiterlesen“): „Aktuelle Mitteilungen“
+  (`data-news="latest"`, 3 neueste ohne Spielberichte) und darunter „Spielberichte“
+  (`data-news="spielberichte"`, 3 neueste, Bereich ausgeblendet wenn leer).
+  `archiv: true` = nicht mehr auf der Startseite.
+- `archiv-mitteilungen.html` zeigt ALLE Einträge als Teaser mit Filter Alle/Mitteilungen/Spielberichte.
+- Links im `text` so schreiben wie von der Startseite aus (`vorstand.html`) – das Skript passt sie an.
+- Bilder unter `assets/images/mitteilungen/`; Einzelseite zeigt sie groß rechts neben dem Text
+  (am Handy darunter), Klick = Großansicht.
+- `SITE_URL` oben in `tools/mitteilungen.js` = Adresse für Linkvorschau; beim Go-live auf die
+  echte Domain umstellen und Skript neu ausführen.
 
 ## Nächste Termine (Startseite)
 

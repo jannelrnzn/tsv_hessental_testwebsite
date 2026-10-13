@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initContactForm();
   updateFooterYear();
   initNews();
+  initShare();
   initTermine();
   initSponsorBar();
   initSuccesses();
@@ -165,11 +166,29 @@ function initContactForm() {
 }
 
 /**
- * Mitteilungen aus js/mitteilungen.js (Liste MITTEILUNGEN, neueste zuerst).
- * Startseite:  <div class="news-list" data-news="latest">  -> die drei neuesten
- * Archivseite: <div class="news-list" data-news="archive"> -> alle älteren
+ * Wurzel der Website (Ordner, in dem js/main.js liegt). Damit funktionieren
+ * Links auch auf Seiten in Unterordnern (z. B. mitteilungen/<id>.html).
+ */
+function siteUrl(path) {
+  var self = document.querySelector('script[src*="js/main.js"]');
+  var root = self ? self.src.replace(/js\/main\.js.*$/, "") : "";
+  return root + path;
+}
+
+/**
+ * Mitteilungen aus js/mitteilungen.js (Liste MITTEILUNGEN, neueste zuerst),
+ * jeweils als Teaser mit Link auf die eigene Seite mitteilungen/<id>.html.
+ * Startseite:  data-news="latest"        -> die drei neuesten Mitteilungen
+ *              data-news="spielberichte" -> die drei neuesten Spielberichte
+ *              (ohne Einträge wird der umgebende [data-news-section] ausgeblendet)
+ * Archivseite: data-news="archive"       -> alle, mit Filter [data-news-filter]
  */
 var NEWS_ON_HOMEPAGE = 3;
+var NEWS_TEASER_LENGTH = 220;
+
+function isSpielbericht(item) {
+  return item.kategorie === "spielbericht";
+}
 
 function initNews() {
   var lists = document.querySelectorAll("[data-news]");
@@ -179,59 +198,139 @@ function initNews() {
   }
 
   lists.forEach(function (list) {
-    // Startseite: die neuesten Mitteilungen ohne "archiv: true", Archiv: alle übrigen
-    var latest = MITTEILUNGEN.filter(function (item) {
-      return !item.archiv;
-    }).slice(0, NEWS_ON_HOMEPAGE);
-    var items = list.getAttribute("data-news") === "latest"
-      ? latest
-      : MITTEILUNGEN.filter(function (item) {
-          return latest.indexOf(item) === -1;
-        });
+    var art = list.getAttribute("data-news");
+    var items = MITTEILUNGEN;
+
+    if (art === "latest" || art === "spielberichte") {
+      items = MITTEILUNGEN.filter(function (item) {
+        return !item.archiv && isSpielbericht(item) === (art === "spielberichte");
+      }).slice(0, NEWS_ON_HOMEPAGE);
+    }
+
+    var section = list.closest("[data-news-section]");
+    if (section) {
+      section.hidden = !items.length;
+    }
 
     if (!items.length) {
-      list.innerHTML = "<p>Derzeit gibt es keine älteren Mitteilungen.</p>";
+      list.innerHTML = "<p>Derzeit gibt es keine Mitteilungen.</p>";
       return;
     }
 
     list.innerHTML = items.map(function (item) {
-      var bilder = renderNewsImages(item.bilder);
-      return (
-        '<article class="news-item' + (bilder ? " news-item--media" : "") + '">' +
-          '<div class="news-item__body">' +
-            '<span class="news-item__date">' + item.datum + "</span>" +
-            '<h3 class="news-item__title">' + item.titel + "</h3>" +
-            "<p>" + item.text + "</p>" +
-          "</div>" +
-          bilder +
-        "</article>"
-      );
+      return renderNewsTeaser(item, art === "archive");
     }).join("");
+
+    if (art === "archive") {
+      initNewsFilter(list);
+    }
   });
 }
 
-/**
- * Optionale Bilder einer Mitteilung. Jedes Bild ist entweder nur der Pfad
- * ("assets/images/mitteilungen/foto.jpg") oder { datei: "...", beschreibung: "..." }.
- * Ein Klick öffnet das Bild in voller Größe.
- */
-function renderNewsImages(bilder) {
-  if (!bilder || !bilder.length) {
-    return "";
-  }
+function renderNewsTeaser(item, mitKategorie) {
+  var url = siteUrl("mitteilungen/" + item.id + ".html");
+  var bild = item.bilder && item.bilder.length ? item.bilder[0] : null;
+  var bildHtml = "";
 
-  var images = bilder.map(function (bild) {
+  if (bild) {
     var datei = typeof bild === "string" ? bild : bild.datei;
     var beschreibung = (typeof bild === "string" ? "" : bild.beschreibung || "").replace(/"/g, "&quot;");
-    return (
-      '<a href="' + datei + '" target="_blank" rel="noopener">' +
-        '<img src="' + datei + '" alt="' + beschreibung + '" loading="lazy">' +
-      "</a>"
-    );
-  }).join("");
+    bildHtml =
+      '<a class="news-item__thumb" href="' + url + '" tabindex="-1" aria-hidden="true">' +
+        '<img src="' + siteUrl(datei) + '" alt="' + beschreibung + '" loading="lazy">' +
+      "</a>";
+  }
 
-  var modifier = bilder.length === 1 ? " news-item__images--single" : "";
-  return '<div class="news-item__images' + modifier + '">' + images + "</div>";
+  var kategorie = mitKategorie && isSpielbericht(item)
+    ? ' <span class="news-item__tag">Spielbericht</span>'
+    : "";
+
+  return (
+    '<article class="news-item news-item--teaser' + (bildHtml ? " news-item--media" : "") + '"' +
+      ' data-kategorie="' + (isSpielbericht(item) ? "spielbericht" : "mitteilung") + '">' +
+      '<div class="news-item__body">' +
+        '<span class="news-item__date">' + item.datum + kategorie + "</span>" +
+        '<h3 class="news-item__title"><a href="' + url + '">' + item.titel + "</a></h3>" +
+        "<p>" + newsTeaser(item) + "</p>" +
+        '<a class="news-item__more" href="' + url + '">Weiterlesen <span aria-hidden="true">→</span></a>' +
+      "</div>" +
+      bildHtml +
+    "</article>"
+  );
+}
+
+/** Eigener Teaser oder die ersten Zeichen des Textes (ohne HTML), am Wortende gekürzt. */
+function newsTeaser(item) {
+  if (item.teaser) {
+    return item.teaser;
+  }
+  var tmp = document.createElement("div");
+  tmp.innerHTML = item.text.replace(/<\/p>\s*<p>/g, " ");
+  var text = tmp.textContent.replace(/\s+/g, " ").trim();
+  if (text.length <= NEWS_TEASER_LENGTH) {
+    return escapeHtml(text);
+  }
+  var cut = text.slice(0, NEWS_TEASER_LENGTH);
+  cut = cut.slice(0, cut.lastIndexOf(" ")).replace(/[\s,;:.–-]+$/, "");
+  return escapeHtml(cut) + " …";
+}
+
+function escapeHtml(text) {
+  return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+/** Archiv: Filter-Buttons Alle / Mitteilungen / Spielberichte */
+function initNewsFilter(list) {
+  var filter = document.querySelector("[data-news-filter]");
+  if (!filter) {
+    return;
+  }
+  var buttons = filter.querySelectorAll("button");
+
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var wert = button.getAttribute("data-filter");
+      buttons.forEach(function (b) {
+        b.setAttribute("aria-pressed", b === button ? "true" : "false");
+      });
+      list.querySelectorAll(".news-item").forEach(function (item) {
+        item.hidden = wert !== "alle" && item.getAttribute("data-kategorie") !== wert;
+      });
+    });
+  });
+}
+
+/** Einzelseite einer Mitteilung: Link teilen (Handy) bzw. kopieren (PC). */
+function initShare() {
+  var button = document.querySelector("[data-share]");
+  if (!button) {
+    return;
+  }
+
+  button.addEventListener("click", function () {
+    var url = window.location.href.split("#")[0];
+    var label = button.querySelector("span");
+
+    if (navigator.share) {
+      navigator.share({ title: document.title, url: url }).catch(function () {});
+      return;
+    }
+
+    function fertig(text) {
+      label.textContent = text;
+      setTimeout(function () { label.textContent = "Link kopieren"; }, 2500);
+    }
+
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(url).then(function () {
+        fertig("Link kopiert ✓");
+      }, function () {
+        window.prompt("Link zum Kopieren:", url);
+      });
+    } else {
+      window.prompt("Link zum Kopieren:", url);
+    }
+  });
 }
 
 /**
@@ -251,7 +350,7 @@ function initSponsorBar() {
   // Version aus dem eigenen <script src="js/main.js?v=…"> übernehmen (Cache-Busting)
   var self = document.querySelector('script[src*="js/main.js"]');
   var version = self && self.src.indexOf("?v=") > -1 ? self.src.split("?v=")[1] : "";
-  script.src = "js/sponsoren.js" + (version ? "?v=" + version : "");
+  script.src = siteUrl("js/sponsoren.js") + (version ? "?v=" + version : "");
   script.onload = function () {
     if (typeof SPONSOREN === "undefined" || !SPONSOREN.length) {
       return;
@@ -268,7 +367,7 @@ function renderSponsorBar(header, sponsors) {
   bar.innerHTML =
     '<div class="container">' +
       '<span class="sponsor-bar__label">Danke an unsere Sponsoren</span>' +
-      '<a class="sponsor-bar__item" href="werbepartner.html">' +
+      '<a class="sponsor-bar__item" href="' + siteUrl("werbepartner.html") + '">' +
         '<strong class="sponsor-bar__name"></strong>' +
         '<span class="sponsor-bar__address"></span>' +
       "</a>" +
@@ -491,7 +590,7 @@ function initConsentEmbeds() {
       '<p class="consent-box__title">Externer Inhalt von ' + info.name + "</p>" +
       "<p>An dieser Stelle wird ein Inhalt von " + info.name + " (" + info.anbieter + ") angezeigt. " +
       "Beim Laden werden Daten, insbesondere deine IP-Adresse, an diesen Anbieter übertragen. " +
-      'Mehr dazu in unserer <a href="datenschutzerklaerung.html">Datenschutzerklärung</a> und bei ' +
+      'Mehr dazu in unserer <a href="' + siteUrl("datenschutzerklaerung.html") + '">Datenschutzerklärung</a> und bei ' +
       '<a href="' + info.datenschutz + '" target="_blank" rel="noopener">' + info.name + " ↗</a>.</p>" +
       '<label class="consent-box__remember"><input type="checkbox"> Für ' + info.name + " merken</label>" +
       '<button type="button" class="btn btn--primary">Inhalt laden</button>' +

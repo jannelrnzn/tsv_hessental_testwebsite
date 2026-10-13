@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mitteilungen – Archiv | TSV Hessental</title>
-  <meta name="description" content="Ältere Mitteilungen und Nachrichten des TSV Hessental.">
+  <meta name="description" content="Alle Mitteilungen und Spielberichte des TSV Hessental.">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="stylesheet" href="css/style.css?v=202610131155">
-  <script src="js/mitteilungen.js?v=202610131155" defer></script>
-  <script src="js/main.js?v=202610131155" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=202610131219">
+  <script src="js/mitteilungen.js?v=202610131219" defer></script>
+  <script src="js/main.js?v=202610131219" defer></script>
 </head>
 <body>
 
@@ -150,20 +150,26 @@
         <p class="breadcrumb"><a href="index.html">Startseite</a> / Archiv / Mitteilungen</p>
         <span class="eyebrow">Archiv</span>
         <h1>Mitteilungen</h1>
-        <p>Ältere Nachrichten rund um den TSV Hessental.</p>
+        <p>Alle Nachrichten und Spielberichte rund um den TSV Hessental.</p>
       </div>
     </header>
 
-    <!-- ============================= Aeltere Mitteilungen ============================= -->
+    <!-- ============================= Alle Mitteilungen ============================= -->
     <section class="section">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Archiv</span>
-          <h2>Ältere Mitteilungen</h2>
-          <p class="lead">Die neuesten Mitteilungen findest du auf der <a href="index.html">Startseite</a>.</p>
+          <h2>Alle Mitteilungen</h2>
+          <p class="lead">Neueste zuerst – zum Weiterlesen einfach anklicken.</p>
         </div>
 
-        <!-- Inhalte kommen aus js/mitteilungen.js (alle ausser den drei neuesten) -->
+        <div class="news-filter" data-news-filter role="group" aria-label="Mitteilungen filtern">
+          <button type="button" data-filter="alle" aria-pressed="true">Alle</button>
+          <button type="button" data-filter="mitteilung" aria-pressed="false">Mitteilungen</button>
+          <button type="button" data-filter="spielbericht" aria-pressed="false">Spielberichte</button>
+        </div>
+
+        <!-- Inhalte kommen aus js/mitteilungen.js (alle Einträge als Teaser) -->
         <div class="news-list" data-news="archive">
           <noscript><p>Zum Anzeigen der Mitteilungen wird JavaScript benötigt.</p></noscript>
         </div>

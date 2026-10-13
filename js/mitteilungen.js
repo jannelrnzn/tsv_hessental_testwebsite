@@ -1,25 +1,36 @@
 /**
- * TSV Hessental – alle Mitteilungen an einer Stelle.
+ * TSV Hessental – alle Mitteilungen und Spielberichte an einer Stelle.
  *
- * Neue Mitteilung: einfach GANZ OBEN in die Liste einfügen (neueste zuerst).
- * Die Startseite zeigt automatisch die drei neuesten, alle älteren erscheinen
- * unter Archiv -> Mitteilungen (archiv-mitteilungen.html).
+ * Neue Mitteilung: GANZ OBEN in die Liste einfügen (neueste zuerst) und danach
+ *   node tools/mitteilungen.js
+ * ausführen. Das Skript erzeugt für jeden Eintrag eine eigene Seite
+ * mitteilungen/<id>.html (verlinkbar, mit Linkvorschau für WhatsApp & Co.).
  *
- * Im "text" ist einfaches HTML erlaubt, z. B. Links: <a href="vorstand.html">…</a>
+ * Felder:
+ *   id        eindeutig, nur a-z, 0-9 und "-", Muster JJJJ-MM-TT-stichwort
+ *             (wird Dateiname – später nicht mehr ändern, sonst gehen Links kaputt)
+ *   datum     Anzeige-Datum, z. B. "12. Oktober 2026"
+ *   titel     Überschrift
+ *   text      kompletter Text; einfaches HTML erlaubt, Absätze mit </p><p>,
+ *             Links z. B. <a href="vorstand.html">…</a> (Pfad wie von der Startseite aus)
+ *   kategorie optional "spielbericht" – erscheint auf der Startseite im eigenen
+ *             Bereich „Spielberichte“ statt unter „Aktuelle Mitteilungen“
+ *   teaser    optional eigener Kurztext für Startseite/Archiv
+ *             (sonst automatisch die ersten Zeilen des Textes)
+ *   bilder    optional, Dateien unter assets/images/mitteilungen/:
+ *               bilder: [
+ *                 { datei: "assets/images/mitteilungen/sieg-vellberg.jpg", beschreibung: "Jubel nach dem 2:4" },
+ *                 "assets/images/mitteilungen/zweites-bild.jpg"
+ *               ]
+ *   archiv    optional true – nicht mehr auf der Startseite anzeigen
  *
- * Optional Bilder: Dateien nach assets/images/mitteilungen/ hochladen und angeben:
- *   bilder: [
- *     { datei: "assets/images/mitteilungen/sieg-vellberg.jpg", beschreibung: "Jubel nach dem 2:4" },
- *     "assets/images/mitteilungen/zweites-bild.jpg"
- *   ]
- * Ohne "bilder" wird einfach keine Bildleiste angezeigt.
- *
- * Optional archiv: true – Mitteilung erscheint sofort im Archiv statt auf der
- * Startseite (die Startseite rückt dann mit der nächstälteren auf).
+ * Startseite: je die drei neuesten Mitteilungen und Spielberichte als Teaser.
+ * Archiv -> Mitteilungen (archiv-mitteilungen.html): alle Einträge.
  */
 
 var MITTEILUNGEN = [
   {
+    id: "2026-10-17-neue-website",
     datum: "17. Oktober 2026",
     titel: "Neue Website für unseren TSV ab dem 17. Oktober 2026",
     text:
@@ -33,7 +44,9 @@ var MITTEILUNGEN = [
       "Wir wünschen viel Spaß mit der neuen Website!"
   },
   {
+    id: "2026-10-12-a3-abstiegsrunde",
     datum: "12. Oktober 2026",
+    kategorie: "spielbericht",
     titel: "Die Fußball-Herren des TSV müssen in die A3-Abstiegsrunde",
     text:
       "Nach dem achten Spieltag der Haller Staffel der Kreisliga A3 ist es nun " +
@@ -46,6 +59,7 @@ var MITTEILUNGEN = [
       "Bezirksliga-Absteiger, die regional der A3 zugeordnet wären, sogar noch erhöhen."
   },
   {
+    id: "2026-09-30-terrassenueberdachung",
     datum: "30. September 2026",
     titel: "Neue Terrassenüberdachung: Werbeplätze und Spenden",
     text:
@@ -69,9 +83,10 @@ var MITTEILUNGEN = [
     ]
   },
   {
+    id: "2026-09-14-schwieriger-saisonstart",
     datum: "14. September 2026",
+    kategorie: "spielbericht",
     titel: "Hessentaler erste Mannschaft mit schwierigem Saisonstart",
-    archiv: true,
     text:
       "Nach vier Spieltagen in der Kreisliga A3 Rems/Murr/Hall (Haller Staffel) wartet die Erste " +
       "noch auf den ersten Sieg: Auf ein 1:1 zum Auftakt gegen SC " +
@@ -82,7 +97,9 @@ var MITTEILUNGEN = [
       "immernoch ungeschlagen und konnte aus drei Spielen 5 Punkte einfahren."
   },
   {
+    id: "2026-04-neuer-2-vorstand",
     datum: "April 2026",
+    archiv: true,
     titel: "Neuer 2. Vorstand: Marco Ebinger folgt auf Jens Ritter",
     text:
       "Bei der Hauptversammlung im April 2026 wurde Marco Ebinger zum " +
