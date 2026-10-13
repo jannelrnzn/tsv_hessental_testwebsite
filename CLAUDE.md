@@ -101,9 +101,9 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Bei neuen/entfallenen Werbepartnern `werbepartner.html` UND `js/sponsoren.js`
   anpassen.
 - `werbepartner.html` nach Klassen (Tafel, Stand 10/2026): **Hauptsponsor** Stadtwerke
-  (Logo + Link), **Exklusiv-Partner** (`.partner-card`, Name + Homepage verlinkt, alle 14 mit
-  Link; Bricks & Mortar → Instagram, Adresse = Firmensitz Gersthofen; Logos (alle 14) unter
-  `assets/images/sponsoren/logos/` (`.partner-card__logo`); Stadtwerke auch hier), **Teampartner** =
+  (Logo + Link), **Exklusiv-Partner** (`.partner-card`, Name + Homepage verlinkt, alle 13 mit
+  Link; Bricks & Mortar → Instagram, Adresse = Firmensitz Gersthofen; Logos (alle) unter
+  `assets/images/sponsoren/logos/` (`.partner-card__logo`); Stadtwerke NUR als Hauptsponsor, nicht in der Liste), **Teampartner** =
   alle übrigen alphabetisch. Die frühere Einteilung Trikots/Bande/Fanpost/Spielerhütte
   ist entfallen.
 
