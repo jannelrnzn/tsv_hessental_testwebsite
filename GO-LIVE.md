@@ -15,7 +15,7 @@ Die alte WordPress-Seite im Hauptverzeichnis bleibt unangetastet (nur gesichert)
 
 ### A1. FileZilla: Verbindung testen
 1. FileZilla öffnen → oben in der Schnellverbindung eintragen:
-   - **Server:** `sftp://ssh.strato.de`
+   - **Server:** `sftp://51307960.ssh.w1.strato.hosting`
    - **Benutzername:** `stu440994156` (Strato → Datenbanken und Webspace → SFTP & SSH,
      Benutzer mit „SFTP + SSH“; der Name ist NICHT die Domain)
    - **Passwort:** das SFTP-Passwort aus Sesam. Klappt es nicht: bei Strato unter SFTP & SSH

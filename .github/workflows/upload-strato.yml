@@ -1,5 +1,5 @@
 # Lädt die Website bei jedem Push auf main automatisch zu Strato hoch
-# (per SFTP in den Ordner /website, nur geänderte Dateien).
+# (per SFTP auf 51307960.ssh.w1.strato.hosting in den Ordner /website, nur geänderte Dateien).
 #
 # Voraussetzung: Repository-Secrets (GitHub → Settings → Secrets and variables → Actions)
 #   STRATO_SFTP_USER      SFTP-Benutzername (Strato: „stu…“, siehe SFTP & SSH im Kundenbereich)
@@ -69,6 +69,6 @@ jobs:
             set sftp:auto-confirm yes
             set net:max-retries 3
             set net:timeout 30
-            open --env-password -u \"$SFTP_USER\" sftp://ssh.strato.de
+            open --env-password -u \"$SFTP_USER\" sftp://51307960.ssh.w1.strato.hosting
             mirror --reverse --only-newer --delete --parallel=4 --verbose=1 dist/ website/
           "

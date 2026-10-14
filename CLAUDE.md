@@ -78,7 +78,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   `.devserver`, `.gitignore`, `CLAUDE.md`) → Test über Subdomain → Domain-Ziel
   umstellen. Mail-Einstellungen der Domain nicht anfassen.
 - **Alte Seite = WordPress** (Theme Accelerate Pro + ca. 20 Plugins) mit MySQL-Datenbank bei
-  Strato → Sicherung = Dateien per SFTP (Server ssh.strato.de) UND Datenbank-Export.
+  Strato → Sicherung = Dateien per SFTP (Server 51307960.ssh.w1.strato.hosting) UND Datenbank-Export.
   Zugangsdaten stehen in Jannes Vereinstabelle „Sesam“ (Dropbox) – NIE in Chat/Repo übernehmen.
   Strato-Kundenlogin steht dort in der Zeile „Provider Strato“ (Spalte Passwort = echte Passwörter);
   Janne ist am 14.10.2026 erfolgreich eingeloggt. Aktuelle Datenbank: dbs16037730 (Export per phpMyAdmin).
@@ -95,7 +95,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   und in derselben Sitzung live prüfen. Ziel der GitHub Action später: `/website`.
   `noreply@` ist angelegt (Umleitung an verwaltung@), AVV besteht.
   SFTP-Benutzer (Strato → SFTP & SSH): `stu440994156` (SFTP + SSH, Startverzeichnis /) und
-  `stu159484164` (nur SFTP); Server ssh.strato.de, Port 22. PHP 8.4 (PHP-Boost an).
+  `stu159484164` (nur SFTP); Server 51307960.ssh.w1.strato.hosting (laut Strato, NICHT mehr ssh.strato.de), Port 22. PHP 8.4 (PHP-Boost an).
   BackupControl: automatische Strato-Backups täglich/wöchentlich (zurück bis 20.09.2026). Keine Cron-Jobs.
   Jannes Laptop (Firmen-VPN/Proxy) blockiert Port 22 → FileZilla nur am privaten PC.
   Google-Konto des alten Termin-Kalenders hat Dieter Erdmann am 14.10.2026 gelöscht (neue Seite
@@ -104,7 +104,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   (ohne interne Dateien laut `tools/upload-ausschluss.txt`, Mitteilungsseiten mit
   SITE_URL=https://tsv-hessental.de/, sitemap.xml, robots.txt, `<base href="/">` in 404.html;
   `--zip` erzeugt tsv-website-upload.zip). GitHub Action `.github/workflows/upload-strato.yml`:
-  bei Push auf main → build → lftp-SFTP-Mirror nach `website/` auf ssh.strato.de (nur neuere
+  bei Push auf main → build → lftp-SFTP-Mirror nach `website/` auf 51307960.ssh.w1.strato.hosting (nur neuere
   Dateien, Dateidatum per git-restore-mtime, `--delete`); ohne Secrets STRATO_SFTP_USER /
   STRATO_SFTP_PASSWORD wird sie übersprungen. `.htaccess` (www → ohne www, 404, keine
   Verzeichnislisten, Cache) und `404.html` liegen im Repo-Root.
