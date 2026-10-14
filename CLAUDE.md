@@ -69,11 +69,11 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
     heißt jetzt „Kurse & Freizeit“. Wartet auf Ansprechpartner, Termine, Treffpunkt.
 11. ~~Gasteltern-Beitrag~~ erledigt (Mitteilung 02.10.2026, U12 Bundesliga Cup, Link zur Anmeldeseite)
 
-## Hosting / Go-live (geplant 17.10.2026)
+## Hosting / Go-live (geplant Freitagabend/-nacht 16./17.10.2026)
 
 - Strato-Paket „Hosting Pro“ (Vertrag des Vereins seit 2006), Domain
   tsv-hessental.de inkl. E-Mail hängt daran. Zugang (Kundenlogin + SFTP)
-  bekommt Janne selbst.
+  bekommt Janne selbst. Kundenlogin: https://www.strato.de/login/
 - Ablauf: alte Seite sichern → Dateien per SFTP in eigenen Ordner (ohne `.git`,
   `.devserver`, `.gitignore`, `CLAUDE.md`) → Test über Subdomain → Domain-Ziel
   umstellen. Mail-Einstellungen der Domain nicht anfassen.
