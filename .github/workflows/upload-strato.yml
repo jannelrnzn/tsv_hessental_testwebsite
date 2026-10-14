@@ -1,0 +1,74 @@
+# Lädt die Website bei jedem Push auf main automatisch zu Strato hoch
+# (per SFTP in den Ordner /website, nur geänderte Dateien).
+#
+# Voraussetzung: Repository-Secrets (GitHub → Settings → Secrets and variables → Actions)
+#   STRATO_SFTP_USER      SFTP-Benutzername (bei Strato: die Domain)
+#   STRATO_SFTP_PASSWORD  SFTP-Passwort
+# Solange die Secrets fehlen, wird der Upload einfach übersprungen.
+# Manuell starten: GitHub → Actions → „Upload zu Strato“ → „Run workflow“.
+
+name: Upload zu Strato
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: upload-strato
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Zugangsdaten vorhanden?
+        id: pruefen
+        env:
+          SFTP_USER: ${{ secrets.STRATO_SFTP_USER }}
+          SFTP_PASSWORD: ${{ secrets.STRATO_SFTP_PASSWORD }}
+        run: |
+          if [ -z "$SFTP_USER" ] || [ -z "$SFTP_PASSWORD" ]; then
+            echo "aktiv=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Keine Strato-Zugangsdaten hinterlegt – Upload übersprungen."
+          else
+            echo "aktiv=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Repository holen
+        if: steps.pruefen.outputs.aktiv == 'true'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Werkzeuge installieren
+        if: steps.pruefen.outputs.aktiv == 'true'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lftp git-restore-mtime
+
+      - name: Dateidatum aus Git übernehmen
+        # Damit beim Hochladen nur wirklich geänderte Dateien übertragen werden
+        if: steps.pruefen.outputs.aktiv == 'true'
+        run: git restore-mtime --quiet
+
+      - name: Upload-Ordner bauen
+        if: steps.pruefen.outputs.aktiv == 'true'
+        env:
+          SITE_URL: https://tsv-hessental.de/
+        run: bash tools/build.sh
+
+      - name: Per SFTP zu Strato hochladen
+        if: steps.pruefen.outputs.aktiv == 'true'
+        env:
+          SFTP_USER: ${{ secrets.STRATO_SFTP_USER }}
+          LFTP_PASSWORD: ${{ secrets.STRATO_SFTP_PASSWORD }}
+        run: |
+          lftp -c "
+            set sftp:auto-confirm yes
+            set net:max-retries 3
+            set net:timeout 30
+            open --env-password -u \"$SFTP_USER\" sftp://ssh.strato.de
+            mirror --reverse --only-newer --delete --parallel=4 --verbose=1 dist/ website/
+          "

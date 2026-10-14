@@ -1,0 +1,31 @@
+# TSV Hessental – Servereinstellungen für Strato (Apache).
+# Wirkt nur auf dem Strato-Webspace, GitHub Pages ignoriert diese Datei.
+
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # www.tsv-hessental.de -> tsv-hessental.de
+  RewriteCond %{HTTP_HOST} ^www\.(tsv-hessental\.de)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# Interne Dateien nie ausliefern
+<FilesMatch "^\.|\.(md|ps1|sh|yml)$">
+  Require all denied
+</FilesMatch>
+
+# Browser-Cache: CSS/JS haben ?v=… (Cache-Busting), Bilder und PDFs ändern sich selten
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType application/pdf "access plus 1 month"
+</IfModule>

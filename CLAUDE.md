@@ -94,9 +94,16 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   Subdomain (z. B. test.tsv-hessental.de → /website), erst dann Hauptdomain auf /website umstellen
   und in derselben Sitzung live prüfen. Ziel der GitHub Action später: `/website`.
   `noreply@` ist angelegt (Umleitung an verwaltung@), AVV besteht.
-- Beim Go-live: `SITE_URL` in `tools/mitteilungen.js` auf die Domain umstellen; die
-  GitHub Action soll vor dem Upload `node tools/mitteilungen.js` ausführen und `tools/`
-  nicht hochladen.
+- **Vorbereitet (14.10.2026):** Anleitung `GO-LIVE.md` (Teil A–D). `tools/build.sh` baut `dist/`
+  (ohne interne Dateien laut `tools/upload-ausschluss.txt`, Mitteilungsseiten mit
+  SITE_URL=https://tsv-hessental.de/, sitemap.xml, robots.txt, `<base href="/">` in 404.html;
+  `--zip` erzeugt tsv-website-upload.zip). GitHub Action `.github/workflows/upload-strato.yml`:
+  bei Push auf main → build → lftp-SFTP-Mirror nach `website/` auf ssh.strato.de (nur neuere
+  Dateien, Dateidatum per git-restore-mtime, `--delete`); ohne Secrets STRATO_SFTP_USER /
+  STRATO_SFTP_PASSWORD wird sie übersprungen. `.htaccess` (www → ohne www, 404, keine
+  Verzeichnislisten, Cache) und `404.html` liegen im Repo-Root.
+- Nach dem Go-live: Standardwert von `SITE_URL` in `tools/mitteilungen.js` auf
+  https://tsv-hessental.de/ umstellen und Skript neu ausführen.
 - Danach: kontakt.php
   echt testen, `noreply@` (am 14.10.2026 angelegt), GitHub Pages abschalten.
 - **Entschieden (Janne):** Änderungen nach dem Go-live laufen weiter über GitHub
@@ -128,8 +135,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Bilder unter `assets/images/mitteilungen/`. Einzelseite: erstes Bild groß in Textbreite (760 px)
   nach dem ersten Absatz (max. 80 % Bildschirmhöhe, Hochformat schmaler), weitere als
   Raster am Ende; Klick = Großansicht. Startseite/Archiv: kleines Vorschaubild neben dem Teaser.
-- `SITE_URL` oben in `tools/mitteilungen.js` = Adresse für Linkvorschau; beim Go-live auf die
-  echte Domain umstellen und Skript neu ausführen.
+- `SITE_URL` oben in `tools/mitteilungen.js` = Adresse für Linkvorschau (Umgebungsvariable
+  SITE_URL überschreibt; `tools/build.sh` setzt die echte Domain).
 
 ## Nächste Termine (Startseite)
 

@@ -16,8 +16,8 @@ var path = require("path");
 var vm = require("vm");
 
 // Adresse der Website – für Linkvorschau (WhatsApp, Facebook) nötig.
-// Beim Go-live auf die echte Domain umstellen und das Skript erneut ausführen.
-var SITE_URL = "https://jannelrnzn.github.io/tsv_hessental_testwebsite/";
+// Für den Upload zu Strato setzt tools/build.sh die Umgebungsvariable SITE_URL.
+var SITE_URL = process.env.SITE_URL || "https://jannelrnzn.github.io/tsv_hessental_testwebsite/";
 
 var ROOT = path.join(__dirname, "..");
 var ZIEL = path.join(ROOT, "mitteilungen");
