@@ -77,6 +77,15 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Ablauf: alte Seite sichern → Dateien per SFTP in eigenen Ordner (ohne `.git`,
   `.devserver`, `.gitignore`, `CLAUDE.md`) → Test über Subdomain → Domain-Ziel
   umstellen. Mail-Einstellungen der Domain nicht anfassen.
+- **Alte Seite = WordPress** (Theme Accelerate Pro + ca. 20 Plugins) mit MySQL-Datenbank bei
+  Strato → Sicherung = Dateien per SFTP (Server ssh.strato.de) UND Datenbank-Export.
+  Zugangsdaten stehen in Jannes Vereinstabelle „Sesam“ (Dropbox) – NIE in Chat/Repo übernehmen.
+  Dort fehlt der Strato-Kundenlogin (Kundennummer) → muss Janne vom Vertragsinhaber bekommen.
+- **Nach dem Go-live kündigen/aufräumen:** WordPress-Plugin-Abos, v. a. „Shortcodes Ultimate Pro“
+  (automatische Verlängerung 30.10.2026!) und „Max Mega Menu Pro“ (Updates bis 18.02.2027);
+  übrige Plugin-/Theme-Lizenzen sind Einmalkäufe (nichts zu tun). Später alte WordPress-Dateien,
+  Demo-Seite und Datenbank bei Strato löschen. FTP- und E-Mail-Passwörter ändern (Tabelle lag
+  in einem geteilten Dropbox-Ordner). FuPa-Login bleibt; Google-Kalender wohl nicht mehr nötig.
 - Beim Go-live: `SITE_URL` in `tools/mitteilungen.js` auf die Domain umstellen; die
   GitHub Action soll vor dem Upload `node tools/mitteilungen.js` ausführen und `tools/`
   nicht hochladen.
