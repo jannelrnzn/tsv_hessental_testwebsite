@@ -95,7 +95,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   und in derselben Sitzung live prüfen. Ziel der GitHub Action später: `/website`.
   `noreply@` ist angelegt (Umleitung an verwaltung@), AVV besteht.
   SFTP-Benutzer (Strato → SFTP & SSH): `stu440994156` (SFTP + SSH, Startverzeichnis /) und
-  `stu159484164` (nur SFTP); Server 51307960.ssh.w1.strato.hosting (laut Strato, NICHT mehr ssh.strato.de), Port 22. PHP 8.4 (PHP-Boost an).
+  `stu159484164` (nur SFTP, früher admin@tsv-hessental.de – bevorzugt, Passwort laut Sesam); Server 51307960.ssh.w1.strato.hosting (laut Strato, NICHT mehr ssh.strato.de), Port 22. PHP 8.4 (PHP-Boost an).
   BackupControl: automatische Strato-Backups täglich/wöchentlich (zurück bis 20.09.2026). Keine Cron-Jobs.
   Jannes Laptop (Firmen-VPN/Proxy) blockiert Port 22 → FileZilla nur am privaten PC.
   Google-Konto des alten Termin-Kalenders hat Dieter Erdmann am 14.10.2026 gelöscht (neue Seite
