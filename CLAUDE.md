@@ -94,6 +94,12 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   Subdomain (z. B. test.tsv-hessental.de → /website), erst dann Hauptdomain auf /website umstellen
   und in derselben Sitzung live prüfen. Ziel der GitHub Action später: `/website`.
   `noreply@` ist angelegt (Umleitung an verwaltung@), AVV besteht.
+  SFTP-Benutzer (Strato → SFTP & SSH): `stu440994156` (SFTP + SSH, Startverzeichnis /) und
+  `stu159484164` (nur SFTP); Server ssh.strato.de, Port 22. PHP 8.4 (PHP-Boost an).
+  BackupControl: automatische Strato-Backups täglich/wöchentlich (zurück bis 20.09.2026).
+  Jannes Laptop (Firmen-VPN/Proxy) blockiert Port 22 → FileZilla nur am privaten PC.
+  Google-Konto des alten Termin-Kalenders hat Dieter Erdmann am 14.10.2026 gelöscht (neue Seite
+  braucht es nicht).
 - **Vorbereitet (14.10.2026):** Anleitung `GO-LIVE.md` (Teil A–D). `tools/build.sh` baut `dist/`
   (ohne interne Dateien laut `tools/upload-ausschluss.txt`, Mitteilungsseiten mit
   SITE_URL=https://tsv-hessental.de/, sitemap.xml, robots.txt, `<base href="/">` in 404.html;

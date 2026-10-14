@@ -2,7 +2,7 @@
 # (per SFTP in den Ordner /website, nur geänderte Dateien).
 #
 # Voraussetzung: Repository-Secrets (GitHub → Settings → Secrets and variables → Actions)
-#   STRATO_SFTP_USER      SFTP-Benutzername (bei Strato: die Domain)
+#   STRATO_SFTP_USER      SFTP-Benutzername (Strato: „stu…“, siehe SFTP & SSH im Kundenbereich)
 #   STRATO_SFTP_PASSWORD  SFTP-Passwort
 # Solange die Secrets fehlen, wird der Upload einfach übersprungen.
 # Manuell starten: GitHub → Actions → „Upload zu Strato“ → „Run workflow“.

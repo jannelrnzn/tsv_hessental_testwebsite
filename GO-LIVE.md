@@ -5,6 +5,8 @@ Test-Subdomain geprüft, und erst dann zeigt **tsv-hessental.de** auf diesen Ord
 Die alte WordPress-Seite im Hauptverzeichnis bleibt unangetastet (nur gesichert).
 
 > Zugangsdaten stehen in der Sesam-Tabelle (Zeile „Provider Strato“).
+> Strato macht zusätzlich automatische Sicherungen (BackupControl: täglich + wöchentlich,
+> mehrere Wochen zurück) – ein weiteres Sicherheitsnetz.
 > Niemals in GitHub-Dateien, Chats oder E-Mails schreiben.
 
 ---
@@ -14,8 +16,11 @@ Die alte WordPress-Seite im Hauptverzeichnis bleibt unangetastet (nur gesichert)
 ### A1. FileZilla: Verbindung testen
 1. FileZilla öffnen → oben in der Schnellverbindung eintragen:
    - **Server:** `sftp://ssh.strato.de`
-   - **Benutzername:** laut Sesam (Zeile „FTP mit FileZilla“, Login `tsv-hessental.de`)
-   - **Passwort:** das zugehörige FTP-Passwort aus Sesam
+   - **Benutzername:** `stu440994156` (Strato → Datenbanken und Webspace → SFTP & SSH,
+     Benutzer mit „SFTP + SSH“; der Name ist NICHT die Domain)
+   - **Passwort:** das SFTP-Passwort aus Sesam. Klappt es nicht: bei Strato unter SFTP & SSH
+     beim Benutzer über „⋮“ ein neues Passwort setzen (die Website ist davon nicht betroffen)
+     und in Sesam eintragen.
    - **Port:** `22`
 2. „Verbinden“ → Rückfrage zum Server-Schlüssel mit „OK“ (und „immer vertrauen“) bestätigen.
 3. Rechts erscheinen die Ordner (`wp-admin`, `wp-content`, …). **Nichts verschieben oder löschen.**
@@ -24,7 +29,7 @@ Die alte WordPress-Seite im Hauptverzeichnis bleibt unangetastet (nur gesichert)
 1. https://github.com/jannelrnzn/tsv_hessental_testwebsite → **Settings** →
    **Secrets and variables** → **Actions** → **New repository secret**.
 2. Zwei Secrets anlegen (genau diese Namen):
-   - `STRATO_SFTP_USER` → derselbe Benutzername wie in FileZilla
+   - `STRATO_SFTP_USER` → derselbe Benutzername wie in FileZilla (`stu440994156`)
    - `STRATO_SFTP_PASSWORD` → dasselbe Passwort wie in FileZilla
 3. Oben auf **Actions** → links **„Upload zu Strato“** → **Run workflow** → **Run workflow**.
 4. Nach einigen Minuten grüner Haken ✅. Der erste Upload dauert länger (ca. 250 MB),
