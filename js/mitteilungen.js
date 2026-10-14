@@ -97,6 +97,23 @@ var MITTEILUNGEN = [
     ]
   },
   {
+    id: "2026-10-02-gasteltern-u12-bundesliga-cup",
+    datum: "2. Oktober 2026",
+    titel: "Gasteltern gesucht für den U12 Bundesliga Cup",
+    text:
+      "Am 12. und 13. Dezember 2026 kommt Bundesliga-Flair nach Hessental: Beim U12 Bundesliga Cup in der Schenkenseehalle in Schwäbisch Hall messen sich unsere Jungs und Mädels mit den Nachwuchsteams von Bundesligisten – ein Highlight, an das sie sich noch lange erinnern werden!</p><p>" +
+      "<strong>Genau dafür brauchen wir euch!</strong> Damit wir dieses Event durchführen können, suchen wir Gasteltern, die jeweils zwei Spieler über das Wochenende bei sich aufnehmen. Je mehr Familien mitmachen, desto besser wird dieses besondere Fußballwochenende.</p><p>" +
+      "<strong>So könnt ihr mitmachen:</strong><br>" +
+      "1. <a href=\"https://tsv.sbitc.de/gastfamilie/anmeldung/adSxuQ4rqSITBwNg9KVbDA\" target=\"_blank\" rel=\"noopener\"><strong>Anmeldeseite für Gastfamilien öffnen</strong></a><br>" +
+      "2. Als Gastfamilie in die Liste eintragen<br>" +
+      "3. Weitersagen: Freunde, Familie, Nachbarn</p><p>" +
+      "Fragen beantwortet gerne unsere <a href=\"fussball-jugend-abteilungsleitung.html\">Jugendleitung</a>.</p><p>" +
+      "Lasst uns gemeinsam zeigen, was Hessental kann! Vielen Dank für eure Unterstützung – eure Jugendleiter des TSV Hessental.",
+    bilder: [
+      { datei: "assets/images/mitteilungen/2026-10-02-gasteltern-u12-bundesliga-cup.jpg", beschreibung: "U12 Bundesliga Cup am 12./13. Dezember 2026 in der Schenkenseehalle Schwäbisch Hall" }
+    ]
+  },
+  {
     id: "2026-09-30-terrassenueberdachung",
     datum: "30. September 2026",
     titel: "Neue Terrassenüberdachung: Werbeplätze und Spenden",

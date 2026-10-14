@@ -68,7 +68,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
    (Bronze/Silber/Gold/Diamant/Individual, Preise „auf Anfrage“) aus Werbevertrag 2026.
 10. Fahrradgruppe – Seite `freizeit-fahrradgruppe.html` angelegt (Platzhalter), Menü „Kurse“
     heißt jetzt „Kurse & Freizeit“. Wartet auf Ansprechpartner, Termine, Treffpunkt.
-11. Gasteltern-Beitrag
+11. ~~Gasteltern-Beitrag~~ erledigt (Mitteilung 02.10.2026, U12 Bundesliga Cup, Link zur Anmeldeseite)
 
 ## Hosting / Go-live (geplant 17.10.2026)
 
