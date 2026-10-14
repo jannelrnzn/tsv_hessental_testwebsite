@@ -46,12 +46,7 @@ jobs:
         if: steps.pruefen.outputs.aktiv == 'true'
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq lftp git-restore-mtime
-
-      - name: Dateidatum aus Git übernehmen
-        # Damit beim Hochladen nur wirklich geänderte Dateien übertragen werden
-        if: steps.pruefen.outputs.aktiv == 'true'
-        run: git restore-mtime --quiet
+          sudo apt-get install -y -qq lftp
 
       - name: Upload-Ordner bauen
         if: steps.pruefen.outputs.aktiv == 'true'
@@ -59,16 +54,10 @@ jobs:
           SITE_URL: https://tsv-hessental.de/
         run: bash tools/build.sh
 
-      - name: Per SFTP zu Strato hochladen
+      - name: Per SFTP zu Strato hochladen (nur Änderungen)
         if: steps.pruefen.outputs.aktiv == 'true'
         env:
+          SFTP_HOST: 51307960.ssh.w1.strato.hosting
           SFTP_USER: ${{ secrets.STRATO_SFTP_USER }}
           LFTP_PASSWORD: ${{ secrets.STRATO_SFTP_PASSWORD }}
-        run: |
-          lftp -c "
-            set sftp:auto-confirm yes
-            set net:max-retries 3
-            set net:timeout 30
-            open --env-password -u \"$SFTP_USER\" sftp://51307960.ssh.w1.strato.hosting
-            mirror --reverse --only-newer --delete --parallel=4 --verbose=1 dist/ website/
-          "
+        run: bash tools/deploy.sh

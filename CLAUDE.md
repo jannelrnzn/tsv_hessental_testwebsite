@@ -104,8 +104,9 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   (ohne interne Dateien laut `tools/upload-ausschluss.txt`, Mitteilungsseiten mit
   SITE_URL=https://tsv-hessental.de/, sitemap.xml, robots.txt, `<base href="/">` in 404.html;
   `--zip` erzeugt tsv-website-upload.zip). GitHub Action `.github/workflows/upload-strato.yml`:
-  bei Push auf main → build → lftp-SFTP-Mirror nach `website/` auf 51307960.ssh.w1.strato.hosting (nur neuere
-  Dateien, Dateidatum per git-restore-mtime, `--delete`); ohne Secrets STRATO_SFTP_USER /
+  bei Push auf main → `tools/build.sh` → `tools/deploy.sh` (lftp/SFTP nach `website/`; überträgt nur
+  per `git diff` seit dem Commit in `website/.deploy-sha` geänderte Dateien + Mitteilungen/sitemap/
+  robots/404, löscht entfernte; ohne .deploy-sha vollständiger Abgleich); ohne Secrets STRATO_SFTP_USER /
   STRATO_SFTP_PASSWORD wird sie übersprungen. `.htaccess` (www → ohne www, 404, keine
   Verzeichnislisten, Cache) und `404.html` liegen im Repo-Root.
 - Nach dem Go-live: Standardwert von `SITE_URL` in `tools/mitteilungen.js` auf
