@@ -98,6 +98,11 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   `stu159484164` (nur SFTP, früher admin@tsv-hessental.de – bevorzugt, Passwort laut Sesam); Server 51307960.ssh.w1.strato.hosting (laut Strato, NICHT mehr ssh.strato.de), Port 22. PHP 8.4 (PHP-Boost an).
   BackupControl: automatische Strato-Backups täglich/wöchentlich (zurück bis 20.09.2026). Keine Cron-Jobs.
   Jannes Laptop (Firmen-VPN/Proxy) blockiert Port 22 → FileZilla nur am privaten PC.
+  **E-Mail-Filter bei Strato (Hinweis Dieter Erdmann):** Muster je Postfach = „Umleiten nach …“ + danach
+  „Verwerfen“ (sonst laufen ungelesene Postfächer voll). Andere Postfächer/Filter NICHT ändern;
+  fussball-herren@ hat bewusst keine Weiterleitung (Markus Gerstenberg liest per Strato-Mail).
+  Dieter hat am 14.10.2026 Dateien + Datenbank der alten Seite selbst gesichert. Fehler 413 auf der
+  alten Seite seit ~8.10. (nicht durch uns) → Kontaktformular mit Anhang 3–4 MB testen.
   Google-Konto des alten Termin-Kalenders hat Dieter Erdmann am 14.10.2026 gelöscht (neue Seite
   braucht es nicht).
 - **Vorbereitet (14.10.2026):** Anleitung `GO-LIVE.md` (Teil A–D). `tools/build.sh` baut `dist/`
