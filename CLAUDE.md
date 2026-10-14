@@ -87,6 +87,13 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   übrige Plugin-/Theme-Lizenzen sind Einmalkäufe (nichts zu tun). Später alte WordPress-Dateien,
   Demo-Seite und Datenbank bei Strato löschen. FTP- und E-Mail-Passwörter ändern (Tabelle lag
   in einem geteilten Dropbox-Ordner). FuPa-Login bleibt; Google-Kalender wohl nicht mehr nötig.
+- **Stand Webspace (14.10.2026):** Domain tsv-hessental.de = „Umleitung Intern“ auf das
+  Stammverzeichnis `/`, dort liegt WordPress (wp-admin, wp-content, wp-includes, cgi-bin, cgi-data).
+  Strato erlaubt als neues Ziel NUR Unterordner; Änderungen nur in derselben Sitzung umkehrbar →
+  kein späteres Zurück auf die alte Seite. Ablauf: neue Seite nach `/website` hochladen, Test über
+  Subdomain (z. B. test.tsv-hessental.de → /website), erst dann Hauptdomain auf /website umstellen
+  und in derselben Sitzung live prüfen. Ziel der GitHub Action später: `/website`.
+  `noreply@` ist angelegt (Umleitung an verwaltung@), AVV besteht.
 - Beim Go-live: `SITE_URL` in `tools/mitteilungen.js` auf die Domain umstellen; die
   GitHub Action soll vor dem Upload `node tools/mitteilungen.js` ausführen und `tools/`
   nicht hochladen.
