@@ -57,7 +57,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
    Strato als Hoster + AVV-Satz, „Stand: Oktober 2026“. Kein Datenschutzbeauftragter
    nötig (Janne). Impressum: Steuernummer-Zeile entfernt (keine USt-IdNr.), Verantwortlich
    nach § 18 Abs. 2 MStV = Janne, „Gestaltung & Umsetzung“ Janne + Dieter Erdmann (alt).
-   **AVV mit Strato muss vor Go-live wirklich abgeschlossen sein** (Text behauptet es).
+   AVV mit Strato besteht (erstmals 25.05.2018, zuletzt 07.03.2025 abgeschlossen) – erledigt.
 4. fussball.de-Widgets für Jugend – WARTEN, Janne meldet sich mit den Codes
 5. Dart-Liga-Widget – WARTEN, Janne meldet sich
 6. ~~Sponsoren in Klassen~~ erledigt (Hauptsponsor / Exklusiv-Partner / Teampartner)
@@ -90,7 +90,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Beim Go-live: `SITE_URL` in `tools/mitteilungen.js` auf die Domain umstellen; die
   GitHub Action soll vor dem Upload `node tools/mitteilungen.js` ausführen und `tools/`
   nicht hochladen.
-- Danach: Strato als Hoster in der Datenschutzerklärung + AVV, kontakt.php
+- Danach: kontakt.php
   echt testen, `noreply@` (am 14.10.2026 angelegt), GitHub Pages abschalten.
 - **Entschieden (Janne):** Änderungen nach dem Go-live laufen weiter über GitHub
   und werden **automatisch per GitHub Action (SFTP) zu Strato** hochgeladen –
