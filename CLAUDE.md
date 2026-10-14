@@ -91,7 +91,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   GitHub Action soll vor dem Upload `node tools/mitteilungen.js` ausführen und `tools/`
   nicht hochladen.
 - Danach: Strato als Hoster in der Datenschutzerklärung + AVV, kontakt.php
-  echt testen, `noreply@` anlegen, GitHub Pages abschalten.
+  echt testen, `noreply@` (am 14.10.2026 angelegt), GitHub Pages abschalten.
 - **Entschieden (Janne):** Änderungen nach dem Go-live laufen weiter über GitHub
   und werden **automatisch per GitHub Action (SFTP) zu Strato** hochgeladen –
   bei jedem Push auf `main`, nur geänderte Dateien. Zugangsdaten trägt Janne
