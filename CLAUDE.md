@@ -80,7 +80,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - **Alte Seite = WordPress** (Theme Accelerate Pro + ca. 20 Plugins) mit MySQL-Datenbank bei
   Strato → Sicherung = Dateien per SFTP (Server ssh.strato.de) UND Datenbank-Export.
   Zugangsdaten stehen in Jannes Vereinstabelle „Sesam“ (Dropbox) – NIE in Chat/Repo übernehmen.
-  Dort fehlt der Strato-Kundenlogin (Kundennummer) → muss Janne vom Vertragsinhaber bekommen.
+  Strato-Kundenlogin steht dort in der Zeile „Provider Strato“ (Spalte Passwort = echte Passwörter);
+  Janne ist am 14.10.2026 erfolgreich eingeloggt. Aktuelle Datenbank: dbs16037730 (Export per phpMyAdmin).
 - **Nach dem Go-live kündigen/aufräumen:** WordPress-Plugin-Abos, v. a. „Shortcodes Ultimate Pro“
   (automatische Verlängerung 30.10.2026!) und „Max Mega Menu Pro“ (Updates bis 18.02.2027);
   übrige Plugin-/Theme-Lizenzen sind Einmalkäufe (nichts zu tun). Später alte WordPress-Dateien,
