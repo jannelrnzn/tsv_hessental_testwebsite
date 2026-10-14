@@ -31,21 +31,6 @@
 
 var MITTEILUNGEN = [
   {
-    id: "2026-10-17-neue-website",
-    datum: "17. Oktober 2026",
-    komplett: true,
-    titel: "Neue Website für unseren TSV ab dem 17. Oktober 2026",
-    text:
-      "Am Samstag, den 17. Oktober 2026, bekommt der TSV Hessental in Form " +
-      "einer neuen, selbst entwickelten Website einen moderneren und " +
-      "übersichtlicheren Webauftritt. Die Inhalte und Rubriken bleiben " +
-      "weitgehend wie auf der alten Website – vor allem Layout und Gestaltung " +
-      "bekommen einen ganz neuen Look! Ideen, Fragen oder Verbesserungsvorschläge " +
-      "gerne über das <a href=\"kontaktformular.html\">Kontaktformular</a> oder " +
-      "per E-Mail an <a href=\"mailto:jannelorenzen2005@gmail.com\">jannelorenzen2005@gmail.com</a>. " +
-      "Wir wünschen viel Spaß mit der neuen Website!"
-  },
-  {
     id: "2026-10-13-besenausfahrt",
     datum: "13. Oktober 2026",
     titel: "Einladung zur Besenausfahrt 2026",

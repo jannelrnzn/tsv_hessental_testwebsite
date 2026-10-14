@@ -96,7 +96,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Inhalt nur in `js/mitteilungen.js` (Liste `MITTEILUNGEN`, neueste zuerst). Neue Mitteilung =
   neuer Eintrag ganz oben mit `id` (`JJJJ-MM-TT-stichwort`, später nie ändern), `datum`,
   `titel`, `text`; optional `kategorie: "spielbericht"`, `teaser` (eigener Kurztext), `komplett: true`
-  (ganzer Text statt Teaser, z. B. „Neue Website“), `bilder`, `archiv: true`.
+  (ganzer Text statt Teaser), `bilder`, `archiv: true`.
   Automatischer Teaser = erste ca. 100 Zeichen (`NEWS_TEASER_LENGTH` in js/main.js).
 - **Danach immer `node tools/mitteilungen.js`** ausführen: erzeugt je Eintrag
   `mitteilungen/<id>.html` (Kopf/Menü/Fuß aus `archiv-mitteilungen.html`, Pfade mit `../`,
