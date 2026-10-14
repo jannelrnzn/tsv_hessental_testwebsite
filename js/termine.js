@@ -12,9 +12,9 @@
 
 var TERMINE = [
   {
-    datum: "2026-10-17",
-    titel: "TSV Hessental – SC Bibersfeld",
-    info: "Anstoß 17:30 Uhr · Heimspiel · Ü32 Kreisliga 4 Rems/Murr/Hall, 2. Spieltag"
+    datum: "2026-10-18",
+    titel: "SG Eutendorf/Ottendorf – TSV Hessental",
+    info: "Anstoß 15:00 Uhr · Auswärtsspiel · Kreisliga A3 Rems/Murr/Hall, 9. Spieltag"
   },
   {
     datum: "2026-10-18",
