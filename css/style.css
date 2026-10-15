@@ -42,6 +42,7 @@ body {
   font-family: var(--font-base);
   color: var(--color-gray-900);
   background-color: var(--color-white);
+  font-size: 1.0625rem; /* 17 px – etwas größer als Browser-Standard */
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -106,10 +107,10 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   padding-inline: var(--space-md);
 }
 
-.section { padding-block: var(--space-2xl); }
+.section { padding-block: var(--space-xl); }
 .section--muted { background-color: var(--color-gray-100); }
 
-.section-head { max-width: 720px; margin-bottom: var(--space-lg); }
+.section-head { max-width: 720px; margin-bottom: var(--space-md); }
 .section-head--center { margin-inline: auto; text-align: center; }
 
 .grid { display: grid; gap: var(--space-lg); }
@@ -304,7 +305,7 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 
 .sponsor-bar__label {
   flex-shrink: 0;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -327,7 +328,7 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 
 .sponsor-bar__item.is-fading { opacity: 0; }
 
-.sponsor-bar__address { color: var(--color-gray-500); font-size: 0.85rem; }
+.sponsor-bar__address { color: var(--color-gray-700); font-size: 0.9rem; }
 
 /* Immer einzeilig, damit die Leiste beim Wechsel nicht springt */
 .sponsor-bar__name,
@@ -350,7 +351,7 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 
 .hero {
   position: relative;
-  min-height: 60vh;
+  min-height: 48vh;
   display: flex;
   align-items: center;
   color: var(--color-white);
@@ -358,7 +359,7 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   background: linear-gradient(160deg, var(--color-primary-dark) 10%, var(--color-primary) 60%, var(--color-anthracite) 100%);
 }
 
-.hero__content { max-width: 640px; padding-block: var(--space-2xl); }
+.hero__content { max-width: 640px; padding-block: var(--space-xl); }
 .hero__eyebrow { color: rgba(255, 255, 255, 0.8); }
 .hero h1 { color: var(--color-white); }
 .hero p { color: rgba(255, 255, 255, 0.85); }
@@ -475,7 +476,7 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 
 .news-item__date {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-primary);
   margin-bottom: 0.3rem;
@@ -579,7 +580,7 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 .page-header {
   background-color: var(--color-primary);
   color: var(--color-white);
-  padding-block: var(--space-xl);
+  padding-block: var(--space-lg) var(--space-xl);
 }
 
 .page-header .eyebrow { color: rgba(255, 255, 255, 0.8); }
@@ -1150,7 +1151,10 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 
   .grid--3 { grid-template-columns: 1fr; }
 
-  .hero { min-height: 70vh; }
+  .hero { min-height: 0; }
+  .hero__content { padding-block: var(--space-lg); }
+  .section { padding-block: var(--space-lg); }
+  .page-header { padding-block: var(--space-md) var(--space-lg); }
   /* Buttons am Handy nebeneinander, gleich breit */
   .hero__actions { flex-wrap: nowrap; gap: 0.6rem; }
   .hero__actions .btn { flex: 1 1 0; justify-content: center; text-align: center; padding: 0.75rem 0.5rem; font-size: 0.9rem; }
