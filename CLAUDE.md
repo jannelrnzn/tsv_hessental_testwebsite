@@ -82,8 +82,9 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   Zugangsdaten stehen in Jannes Vereinstabelle „Sesam“ (Dropbox) – NIE in Chat/Repo übernehmen.
   Strato-Kundenlogin steht dort in der Zeile „Provider Strato“ (Spalte Passwort = echte Passwörter);
   Janne ist am 14.10.2026 erfolgreich eingeloggt. Aktuelle Datenbank: dbs16037730 (Export per phpMyAdmin).
-- **Nach dem Go-live kündigen/aufräumen:** WordPress-Plugin-Abos, v. a. „Shortcodes Ultimate Pro“
-  (automatische Verlängerung 30.10.2026!) und „Max Mega Menu Pro“ (Updates bis 18.02.2027);
+- **Nach dem Go-live kündigen/aufräumen:** WordPress-Plugin-Abos: „Shortcodes Ultimate Pro“
+  am 14.10.2026 von Dieter Erdmann gekündigt (alte Seite läuft seitdem mit Free-Version, teils
+  eingeschränkt); noch prüfen: „Max Mega Menu Pro“ (Updates bis 18.02.2027);
   übrige Plugin-/Theme-Lizenzen sind Einmalkäufe (nichts zu tun). Später alte WordPress-Dateien,
   Demo-Seite und Datenbank bei Strato löschen. FTP- und E-Mail-Passwörter ändern (Tabelle lag
   in einem geteilten Dropbox-Ordner). FuPa-Login bleibt; Google-Kalender wohl nicht mehr nötig.

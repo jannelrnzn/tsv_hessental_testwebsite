@@ -99,8 +99,8 @@ Ordner zippen und in die Vereins-Dropbox legen (nicht öffentlich teilen).
 - [ ] Claude Bescheid geben → stellt die Linkvorschau-Adresse dauerhaft um, danach
       **GitHub Pages abschalten** (Settings → Pages).
 - [ ] Optional: Google Search Console einrichten und `https://tsv-hessental.de/sitemap.xml` einreichen.
-- [ ] **Bis 30.10.2026:** WordPress-Plugin „Shortcodes Ultimate Pro“ kündigen (Auto-Verlängerung),
-      „Max Mega Menu Pro“ prüfen.
+- [x] „Shortcodes Ultimate Pro“ – von Herrn Erdmann am 14.10.2026 gekündigt.
+- [ ] „Max Mega Menu Pro“ prüfen (läuft evtl. noch über Herrn Erdmann).
 - [ ] Mit Herrn Erdmann abstimmen: Umleitung von `admin@tsv-hessental.de` (geht derzeit an seine
       private Adresse) auf Janne bzw. `verwaltung@` umstellen; übrige Accounts gemeinsam durchgehen.
 - [ ] Passwörter ändern: Strato-Kundenlogin, SFTP (dann auch das GitHub-Secret anpassen!), E-Mail.
