@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initConsentEmbeds();
   initConsentReset();
   initGalleries();
+  initJerseyFlip();
 });
 
 function updateFooterYear() {
@@ -795,4 +796,21 @@ function initTermine() {
     );
   }).join("");
   box.hidden = false;
+}
+
+/** Dart-Seiten: Trikot per Klick/Tipp umdrehen (Vorder-/Rückseite). */
+function initJerseyFlip() {
+  document.querySelectorAll("[data-jersey-flip]").forEach(function (button) {
+    var wrap = button.parentElement;
+    var label = wrap ? wrap.querySelector("[data-jersey-side]") : null;
+
+    button.addEventListener("click", function () {
+      var hinten = button.classList.toggle("is-flipped");
+      button.setAttribute("aria-pressed", hinten ? "true" : "false");
+      button.setAttribute("aria-label", "Trikot umdrehen – zeigt die " + (hinten ? "Vorderseite" : "Rückseite"));
+      if (label) {
+        label.textContent = hinten ? "Rückseite" : "Vorderseite";
+      }
+    });
+  });
 }

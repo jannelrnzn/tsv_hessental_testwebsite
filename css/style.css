@@ -702,11 +702,17 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 .logo-row img { height: 64px; width: auto; max-width: 100%; }
 
 /* Trikot: Vorder- und Rückseite nebeneinander */
-.jersey-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-md); max-width: 960px; }
-.jersey-grid figure { margin: 0; text-align: center; }
-.jersey-grid img { width: 100%; height: auto; }
-.jersey-grid figcaption { margin-top: var(--space-xs); font-weight: 600; color: var(--color-gray-700); }
-@media (max-width: 640px) { .jersey-grid { grid-template-columns: 1fr; } }
+/* Dart-Trikot: Klick/Tipp dreht das Trikot um (Vorder-/Rückseite) */
+.jersey-flip-wrap { max-width: 560px; margin-inline: auto; text-align: center; }
+.jersey-flip { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: pointer; perspective: 1400px; }
+.jersey-flip:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 6px; border-radius: var(--radius); }
+.jersey-flip__inner { position: relative; display: block; aspect-ratio: 752 / 528; transition: transform 0.7s ease; transform-style: preserve-3d; }
+.jersey-flip.is-flipped .jersey-flip__inner { transform: rotateY(180deg); }
+.jersey-flip img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.jersey-flip__back { transform: rotateY(180deg); }
+.jersey-flip__hint { margin-top: var(--space-xs); font-size: 0.9rem; color: var(--color-gray-700); }
+.jersey-flip__hint [data-jersey-side] { font-weight: 700; color: var(--color-gray-900); }
+@media (prefers-reduced-motion: reduce) { .jersey-flip__inner { transition: none; } }
 
 /* 2-Klick-Lösung: Hinweis vor externen Inhalten */
 .consent-box {

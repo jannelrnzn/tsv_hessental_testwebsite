@@ -9,8 +9,8 @@
   <link rel="apple-touch-icon" href="assets/images/icons/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#c8102e">
-  <link rel="stylesheet" href="css/style.css?v=202610150821">
-  <script src="js/main.js?v=202610150821" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=202610151150">
+  <script src="js/main.js?v=202610151150" defer></script>
 </head>
 <body>
 
@@ -198,15 +198,14 @@
           <h2>Unser Trikot</h2>
         </div>
 
-        <div class="jersey-grid">
-          <figure>
-            <img src="assets/images/dart/trikot-vorne.png" alt="Dart-Trikot der Scorpions, Vorderseite" width="720" height="528" loading="lazy">
-            <figcaption>Vorderseite</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/images/dart/trikot-hinten.png" alt="Dart-Trikot der Scorpions, Rückseite mit Schriftzug TSV Hessental" width="752" height="528" loading="lazy">
-            <figcaption>Rückseite</figcaption>
-          </figure>
+        <div class="jersey-flip-wrap">
+          <button type="button" class="jersey-flip" data-jersey-flip aria-pressed="false" aria-label="Trikot umdrehen – zeigt die Rückseite">
+            <span class="jersey-flip__inner">
+              <img class="jersey-flip__front" src="assets/images/dart/trikot-vorne.png" alt="Dart-Trikot der Scorpions, Vorderseite" width="720" height="528" loading="lazy">
+              <img class="jersey-flip__back" src="assets/images/dart/trikot-hinten.png" alt="Dart-Trikot der Scorpions, Rückseite mit Schriftzug TSV Hessental" width="752" height="528" loading="lazy">
+            </span>
+          </button>
+          <p class="jersey-flip__hint"><span data-jersey-side>Vorderseite</span> · zum Umdrehen auf das Trikot klicken bzw. tippen</p>
         </div>
       </div>
     </section>
