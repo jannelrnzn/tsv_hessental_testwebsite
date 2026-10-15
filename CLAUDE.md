@@ -119,8 +119,9 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   Verzeichnislisten, Cache) und `404.html` liegen im Repo-Root.
 - Nach dem Go-live: Standardwert von `SITE_URL` in `tools/mitteilungen.js` auf
   https://tsv-hessental.de/ umstellen und Skript neu ausführen.
-- Danach: kontakt.php
-  echt testen, `noreply@` (am 14.10.2026 angelegt), GitHub Pages abschalten.
+- kontakt.php am 15.10.2026 auf test.tsv-hessental.de erfolgreich getestet (Mail kommt an,
+  Antworten geht an Absender). verwaltung@ leitet um an Thilo, Marco Ebinger und Janne (seit 15.10.).
+- Nach dem Go-live: GitHub Pages abschalten.
 - **Entschieden (Janne):** Änderungen nach dem Go-live laufen weiter über GitHub
   und werden **automatisch per GitHub Action (SFTP) zu Strato** hochgeladen –
   bei jedem Push auf `main`, nur geänderte Dateien. Zugangsdaten trägt Janne
