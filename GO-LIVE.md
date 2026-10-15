@@ -101,6 +101,8 @@ Ordner zippen und in die Vereins-Dropbox legen (nicht öffentlich teilen).
 - [ ] Optional: Google Search Console einrichten und `https://tsv-hessental.de/sitemap.xml` einreichen.
 - [ ] **Bis 30.10.2026:** WordPress-Plugin „Shortcodes Ultimate Pro“ kündigen (Auto-Verlängerung),
       „Max Mega Menu Pro“ prüfen.
+- [ ] Mit Herrn Erdmann abstimmen: Umleitung von `admin@tsv-hessental.de` (geht derzeit an seine
+      private Adresse) auf Janne bzw. `verwaltung@` umstellen; übrige Accounts gemeinsam durchgehen.
 - [ ] Passwörter ändern: Strato-Kundenlogin, SFTP (dann auch das GitHub-Secret anpassen!), E-Mail.
 - [ ] Nach 2–4 Wochen ohne Probleme: alte WordPress-Dateien, Demo-Seite und Datenbank bei
       Strato löschen; Subdomain `test` löschen.

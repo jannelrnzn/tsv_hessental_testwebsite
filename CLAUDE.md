@@ -101,6 +101,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   **E-Mail-Filter bei Strato (Hinweis Dieter Erdmann):** Muster je Postfach = „Umleiten nach …“ + danach
   „Verwerfen“ (sonst laufen ungelesene Postfächer voll). Andere Postfächer/Filter NICHT ändern;
   fussball-herren@ hat bewusst keine Weiterleitung (Markus Gerstenberg liest per Strato-Mail).
+  admin@tsv-hessental.de wird an Dieter Erdmanns private Adresse umgeleitet → nach Go-live mit ihm
+  abstimmen und auf Janne/verwaltung@ umstellen (steht in GO-LIVE.md Teil D).
   Dieter hat am 14.10.2026 Dateien + Datenbank der alten Seite selbst gesichert. Fehler 413 auf der
   alten Seite seit ~8.10. (nicht durch uns) → Kontaktformular mit Anhang 3–4 MB testen.
   Google-Konto des alten Termin-Kalenders hat Dieter Erdmann am 14.10.2026 gelöscht (neue Seite
