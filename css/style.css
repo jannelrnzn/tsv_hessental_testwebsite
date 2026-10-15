@@ -1687,3 +1687,8 @@ a.partner-card__name:hover { color: var(--color-primary); }
 .stats-table td:nth-child(n+2), .stats-table th:nth-child(n+2) { text-align: right; width: 5.5rem; font-variant-numeric: tabular-nums; }
 .stats-table tbody tr:nth-child(even) { background: var(--color-gray-100); }
 .stats-note { font-size: 0.85rem; color: var(--color-gray-700); margin-top: calc(-1 * var(--space-sm)); }
+
+/* VIP-Karten der vergangenen Jahre (vip-karte.html) */
+.vip-history { margin: var(--space-lg) 0 0; max-width: 900px; }
+.vip-history img { width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow-card); background: var(--color-white); }
+.vip-history figcaption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--color-gray-700); }
