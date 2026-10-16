@@ -32,10 +32,10 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Vereinslogo (optimiert von Dieter Erdmann, 16.10.2026): `assets/images/logo/vereinslogo.png` (815×990,
   Original), `vereinslogo-100x121.png` (Kopf/Fuß, 44 px hoch), `vereinslogo-58x70.png`. Das alte Logo mit
   grauem Rand ist entfernt.
-- Favicon `favicon.ico` (16/32/48, Repo-Root) + `assets/images/icons/favicon-32.png`; Homescreen:
-  `apple-touch-icon.png` (weiß, 180), Manifest `icon-192/512.png` (transparent) und
-  `icon-maskable-512.png` (weiß, Wappen ca. 74 % Höhe, damit Android nichts abschneidet).
-  Alle aus `vereinslogo.png` erzeugt (ImageMagick `-resize x… -extent`).
+- Favicon `favicon.ico` (Repo-Root, 48 px) = von Dieter Erdmann selbst optimiert (16.10.2026) – NICHT neu erzeugen.
+  Homescreen: `apple-touch-icon.png` (weiß, 180), Manifest `icon-192/512.png` (transparent) und
+  `icon-maskable-512.png` (weiß) – Wappen überall nur ca. 74 % hoch, damit Android nichts abschneidet.
+  Aus `vereinslogo.png` erzeugt (ImageMagick `-resize x… -extent`).
 
 ## Termine
 
