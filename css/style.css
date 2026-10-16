@@ -159,7 +159,7 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.85rem; /* etwas mehr Luft zwischen Wappen und Schriftzug */
+  gap: 1.1rem; /* Luft zwischen Wappen und Schriftzug (Wunsch Dieter Erdmann) */
   color: var(--color-anthracite);
   font-weight: 700;
   font-size: 1.25rem;
@@ -1039,6 +1039,8 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 
 .footer-brand .logo { color: var(--color-white); }
 .footer-brand p { color: var(--color-gray-300); font-size: 0.9rem; max-width: 320px; }
+.footer-brand .logo__text-sub { color: var(--color-gray-300); }
+.footer-brand__claim { margin-top: var(--space-sm); }
 
 .social-links {
   display: flex;

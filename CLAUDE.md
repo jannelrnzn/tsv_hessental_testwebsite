@@ -26,6 +26,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Handy-Menü (☰) schon bis 1280 px Breite (`@media (max-width: 1280px)` in css/style.css), damit die
   Kopfzeile auch bei Browser-Zoom (Strg +) und Windows-Schrift einzeilig bleibt (Hinweis Dieter Erdmann).
   Menüpunkte haben eine feste Höhe (2.1rem), „TSV Hessental“ im Logo bricht nie um.
+- Logo in Kopf UND Fuß identisch: Wappen + „TSV Hessental“ + darunter „1923 e.V.“ (`.logo__text-sub`),
+  Abstand Wappen–Schriftzug 1.1rem. Im Fuß darunter nur „Tradition unterm Einkorn“ (`.footer-brand__claim`).
 
 ## Logo & Icons
 
