@@ -166,6 +166,7 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 }
 
 .logo:hover, .logo:focus-visible { text-decoration: none; }
+.logo > span { white-space: nowrap; }
 
 .logo__icon { height: 44px; width: auto; flex-shrink: 0; }
 
@@ -205,12 +206,6 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 
 .main-nav__list > li { position: relative; }
 
-/* Etwas engeres Menü zwischen Tablet und großem Bildschirm, damit es einzeilig bleibt */
-@media (min-width: 961px) and (max-width: 1200px) {
-  .main-nav__list { gap: 0.3rem 0.6rem; }
-  .main-nav__list a,
-  .main-nav__list button.nav-link { font-size: 0.84rem; }
-}
 
 .main-nav__list a,
 .main-nav__list button.nav-link {
@@ -1124,7 +1119,9 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   .footer-brand { grid-column: 1 / -1; }
 }
 
-@media (max-width: 720px) {
+/* Handy-Menü (☰) schon ab 1280 px Breite: so bleibt die Kopfzeile auch bei vergrößerter
+   Browser-Ansicht (Strg +) und unter Windows mit breiterer Schrift immer einzeilig */
+@media (max-width: 1280px) {
   .nav-toggle { display: block; }
 
   .main-nav {
@@ -1142,7 +1139,8 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 
   .main-nav.is-open { max-height: 420px; overflow-y: auto; }
 
-  .main-nav__list { flex-direction: column; gap: 0; padding: var(--space-sm) var(--space-md) var(--space-md); }
+  .main-nav__list { flex-direction: column; align-items: stretch; gap: 0; padding: var(--space-sm) var(--space-md) var(--space-md); }
+  .main-nav__list > li { width: 100%; }
 
   .main-nav__list a,
   .main-nav__list button.nav-link {
@@ -1164,7 +1162,9 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   .nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(2) { opacity: 0; }
   .nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
 
+@media (max-width: 720px) {
   .grid--3 { grid-template-columns: 1fr; }
 
   .hero { min-height: 0; }

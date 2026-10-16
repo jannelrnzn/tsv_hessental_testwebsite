@@ -21,6 +21,12 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Einleitungstext unter der Überschrift: nach jedem Satz `<br>` (Wunsch Dieter Erdmann, besser lesbar).
 - Links darin sind weiß, fett und unterstrichen (`.page-header .container > p a`), sonst rot auf rot unsichtbar.
 
+## Navigation
+
+- Handy-Menü (☰) schon bis 1280 px Breite (`@media (max-width: 1280px)` in css/style.css), damit die
+  Kopfzeile auch bei Browser-Zoom (Strg +) und Windows-Schrift einzeilig bleibt (Hinweis Dieter Erdmann).
+  Menüpunkte haben eine feste Höhe (2.1rem), „TSV Hessental“ im Logo bricht nie um.
+
 ## Logo & Icons
 
 - Vereinslogo (optimiert von Dieter Erdmann, 16.10.2026): `assets/images/logo/vereinslogo.png` (815×990,
