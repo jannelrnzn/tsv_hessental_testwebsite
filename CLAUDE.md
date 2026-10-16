@@ -373,7 +373,8 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
 - D- und E-Junioren: nur aktuelle Seite (Trainer + fussball.de-Widget), kein
   Archiv. Trainerfotos unter `assets/images/team/vorname-nachname.jpg`; fehlt
   ein Foto, erscheint automatisch ein Platzhalter. E1 = Quali-Staffel 19,
-  E2 = Quali-Staffel 20 (Stand 2026/27).
+  E2 = Quali-Staffel 20, D1 = Quali-Staffel 11, D2 = Quali-Staffel 10 (Stand 2026/27). fussball.de-Widgets
+  müssen dort für die Domain „tsv-hessental.de“ (ohne www) angelegt sein, sonst laden sie nicht.
 - F-Junioren (`fussball-jugend-f.html`) und Bambini (`fussball-jugend-bambini.html`):
   nur Trainerteam (gleiche Personenkarten mit Platzhalter), kein Widget, kein Archiv.
 
