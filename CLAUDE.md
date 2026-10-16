@@ -16,6 +16,16 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   Repo-Root oder mit Originalnamen – an die richtige Stelle verschieben,
   sinnvoll umbenennen und auf max. 2400 px Breite verkleinern.
 
+## Logo & Icons
+
+- Vereinslogo (optimiert von Dieter Erdmann, 16.10.2026): `assets/images/logo/vereinslogo.png` (815×990,
+  Original), `vereinslogo-100x121.png` (Kopf/Fuß, 44 px hoch), `vereinslogo-58x70.png`. Das alte Logo mit
+  grauem Rand ist entfernt.
+- Favicon `favicon.ico` (16/32/48, Repo-Root) + `assets/images/icons/favicon-32.png`; Homescreen:
+  `apple-touch-icon.png` (weiß, 180), Manifest `icon-192/512.png` (transparent) und
+  `icon-maskable-512.png` (weiß, Wappen ca. 74 % Höhe, damit Android nichts abschneidet).
+  Alle aus `vereinslogo.png` erzeugt (ImageMagick `-resize x… -extent`).
+
 ## Termine
 
 - **Am 01.10.2027:** Jannes Anschrift im Impressum (`impressum.html`, „Verantwortlich

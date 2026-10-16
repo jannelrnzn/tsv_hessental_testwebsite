@@ -23,7 +23,7 @@ var ROOT = path.join(__dirname, "..");
 var ZIEL = path.join(ROOT, "mitteilungen");
 var VORLAGE = path.join(ROOT, "archiv-mitteilungen.html");
 var MARKER = "<!-- Automatisch erzeugt aus js/mitteilungen.js (node tools/mitteilungen.js) – nicht von Hand bearbeiten -->";
-var STANDARD_BILD = "assets/images/TSV Hessental logo_transparent.png";
+var STANDARD_BILD = "assets/images/logo/vereinslogo.png";
 var TEASER_LAENGE = 220;
 
 // ---------- Daten laden und prüfen ----------
