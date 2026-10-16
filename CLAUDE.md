@@ -2,7 +2,7 @@
 
 Statische Website (HTML/CSS/JS, kein Build). **LIVE seit 16.10.2026 unter https://tsv-hessental.de/**
 (Strato, Ordner `/website`). Jeder Push auf `main` wird automatisch per GitHub Action dorthin hochgeladen –
-also nur geprüfte Änderungen pushen. GitHub Pages wird abgeschaltet (Janne).
+also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgeschaltet.
 
 ## Arbeitsweise
 
@@ -77,7 +77,7 @@ also nur geprüfte Änderungen pushen. GitHub Pages wird abgeschaltet (Janne).
   nicht testbar); Datenschutzerklärung gegenlesen lassen, v. a. Rechtsgrundlage
   lit. f für die direkt eingebundenen Dienste.
 - **Go-live am 16.10.2026 erledigt** (Domain → `/website`, www/http-Weiterleitung und Kontaktformular geprüft).
-  Danach noch: GitHub Pages abschalten, Test-Subdomain `test` und alte WordPress-Dateien/Datenbank nach
+  GitHub Pages abgeschaltet (16.10.). Danach noch: Test-Subdomain `test` und alte WordPress-Dateien/Datenbank nach
   2–4 Wochen löschen, Passwörter ändern, Max Mega Menu Pro prüfen (siehe Hosting-Abschnitt).
   Direkt nach der Umstellung gelegentlich „503“ auf tsv-hessental.de (nicht auf test.) – beobachten,
   bei Dauerproblem Strato-Support.
@@ -155,7 +155,7 @@ also nur geprüfte Änderungen pushen. GitHub Pages wird abgeschaltet (Janne).
 - `SITE_URL` in `tools/mitteilungen.js` steht seit dem Go-live auf https://tsv-hessental.de/.
 - kontakt.php am 15.10.2026 auf test.tsv-hessental.de erfolgreich getestet (Mail kommt an,
   Antworten geht an Absender). verwaltung@ leitet um an Thilo, Marco Ebinger und Janne (seit 15.10.).
-- Nach dem Go-live: GitHub Pages abschalten.
+- GitHub Pages am 16.10.2026 abgeschaltet.
 - **Entschieden (Janne):** Änderungen nach dem Go-live laufen weiter über GitHub
   und werden **automatisch per GitHub Action (SFTP) zu Strato** hochgeladen –
   bei jedem Push auf `main`, nur geänderte Dateien. Zugangsdaten trägt Janne

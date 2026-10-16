@@ -100,7 +100,7 @@ Ordner zippen und in die Vereins-Dropbox legen (nicht öffentlich teilen).
 ## Teil D – Nach dem Go-live
 
 - [x] Linkvorschau-Adresse dauerhaft auf tsv-hessental.de umgestellt (16.10.2026).
-- [ ] **GitHub Pages abschalten** (Settings → Pages).
+- [x] GitHub Pages abgeschaltet (16.10.2026).
 - [ ] Optional: Google Search Console einrichten und `https://tsv-hessental.de/sitemap.xml` einreichen.
 - [x] „Shortcodes Ultimate Pro“ – von Herrn Erdmann am 14.10.2026 gekündigt.
 - [ ] „Max Mega Menu Pro“ prüfen (läuft evtl. noch über Herrn Erdmann).
