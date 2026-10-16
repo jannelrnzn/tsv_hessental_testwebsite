@@ -34,6 +34,14 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
 - Logo in Kopf UND Fuß identisch: Wappen + „TSV Hessental“ + darunter „1923 e.V.“ (`.logo__text-sub`),
   Abstand Wappen–Schriftzug 1.1rem. Im Fuß darunter nur „Tradition unterm Einkorn“ (`.footer-brand__claim`).
 
+## Vorstand
+
+- `vorstand.html`: aktuelle Vorstandschaft als Karten, darunter `#vorstaende` „Die Vorstände seit
+  Vereinsgründung“ (Tabelle 1923–heute, von der alten Seite, Wunsch Dieter Erdmann). Bei Vorstandswechsel
+  dort die letzte Zeile („seit JJJJ“) anpassen und neue Zeile anfügen.
+- `initHashTarget` (js/main.js) hält Sprungziele (#anker) bis 8 s fest, weil Widgets oberhalb nachladen
+  (Hinweis Dieter: Breadcrumb „Der Verein“ → index.html#verein landete zu hoch).
+
 ## Logo & Icons
 
 - Vereinslogo (optimiert von Dieter Erdmann, 16.10.2026): `assets/images/logo/vereinslogo.png` (815×990,

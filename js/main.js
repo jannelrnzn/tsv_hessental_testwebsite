@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initConsentReset();
   initGalleries();
   initJerseyFlip();
+  initHashTarget();
 });
 
 function updateFooterYear() {
@@ -817,4 +818,30 @@ function initJerseyFlip() {
       }
     });
   });
+}
+
+/**
+ * Sprungziele (#anker) festhalten: Widgets und Bilder oberhalb laden oft erst nach dem Sprung
+ * und schieben das Ziel nach unten. Bis zu 8 Sekunden wird nachjustiert – aber nur, solange
+ * der Besucher noch nicht selbst scrollt oder klickt.
+ */
+function initHashTarget() {
+  if (!location.hash || !("ResizeObserver" in window)) {
+    return;
+  }
+  var ziel = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (!ziel) {
+    return;
+  }
+  var aktiv = true;
+  ["wheel", "touchstart", "keydown", "mousedown"].forEach(function (ereignis) {
+    window.addEventListener(ereignis, function () { aktiv = false; }, { once: true, passive: true });
+  });
+  var beobachter = new ResizeObserver(function () {
+    if (aktiv) {
+      ziel.scrollIntoView({ block: "start" });
+    }
+  });
+  beobachter.observe(document.body);
+  setTimeout(function () { beobachter.disconnect(); }, 8000);
 }

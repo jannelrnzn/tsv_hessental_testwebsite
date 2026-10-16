@@ -1356,6 +1356,9 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 .jubi-person p { margin: 0; }
 
 .jubi-zurueck { margin-top: var(--space-xl); }
+.vorstaende-tabelle { font-size: 1rem; }
+.vorstaende-tabelle th { min-width: 8.5rem; }
+.vorstaende-mehr { margin-top: var(--space-sm); }
 
 /* Archiv Hauptversammlungen */
 .hv-bericht .eyebrow { display: block; margin-bottom: 0.25rem; }
