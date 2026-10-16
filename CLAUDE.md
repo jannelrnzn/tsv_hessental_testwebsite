@@ -359,7 +359,8 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
 - Fotos: `assets/images/archiv/jugend-X/JJJJ.jpg`. Aufstellungen mit Namen nur,
   wenn Janne sie liefert (nicht alle Jugendjahrgänge bekommen Namen).
 - Saisons ohne Mannschaft (z. B. A-Junioren 2018/19, aktuell 2026/27): kein
-  Foto-Platzhalter, nur der Hinweistext.
+  Foto-Platzhalter, nur der Hinweistext. 2025/26 (A/B/C): kein Mannschaftsfoto vorhanden → nur
+  Überschrift + Liga, kein Platzhalter.
 - D-Junioren und jünger bekommen kein Archiv.
 - D- und E-Junioren: nur aktuelle Seite (Trainer + fussball.de-Widget), kein
   Archiv. Trainerfotos unter `assets/images/team/vorname-nachname.jpg`; fehlt
