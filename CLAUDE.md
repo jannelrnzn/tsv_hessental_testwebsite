@@ -42,6 +42,11 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
 - `initHashTarget` (js/main.js) hält Sprungziele (#anker) bis 8 s fest, weil Widgets oberhalb nachladen
   (Hinweis Dieter: Breadcrumb „Der Verein“ → index.html#verein landete zu hoch).
 
+## Hinweise hervorheben
+
+- Wichtige Hinweise (z. B. „Gruppe voll, Warteliste“) mit `<p class="hinweis-marker">` – gelb wie Textmarker
+  (Wunsch Dieter Erdmann, erstmals Eltern-Kind-Turnen auf `turnen-kinderturnen.html`).
+
 ## Logo & Icons
 
 - Vereinslogo (optimiert von Dieter Erdmann, 16.10.2026): `assets/images/logo/vereinslogo.png` (815×990,

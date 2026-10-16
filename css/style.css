@@ -1360,6 +1360,19 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 .vorstaende-tabelle th { min-width: 8.5rem; }
 .vorstaende-mehr { margin-top: var(--space-sm); }
 
+/* Wichtiger Hinweis wie mit Textmarker hervorgehoben (z. B. „Gruppe voll“) */
+.hinweis-marker {
+  margin: 0;
+  padding: 0.6rem 0.75rem;
+  background: #fff176;
+  border-left: 4px solid #f2c200;
+  border-radius: 4px;
+  color: var(--color-gray-900);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.hinweis-marker a { font-weight: 600; }
+
 /* Archiv Hauptversammlungen */
 .hv-bericht .eyebrow { display: block; margin-bottom: 0.25rem; }
 .hv-lead { font-weight: 600; font-size: 1.05rem; }
