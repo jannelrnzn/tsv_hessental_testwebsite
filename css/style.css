@@ -1041,6 +1041,7 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 .footer-brand p { color: var(--color-gray-300); font-size: 0.9rem; max-width: 320px; }
 .footer-brand .logo__text-sub { color: var(--color-gray-300); }
 .footer-brand__claim { margin-top: var(--space-sm); }
+.footer-address { color: var(--color-gray-300); font-size: 0.9rem; margin: 0 0 0.75rem; line-height: 1.5; }
 
 .social-links {
   display: flex;

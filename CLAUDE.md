@@ -26,6 +26,9 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 - Handy-Menü (☰) schon bis 1280 px Breite (`@media (max-width: 1280px)` in css/style.css), damit die
   Kopfzeile auch bei Browser-Zoom (Strg +) und Windows-Schrift einzeilig bleibt (Hinweis Dieter Erdmann).
   Menüpunkte haben eine feste Höhe (2.1rem), „TSV Hessental“ im Logo bricht nie um.
+- Fußzeile: Logo + „Tradition unterm Einkorn“ | Schnellzugriff (Mitglied werden, Mitteilungen, Vorstand,
+  Werbepartner werden) | Kontakt (Adresse Im Wachholder, Kontaktformular, E-Mail, Anfahrt); unten nur
+  Datenschutz + Impressum.
 - Logo in Kopf UND Fuß identisch: Wappen + „TSV Hessental“ + darunter „1923 e.V.“ (`.logo__text-sub`),
   Abstand Wappen–Schriftzug 1.1rem. Im Fuß darunter nur „Tradition unterm Einkorn“ (`.footer-brand__claim`).
 
@@ -35,8 +38,9 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   Original), `vereinslogo-100x121.png` (Kopf/Fuß, 44 px hoch), `vereinslogo-58x70.png`. Das alte Logo mit
   grauem Rand ist entfernt.
 - Favicon `favicon.ico` (Repo-Root, 48 px) = von Dieter Erdmann selbst optimiert (16.10.2026) – NICHT neu erzeugen.
-  Homescreen: `apple-touch-icon.png` (weiß, 180), Manifest `icon-192/512.png` (transparent) und
-  `icon-maskable-512.png` (weiß) – Wappen überall nur ca. 74 % hoch, damit Android nichts abschneidet.
+  Homescreen: `apple-touch-icon.png` (weiß, 180) und Manifest `icon-192/512.png` (transparent, „any“) –
+  Wappen ca. 70 % hoch. KEIN maskable-Icon mehr (Chrome/Edge haben es angeschnitten, Firefox mit „any“
+  sah am besten aus – Test Dieter Erdmann 16.10.2026). Weißer Hintergrund kommt vom Android-Launcher.
   Aus `vereinslogo.png` erzeugt (ImageMagick `-resize x… -extent`).
 
 ## Termine
