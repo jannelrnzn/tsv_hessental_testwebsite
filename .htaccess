@@ -6,6 +6,9 @@ DirectoryIndex index.html
 ErrorDocument 404 /404.html
 AddType application/manifest+json .webmanifest
 
+# Umbenannte Seiten
+Redirect 301 /archiv-jubilaeumszeitschriften.html /archiv-vereinsjubilaeen.html
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   # www.tsv-hessental.de -> tsv-hessental.de

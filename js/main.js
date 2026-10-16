@@ -689,7 +689,11 @@ function initGalleries() {
     var link = links[index];
     bild.src = link.href;
     bild.alt = link.querySelector("img").alt;
-    zaehler.textContent = (index + 1) + " / " + links.length;
+    // Bildkommentar: data-caption am Link oder figcaption der umgebenden figure
+    var figur = link.closest("figure");
+    var unterschrift = link.getAttribute("data-caption") ||
+      (figur && figur.querySelector("figcaption") ? figur.querySelector("figcaption").textContent : "");
+    zaehler.textContent = (index + 1) + " / " + links.length + (unterschrift ? " · " + unterschrift.replace(/\s+/g, " ").trim() : "");
   }
 
   function oeffnen(galerie, link) {

@@ -40,7 +40,10 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   - Gisela Böhm (Vorstand, bisher `assets/images/Vorstand/platzhalter.png`)
 - **Alte Seite (Entscheidung Janne, 14.10.2026):** wird beim Go-live gesichert, vorerst wird
   NICHTS weiter übernommen (Pilates/Rückenfit, alte Spielberichte, Pokal-Seiten, Bambini-Cup,
-  Dart DLH-Pokal, Jubiläumstexte, Puzzles, Liga-Archiv, Linkliste). Bei Bedarf später aus der Sicherung.
+  Dart DLH-Pokal, Puzzles, Liga-Archiv, Linkliste). Bei Bedarf später aus der Sicherung.
+  Ausnahme (16.10.2026, Wunsch Janne nach Hinweis Dieter Erdmann): Vereinsjubiläen 50/75/100 Jahre
+  und die übrigen Galerien (Feiern, Vatertag, Weihnachtsmarkt, Arbeitsdienst,
+  Trainingslager, Stadtmeisterschaft, Pokalfinale) sind übernommen – siehe „Vereinsjubiläen“ und „Bilder“.
 - **Prüfen:** FuPa- und fussball.de-Widgets auf der Live-Seite (hier im Container
   nicht testbar); Datenschutzerklärung gegenlesen lassen, v. a. Rechtsgrundlage
   lit. f für die direkt eingebundenen Dienste.
@@ -50,8 +53,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
 
 ## Finale Abstimmung vor Go-live (13.10.2026) – NOCH NICHT UMSETZEN, erst Rückfragen klären
 
-1. Jubiläumszeitschriften – Seite `archiv-jubilaeumszeitschriften.html` (Archiv-Menü),
-   100 Jahre (2023) online; 50/75 Jahre folgen ggf.
+1. ~~Jubiläumszeitschriften~~ erledigt: Archiv → Vereinsjubiläen (`archiv-vereinsjubilaeen.html`)
+   mit 50/75/100 Jahre (Texte + Bilder von der alten Seite übernommen, 16.10.2026).
 2. ~~Beitrag über Überdachung~~ erledigt (Mitteilung 30.09.2026 mit Foto)
 3. Impressum + Datenschutz verifizieren – erledigt: fussball.de im Haftungshinweis,
    Strato als Hoster + AVV-Satz, „Stand: Oktober 2026“. Kein Datenschutzbeauftragter
@@ -183,20 +186,36 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   `aufstellung` (Liste aus `titel` + `namen`), `link`, `linktext`).
   Reihenfolge egal – `initSuccesses` in `js/main.js` sortiert nach Saison und
   gruppiert nach Jahrzehnten (mit Sprungleiste). Bilder unter `assets/images/erfolge/`.
-- Archiv-Menü auf allen Seiten: Mitteilungen, Erfolge, Jubiläumszeitschriften (alte Bilder gehören
+- Archiv-Menü auf allen Seiten: Mitteilungen, Erfolge, Vereinsjubiläen (alte Bilder gehören
   in den Hauptmenüpunkt „Bilder“).
+
+## Vereinsjubiläen (Archiv)
+
+- Übersicht `archiv-vereinsjubilaeen.html` (früher `archiv-jubilaeumszeitschriften.html`, Weiterleitung
+  in `.htaccess`) mit drei Karten → `archiv-jubilaeum-2023.html` (Festzeitschrift-PDF + Galerie der
+  Feier am 3.11.2023, 203 Bilder unter `assets/images/archiv/jubilaeum/2023/` + `thumbs/`),
+  `archiv-jubilaeum-1998.html` und `archiv-jubilaeum-1973.html` (Kapitel aus den Festschriften,
+  Sprungleiste, `section.jubi-kapitel`, Tabellen `.jubi-tabelle`, Bilder `.jubi-bilder` unter
+  `assets/images/archiv/jubilaeum/1973|1998/`; Großansicht über `data-gallery`).
+- Texte stammen 1:1 von der alten Seite (nur offensichtliche Tippfehler korrigiert, z. B. „lgnatz“,
+  „7973“). Bekannte Ungereimtheit im Original 1998: „Vom 19. bis 18. Juni 1998“ – nicht geändert.
 
 ## Bilder (Fotoalben)
 
 - Menü „Bilder“: je Rubrik eine Seite `bilder-<rubrik>.html` (bisher:
   `bilder-hauptversammlung.html`, `bilder-dorfpokal.html` (Alben 2024, 2023, 2019, 2018,
   2017, 2016 – ältere von der alten Seite übernommen),
+  `bilder-vereinsleben.html` (Vatertag 2017–2023, Weihnachtsmarkt 2017/2018, Abschlussfete 2016/17,
+  Sportplatzputzete 2017; Hochzeitsfotos bewusst NICHT, Janne 16.10.2026), `bilder-fussball.html` (Hallenstadtmeisterschaft 18.01.2025
+  Senioren + Aktive, Bezirkspokal-Finale 2017/18, Trainingslager Oberstdorf 2018) – beide 16.10.2026
+  von der alten Seite übernommen –,
   `bilder-vereinsheimbau.html`, `bilder-terrassenueberdachung.html` (Bau 2026, verlinkt aus der
   Mitteilung 30.09.2026)), darin pro Anlass ein `.gallery-album`
   (neuestes oben) mit Datum, Titel, „Fotos: …“ und `<div class="gallery">`.
 - Bilder: `assets/images/bilder/<rubrik>/<jahr oder anlass>/01.jpg …` plus
   Vorschaubilder in `thumbs/` (400 px hoch). Link = großes Bild, img = Vorschau.
-- `initGalleries` (js/main.js) macht daraus die Großansicht (Pfeile, Esc, Wischen).
+- `initGalleries` (js/main.js) macht daraus die Großansicht (Pfeile, Esc, Wischen). Bildkommentar in
+  der Großansicht: `data-caption="…"` am Link (oder `figcaption` der umgebenden `figure`).
 - `bilder-zeitreise.html`: zwei Zeitstrahl-Abschnitte „Die Anfänge“ (bis 1968) und
   „Ab 2000“, je älteste zuerst, „Ohne Jahr“ am Ende, aus
   `article.timeline-item` mit Jahr, Titel, Foto(s) und optional
@@ -214,12 +233,12 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   - 2005/06 und 2006/07: Erfolg oder normale Mannschaftsfotos?
   - Jahreszahlen der drei „Ohne Jahr“-Fotos bis 1970 und der drei ab 2000;
     Saison 1948 (1947/48 oder 1948/49?) und Jahr des zweiten B-Klasse-Meisters.
-- Bewusst NICHT übernommen (Janne): Trainingslager, Stadtmeisterschaft,
-  Feiern, Arbeitsdienst.
+- Zeitreise: Trainingslager, Stadtmeisterschaft, Feiern, Arbeitsdienst bewusst NICHT im Zeitstrahl –
+  diese Bilder stehen auf `bilder-vereinsleben.html` / `bilder-fussball.html`.
 
 ## Downloads (PDF)
 
-- Jubiläumszeitschriften: `archiv-jubilaeumszeitschriften.html`, Dateien unter
+- Jubiläumszeitschriften: `archiv-jubilaeum-2023.html` (verlinkt aus `archiv-vereinsjubilaeen.html`), Dateien unter
   `assets/downloads/jubilaeum/`. Stadionhefte: `fussball-herren-stadionhefte.html`,
   Dateien unter `assets/downloads/stadionhefte/JJJJ/fanpost-JJJJ-MM-TT.pdf` (nur aktuelle
   Saison), Titelbild = Seite 1 per `pdftoppm -r 60` nach `cover/`; Karte mit Datum,

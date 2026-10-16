@@ -1262,6 +1262,91 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.9rem;
+  padding-inline: 4rem;
+  margin: 0;
+}
+
+/* =============================== Vereinsjubiläen (Archiv) =============================== */
+.jubi-intro {
+  max-width: 760px;
+  margin-bottom: var(--space-md);
+  color: var(--color-gray-700);
+}
+
+.jubi-inhalt { margin-bottom: var(--space-lg); }
+
+.jubi-text { max-width: 760px; }
+
+.jubi-kapitel { scroll-margin-top: 6rem; }
+.jubi-kapitel + .jubi-kapitel {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-gray-200, #e3e6ea);
+}
+
+.jubi-kapitel h2 { margin-bottom: var(--space-sm); }
+.jubi-kapitel h3 { margin: var(--space-md) 0 0.5rem; font-size: 1.1rem; }
+.jubi-kapitel p { margin: 0 0 0.9rem; }
+
+.jubi-signatur { color: var(--color-gray-700); }
+
+.jubi-tabelle {
+  border-collapse: collapse;
+  margin: 0.5rem 0 1.25rem;
+  font-size: 0.95rem;
+}
+
+.jubi-tabelle th,
+.jubi-tabelle td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.3rem 1rem 0.3rem 0;
+}
+
+.jubi-tabelle th { font-weight: 600; white-space: nowrap; color: var(--color-gray-700); }
+
+.jubi-bilder { margin: 1.25rem 0; }
+.jubi-bilder--mehrere {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.jubi-bilder figure { margin: 0; }
+.jubi-bilder img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+
+.jubi-bilder figcaption {
+  font-size: 0.9rem;
+  color: var(--color-gray-700);
+  margin-top: 0.4rem;
+}
+
+.jubi-person {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 1rem;
+}
+
+.jubi-person img {
+  width: 96px;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+
+.jubi-person p { margin: 0; }
+
+.jubi-zurueck { margin-top: var(--space-xl); }
+
+@media (max-width: 480px) {
+  .jubi-tabelle th { white-space: normal; }
 }
 
 /* =============================== Zeitstrahl (Bilder → Zeitreise) =============================== */
