@@ -22,6 +22,59 @@
 
 var ERFOLGE = [
   {
+    saison: "2023/24",
+    datum: "20. Januar 2024",
+    mannschaft: "Senioren",
+    erfolg: "Hallenstadtmeister",
+    liga: "Hallenstadtmeisterschaft Schwäbisch Hall",
+    bild: "assets/images/senioren/archiv/2024-01-20.jpg",
+    aufstellung: [
+      { titel: "Hinten v.l.n.r.", namen: "Michael Frey (Erfolgstrainer), Alexander Befus, Eugen Kunz, Jens Ritter, Alexander Becker, Johann Stoll" },
+      { titel: "Vorne v.l.n.r.", namen: "Cristian Rotaru, Waldemar Wolf, Pieter Versteeg, Sergei Dreiling, Jürgen Kantlehner (Erfolgsbetreuer), Oliver Köhler, Jakob Krout" }
+    ],
+    link: "fussball-herren-senioren.html#archiv",
+    linktext: "Zu den Senioren"
+  },
+  {
+    saison: "2023",
+    mannschaft: "Senioren",
+    erfolg: "Meister",
+    liga: "Bezirksliga",
+    bild: "assets/images/senioren/archiv/2023.jpg",
+    aufstellung: [
+      { titel: "Stehend v.l.n.r.", namen: "Jürgen Kantlehner (Betreuer), Pieter Versteeg, Nico Grindler, Nico Sasso, Niko Schneider, Andrej Overchenko, Jens Ritter, Julian Schwerdt, Patrick Walz" },
+      { titel: "Knieend v.l.n.r.", namen: "Viorel Ratoi, Jakob Krout, Sergej Dreiling, Eugen Kunz, Tom Rodehau, Johann Stoll, Daniel Bäumlisberger" }
+    ],
+    link: "fussball-herren-senioren.html#archiv",
+    linktext: "Zu den Senioren"
+  },
+  {
+    saison: "2022",
+    mannschaft: "Senioren",
+    erfolg: "Meister",
+    liga: "Kreisklasse",
+    bild: "assets/images/senioren/archiv/2022.jpg",
+    aufstellung: [
+      { titel: "Auf dem Bild", namen: "Marius Dambach, Niko Schneider, Julian Schwerdt, Jens Ritter, Eugen Kunz, Antonio Mota (Erfolgsbetreuer), Sergej Dreiling, Tom Rodehau, Jürgen Kantlehner (Erfolgsbetreuer), Michael Frey (Abteilungsleiter), Patrick Walz (Spielertrainer), Alexander Befus, Thomas Lang, Daniel Baumgärtner, Jakob Krout, Nico Sasso, Rainer Brandtner (Sponsor), Nico Grindler, Uwe Kopp (Keeper)" }
+    ],
+    link: "fussball-herren-senioren.html#archiv",
+    linktext: "Zu den Senioren"
+  },
+  {
+    saison: "2019/20",
+    datum: "18. Januar 2020",
+    mannschaft: "Senioren",
+    erfolg: "Hallenstadtmeister",
+    liga: "Hallenstadtmeisterschaft Schwäbisch Hall",
+    bild: "assets/images/senioren/archiv/2020-01-18.jpg",
+    aufstellung: [
+      { titel: "Stehend v.l.n.r.", namen: "Jakob Krout, Patrick Walz, Jens Ritter, Alexander Befus, Pieter Versteeg, Julian Schwerdt, Michael Frey (Erfolgstrainer)" },
+      { titel: "Knieend v.l.n.r.", namen: "Alexander Becker, Eugen Kunz, Marco Ebinger, Sergei Dreiling, Jürgen Kantlehner (Erfolgsbetreuer)" }
+    ],
+    link: "fussball-herren-senioren.html#archiv",
+    linktext: "Zu den Senioren"
+  },
+  {
     saison: "2024/25",
     datum: "Juni 2025",
     mannschaft: "2. Mannschaft",

@@ -196,8 +196,10 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   Ehrennadel-Tabelle (Gold/Silber/Bronze) und Button zur Galerie `bilder-hauptversammlung.html#hv-JJJJ`
   (Alben 2026–2017 unter `assets/images/bilder/hauptversammlung/JJJJ/`). 2016–2025 von der alten Seite
   übernommen (16.10.2026).
-- **NICHT veröffentlichen:** HV-Protokolle (interne Vereinsdokumente) und Zeitungsartikel des Haller
-  Tagblatts (Urheberrecht) – beide standen auf der alten Seite, sind bewusst nicht übernommen.
+- HV-Protokolle als PDF online (Entscheidung Janne, 16.10.2026): `assets/downloads/hauptversammlung/
+  JJJJ-MM-TT-hv-protokoll.pdf` (2022–2026), Button „Protokoll (PDF)“ neben dem Galerie-Button.
+- NICHT veröffentlichen: Zeitungsartikel des Haller Tagblatts (Urheberrecht).
+- Erfolge der Senioren (Meister 2022/2023, Hallenstadtmeister 2020/2024) stehen in `js/erfolge.js`.
 
 ## Vereinsjubiläen (Archiv)
 
