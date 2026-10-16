@@ -17,7 +17,7 @@ var vm = require("vm");
 
 // Adresse der Website – für Linkvorschau (WhatsApp, Facebook) nötig.
 // Für den Upload zu Strato setzt tools/build.sh die Umgebungsvariable SITE_URL.
-var SITE_URL = process.env.SITE_URL || "https://jannelrnzn.github.io/tsv_hessental_testwebsite/";
+var SITE_URL = process.env.SITE_URL || "https://tsv-hessental.de/";
 
 var ROOT = path.join(__dirname, "..");
 var ZIEL = path.join(ROOT, "mitteilungen");

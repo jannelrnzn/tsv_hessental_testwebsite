@@ -1,5 +1,8 @@
 # Go-live neue Website – Schritt für Schritt
 
+> ✅ **Erledigt am 16.10.2026:** tsv-hessental.de zeigt auf `/website`, alle Prüfungen aus Teil C erfolgreich.
+> Offen ist nur noch Teil D.
+
 Ziel: Die neue Website liegt bei Strato im Ordner **`/website`**, wird über eine
 Test-Subdomain geprüft, und erst dann zeigt **tsv-hessental.de** auf diesen Ordner.
 Die alte WordPress-Seite im Hauptverzeichnis bleibt unangetastet (nur gesichert).
@@ -96,8 +99,8 @@ Ordner zippen und in die Vereins-Dropbox legen (nicht öffentlich teilen).
 
 ## Teil D – Nach dem Go-live
 
-- [ ] Claude Bescheid geben → stellt die Linkvorschau-Adresse dauerhaft um, danach
-      **GitHub Pages abschalten** (Settings → Pages).
+- [x] Linkvorschau-Adresse dauerhaft auf tsv-hessental.de umgestellt (16.10.2026).
+- [ ] **GitHub Pages abschalten** (Settings → Pages).
 - [ ] Optional: Google Search Console einrichten und `https://tsv-hessental.de/sitemap.xml` einreichen.
 - [x] „Shortcodes Ultimate Pro“ – von Herrn Erdmann am 14.10.2026 gekündigt.
 - [ ] „Max Mega Menu Pro“ prüfen (läuft evtl. noch über Herrn Erdmann).
