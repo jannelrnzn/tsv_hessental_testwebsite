@@ -16,6 +16,11 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   Repo-Root oder mit Originalnamen – an die richtige Stelle verschieben,
   sinnvoll umbenennen und auf max. 2400 px Breite verkleinern.
 
+## Seitenkopf (roter Balken)
+
+- Einleitungstext unter der Überschrift: nach jedem Satz `<br>` (Wunsch Dieter Erdmann, besser lesbar).
+- Links darin sind weiß, fett und unterstrichen (`.page-header .container > p a`), sonst rot auf rot unsichtbar.
+
 ## Logo & Icons
 
 - Vereinslogo (optimiert von Dieter Erdmann, 16.10.2026): `assets/images/logo/vereinslogo.png` (815×990,

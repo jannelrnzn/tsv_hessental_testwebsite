@@ -590,6 +590,11 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 .page-header .eyebrow { color: rgba(255, 255, 255, 0.8); }
 .page-header h1 { color: var(--color-white); margin-bottom: var(--space-xs); }
 .page-header p { color: rgba(255, 255, 255, 0.85); max-width: 640px; margin-bottom: 0; }
+/* Links im roten Seitenkopf weiß und unterstrichen, sonst rot auf rot unsichtbar */
+.page-header .container > p:not(.breadcrumb) a,
+.page-header__grid > div:first-child > p a { color: var(--color-white); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.page-header .container > p:not(.breadcrumb) a:hover,
+.page-header__grid > div:first-child > p a:hover { color: var(--color-white); text-decoration-thickness: 2px; }
 
 .page-header__grid {
   display: flex;
