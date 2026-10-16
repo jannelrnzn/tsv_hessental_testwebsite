@@ -186,8 +186,18 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   `aufstellung` (Liste aus `titel` + `namen`), `link`, `linktext`).
   Reihenfolge egal – `initSuccesses` in `js/main.js` sortiert nach Saison und
   gruppiert nach Jahrzehnten (mit Sprungleiste). Bilder unter `assets/images/erfolge/`.
-- Archiv-Menü auf allen Seiten: Mitteilungen, Erfolge, Vereinsjubiläen (alte Bilder gehören
-  in den Hauptmenüpunkt „Bilder“).
+- Archiv-Menü auf allen Seiten: Mitteilungen, Erfolge, Hauptversammlungen, Vereinsjubiläen (alte Bilder
+  gehören in den Hauptmenüpunkt „Bilder“).
+
+## Hauptversammlungen (Archiv)
+
+- `archiv-hauptversammlungen.html`: je HV ein `article.hv-bericht` (id `hv-JJJJ`, neueste oben) mit Datum,
+  Titelbild `assets/images/archiv/hauptversammlungen/JJJJ.jpg`, fettem Leitsatz `.hv-lead`, Bericht,
+  Ehrennadel-Tabelle (Gold/Silber/Bronze) und Button zur Galerie `bilder-hauptversammlung.html#hv-JJJJ`
+  (Alben 2026–2017 unter `assets/images/bilder/hauptversammlung/JJJJ/`). 2016–2025 von der alten Seite
+  übernommen (16.10.2026).
+- **NICHT veröffentlichen:** HV-Protokolle (interne Vereinsdokumente) und Zeitungsartikel des Haller
+  Tagblatts (Urheberrecht) – beide standen auf der alten Seite, sind bewusst nicht übernommen.
 
 ## Vereinsjubiläen (Archiv)
 
@@ -198,7 +208,7 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   Sprungleiste, `section.jubi-kapitel`, Tabellen `.jubi-tabelle`, Bilder `.jubi-bilder` unter
   `assets/images/archiv/jubilaeum/1973|1998/`; Großansicht über `data-gallery`).
 - Texte stammen 1:1 von der alten Seite (nur offensichtliche Tippfehler korrigiert, z. B. „lgnatz“,
-  „7973“). Bekannte Ungereimtheit im Original 1998: „Vom 19. bis 18. Juni 1998“ – nicht geändert.
+  „7973“, „19. bis 18. Juni 1998“ → „18. bis 19. Juni 1998“).
 
 ## Bilder (Fotoalben)
 
@@ -302,6 +312,8 @@ https://jannelrnzn.github.io/tsv_hessental_testwebsite/
   (`team/patrick-walz.jpg`), Mannschaftsfoto `assets/images/senioren/` mit
   Aufstellung (Hallenstadtmeisterschaft 18.01.2025; Vize-Titel bewusst NICHT
   unter Erfolge), FuPa-Widget (Spielplan/Ergebnisse), kein fussball.de-Widget mehr.
+  Ganz unten „Frühere Mannschaften“ (`#archiv`, `.senioren-archiv`): Mannschaftsfotos 2024–2017 von der
+  alten Seite (`assets/images/senioren/archiv/`) mit Aufstellung.
 
 ## Mannschaftsarchiv Jugend (A-, B-, C-Junioren)
 

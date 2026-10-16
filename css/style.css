@@ -1345,6 +1345,21 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 
 .jubi-zurueck { margin-top: var(--space-xl); }
 
+/* Archiv Hauptversammlungen */
+.hv-bericht .eyebrow { display: block; margin-bottom: 0.25rem; }
+.hv-lead { font-weight: 600; font-size: 1.05rem; }
+.hv-bild { margin: 0 0 1rem; }
+.hv-bild img { width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow-card); }
+.hv-bild figcaption { font-size: 0.85rem; color: var(--color-gray-700); margin-top: 0.35rem; }
+.hv-ehrungen th { white-space: nowrap; }
+.hv-ehrungen td { white-space: normal; }
+.hv-galerie { margin-top: var(--space-sm); }
+
+/* Senioren: frühere Mannschaften */
+.senioren-archiv > h3 { margin: 0; padding: var(--space-sm) var(--space-md) 0; }
+.senioren-archiv > .archive-subtitle { margin: 0 0 var(--space-sm); padding: 0 var(--space-md); }
+.senioren-archiv .archive-panel__photo + .archive-panel__photo { border-top: 2px solid var(--color-white); }
+
 @media (max-width: 480px) {
   .jubi-tabelle th { white-space: normal; }
 }
