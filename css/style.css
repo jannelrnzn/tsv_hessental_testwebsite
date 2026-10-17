@@ -427,6 +427,7 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 0; /* Ausschnitt ganz oben, damit der Kopf inkl. Haare nicht abgeschnitten wird (Wunsch Dieter Erdmann) */
 }
 
 .person-card__photo svg {
