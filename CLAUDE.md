@@ -71,10 +71,6 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   - Spielbericht A3-Abstiegsrunde (`2026-10-12-a3-abstiegsrunde`): letztes Quali-Spiel
     SG Eutendorf/Ottendorf – TSV Hessental (wird noch ausgetragen, vermutlich vor Go-live)
     → Ergebnis + Text am Ende der Ergebnisliste der Ersten ergänzen (vor dem Abschnitt „Die zweite Mannschaft in der Kreisliga B6“).
-- **Fotos von Dieter Erdmann (17.10.2026, Dropbox-Ordner „TSV Hessental/Janne“)** – Janne schickt einen
-  Freigabelink, nach dem Kopieren Ordner löschen lassen. Inhalt: Arbeitsdienste 2020–2022, Dart, Spielszenen
-  Herren, Teams Junioren, VfB Fußballschule 2025-07, Festschrift-Titelbilder 50/75 Jahre (560×795),
-  Senioren Bezirkspokalsieger 2015/16. **Gewünscht (Janne): eigene Galerie „VfB-Fußballschule“.**
 - **Fehlende Fotos** (Platzhalter erscheint automatisch, Dateiname = vorname-nachname.jpg):
   - Trainer `assets/images/team/`: Benjamin Bradtke (D + F),
     Erik Nizezki, Johann Schwab (E), Berkan Celik, Adrian Haag, Sead Begtasevic,
@@ -268,7 +264,7 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   `bilder-hauptversammlung.html`, `bilder-dorfpokal.html` (Alben 2024, 2023, 2019, 2018,
   2017, 2016 – ältere von der alten Seite übernommen),
   `bilder-vereinsleben.html` (Vatertag 2017–2023, Weihnachtsmarkt 2017/2018, Abschlussfete 2016/17,
-  Sportplatzputzete 2017; Hochzeitsfotos bewusst NICHT, Janne 16.10.2026), `bilder-fussball.html` (Hallenstadtmeisterschaft 18.01.2025
+  Sportplatzputzete 2017; Hochzeitsfotos bewusst NICHT, Janne 16.10.2026), `bilder-fussball.html` (VfB-Fußballschule Wochenend-Camp Juli 2025 – Fotos von Dieter Erdmann, 17.10.2026; Hallenstadtmeisterschaft 18.01.2025
   Senioren + Aktive, Bezirkspokal-Finale 2017/18, Trainingslager Oberstdorf 2018) – beide 16.10.2026
   von der alten Seite übernommen –,
   `bilder-vereinsheimbau.html`, `bilder-terrassenueberdachung.html` (Bau 2026, verlinkt aus der
