@@ -622,6 +622,9 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
 .download-link a { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 600; }
 .download-link svg { width: 18px; height: 18px; }
 
+/* Link unter einem Bild-/Aufstellungskasten (z. B. „Alle Fotos … ansehen →“) */
+.mehr-link { margin: var(--space-md) 0 0; font-size: 0.95rem; font-weight: 600; }
+
 /* Untereinander stehende Bannerbilder (z. B. Fan-Banden) */
 .banner-list { display: grid; gap: var(--space-sm); max-width: 700px; }
 .banner-list img { width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow-card); }
