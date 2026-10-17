@@ -167,7 +167,9 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   Verzeichnislisten, Cache) und `404.html` liegen im Repo-Root.
 - `SITE_URL` in `tools/mitteilungen.js` steht seit dem Go-live auf https://tsv-hessental.de/.
 - kontakt.php am 15.10.2026 auf test.tsv-hessental.de erfolgreich getestet (Mail kommt an,
-  Antworten geht an Absender). verwaltung@ leitet um an Thilo, Marco Ebinger und Janne (seit 15.10.).
+  Antworten geht an Absender). verwaltung@ leitet um an Thilo, Marco Ebinger und Janne (seit 15.10.); „Verwerfen“ dahinter hat
+  Dieter Erdmann am 17.10.2026 ergänzt. Vorher aufgelaufene Mails (ca. 250 KB, nur Kopien) im Postfach löschen –
+  Passwort des Postfachs hat wohl nur Thilo.
 - GitHub Pages am 16.10.2026 abgeschaltet.
 - **Entschieden (Janne):** Änderungen nach dem Go-live laufen weiter über GitHub
   und werden **automatisch per GitHub Action (SFTP) zu Strato** hochgeladen –
