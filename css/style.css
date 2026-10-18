@@ -1143,7 +1143,8 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
     transition: max-height var(--transition);
   }
 
-  .main-nav.is-open { max-height: 420px; overflow-y: auto; }
+  /* So hoch wie der Bildschirm unter der Kopfzeile: alle Menüpunkte sofort sichtbar, nur bei sehr kleinen Handys scrollen */
+  .main-nav.is-open { max-height: calc(100vh - 76px); max-height: calc(100dvh - 76px); overflow-y: auto; }
 
   .main-nav__list { flex-direction: column; align-items: stretch; gap: 0; padding: var(--space-sm) var(--space-md) var(--space-md); }
   .main-nav__list > li { width: 100%; }
