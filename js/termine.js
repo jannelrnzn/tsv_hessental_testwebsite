@@ -12,18 +12,13 @@
 
 var TERMINE = [
   {
-    datum: "2026-10-18",
-    titel: "SG Eutendorf/Ottendorf – TSV Hessental",
-    info: "Anstoß 15:00 Uhr · Auswärtsspiel · Kreisliga A3 Rems/Murr/Hall, 9. Spieltag"
-  },
-  {
-    datum: "2026-10-18",
-    titel: "TSV Hessental II – TuRa Untermünkheim II",
-    info: "Anstoß 15:00 Uhr · Heimspiel · Kreisliga B6 Rems/Murr/Hall, 9. Spieltag"
-  },
-  {
     datum: "2026-11-06",
     titel: "Besenausfahrt 2026 zum Weingut Birkert (Adolzfurt)",
     info: "Abfahrt 17:30 Uhr · Sportplatz Hessental · 15 € · Anmeldung bis 16.10. bei Marcel Fischer"
+  },
+  {
+    datum: "2026-12-12",
+    titel: "U12 Bundesliga Cup",
+    info: "12. und 13. Dezember · Schenkenseehalle Schwäbisch Hall"
   }
 ];
