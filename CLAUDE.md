@@ -253,7 +253,8 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
 ## Vereinsjubiläen (Archiv)
 
 - Übersicht `archiv-vereinsjubilaeen.html` (früher `archiv-jubilaeumszeitschriften.html`, Weiterleitung
-  in `.htaccess`) mit drei Karten → `archiv-jubilaeum-2023.html` (Festzeitschrift-PDF + Galerie der
+  in `.htaccess`) mit drei Karten (Cover = Original-Titelseiten unter `assets/downloads/jubilaeum/cover/`, `.doc-card__cover` im
+  Seitenformat 210/297, nicht beschnitten, alle gleich hoch) → `archiv-jubilaeum-2023.html` (Festzeitschrift-PDF + Galerie der
   Feier am 3.11.2023, 203 Bilder unter `assets/images/archiv/jubilaeum/2023/` + `thumbs/`),
   `archiv-jubilaeum-1998.html` und `archiv-jubilaeum-1973.html` (Kapitel aus den Festschriften,
   Sprungleiste, `section.jubi-kapitel`, Tabellen `.jubi-tabelle`, Bilder `.jubi-bilder` unter

@@ -1565,7 +1565,8 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   display: flex;
   align-items: center;
   justify-content: center;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 210 / 297; /* Hochformat wie die Hefte (A4/A5), Cover nicht beschnitten */
+  overflow: hidden; /* sonst wächst die Box mit dem Bild – Karten ungleich hoch */
   background: var(--color-gray-100);
   color: var(--color-primary);
 }
