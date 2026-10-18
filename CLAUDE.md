@@ -71,9 +71,6 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
 
 - **Inhalte, die Janne noch liefert:**
   - Antworten zu den offenen Fragen der Zeitreise (siehe Abschnitt Bilder)
-  - Spielbericht A3-Abstiegsrunde (`2026-10-12-a3-abstiegsrunde`): letztes Quali-Spiel
-    SG Eutendorf/Ottendorf – TSV Hessental (wird noch ausgetragen, vermutlich vor Go-live)
-    → Ergebnis + Text am Ende der Ergebnisliste der Ersten ergänzen (vor dem Abschnitt „Die zweite Mannschaft in der Kreisliga B6“).
 - **Strato-Postfach verwaltung@ aufräumen (später, keine Eile):** alte Mail-Kopien (~250 KB) löschen – Thilo
   fragen, ob er das Passwort hat; sonst bei Strato neues Passwort setzen (vorher Thilo fragen, ob er das
   Postfach direkt in Outlook/Handy nutzt), Webmail https://webmail.strato.de/appsuite/, Papierkorb leeren.
