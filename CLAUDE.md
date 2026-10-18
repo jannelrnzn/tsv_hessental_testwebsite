@@ -20,7 +20,10 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
 
 ## Seitenkopf (roter Balken)
 
-- Einleitungstext unter der Überschrift: nach jedem Satz `<br>` (Wunsch Dieter Erdmann, besser lesbar).
+- Einleitungstext unter der Überschrift: nach jedem Satz `<br>` (Wunsch Dieter Erdmann, besser lesbar), volle Breite
+  (keine max-width), ebenso die Startseiten-Überschrift (`.hero__content`). Zusatzhinweise mit `<br><br>` als
+  eigener Absatz dort statt gelber Box (z. B. Pflichtfelder im Kontaktformular). Gelb (`.hinweis-marker`) nur,
+  wenn ausdrücklich gewünscht (Eltern-Kind-Turnen).
 - Links darin sind weiß, fett und unterstrichen (`.page-header .container > p a`), sonst rot auf rot unsichtbar.
 
 ## Navigation
