@@ -78,7 +78,8 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   - Trainer `assets/images/team/`: Benjamin Bradtke (D + F),
     Erik Nizezki, Johann Schwab (E), Berkan Celik, Adrian Haag, Sead Begtasevic,
     Waldemar Fichter, Joah Bäumlisberger, Maxim Lotz, Mattias Teinert (F),
-    Andreas Schneider, Andrija Martinovic, Manuel Arcis (Bambini)
+    Andreas Schneider, Andrija Martinovic, Manuel Arcis (Bambini),
+    Lars Anskinewitsch (Trainer 2. Mannschaft, auch ohne Telefonnummer)
   - Schiedsrichter `assets/images/schiedsrichter/`: Erik Kronmüller, Ricardo
     Kosche, Rolf Baumann
   - Marvin Lamm (`assets/images/dart/`), Christine Schmidt (`assets/images/kurse/`)
