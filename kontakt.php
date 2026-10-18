@@ -22,14 +22,14 @@ $ABSENDER_NAME = 'TSV Hessental Website';
 $MIN_SEKUNDEN     = 3;                 // Zeitprüfung
 $MAX_LINKS        = 3;                 // Links in der Nachricht
 $MAX_PRO_STUNDE   = 5;                 // Sendelimit je IP
-$MAX_ANLAGE_BYTES = 5 * 1024 * 1024;   // 5 MB
+$MAX_ANLAGEN      = 5;                 // Anzahl Dateien
+$MAX_ANLAGE_BYTES = 15 * 1024 * 1024;  // 15 MB für alle Anlagen zusammen (als Mail ca. 20 MB, passt z. B. noch zu Gmail)
+// Kein Word: .doc/.docm können Makros enthalten (Hinweis Dieter Erdmann)
 $ERLAUBTE_ANLAGEN = [
     'pdf'  => ['application/pdf'],
     'jpg'  => ['image/jpeg'],
     'jpeg' => ['image/jpeg'],
     'png'  => ['image/png'],
-    'doc'  => ['application/msword', 'application/octet-stream'],
-    'docx' => ['application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/zip', 'application/octet-stream'],
 ];
 // =========================================================
 
@@ -115,25 +115,40 @@ if (preg_match_all('~(https?://|www\.)~i', $nachricht) > $MAX_LINKS) {
     spam();
 }
 
-// ---------- Anlage (optional) ----------
-$anlage = null;
-if (isset($_FILES['anlage']) && $_FILES['anlage']['error'] !== UPLOAD_ERR_NO_FILE) {
-    $datei = $_FILES['anlage'];
-    if ($datei['error'] !== UPLOAD_ERR_OK || $datei['size'] > $MAX_ANLAGE_BYTES) {
-        antworten(false, 'Die Anlage konnte nicht übernommen werden (höchstens 5 MB).');
+// ---------- Anlagen (optional, mehrere möglich) ----------
+$anlagen = [];
+if (isset($_FILES['anlage'])) {
+    $f = $_FILES['anlage'];
+    // name="anlage[]" liefert Listen, ein einzelnes Feld "anlage" Einzelwerte
+    $namen = (array) $f['name'];
+    $fehler = (array) $f['error'];
+    $groessen = (array) $f['size'];
+    $tmp = (array) $f['tmp_name'];
+    $summe = 0;
+    foreach ($namen as $i => $dateiname) {
+        if ($fehler[$i] === UPLOAD_ERR_NO_FILE) {
+            continue;
+        }
+        if ($fehler[$i] !== UPLOAD_ERR_OK) {
+            antworten(false, 'Die Anlagen konnten nicht übernommen werden (höchstens 15 MB zusammen).');
+        }
+        $summe += $groessen[$i];
+        if (count($anlagen) >= $MAX_ANLAGEN || $summe > $MAX_ANLAGE_BYTES) {
+            antworten(false, 'Bitte höchstens 5 Anlagen mit zusammen 15 MB senden.');
+        }
+        $endung = strtolower(pathinfo($dateiname, PATHINFO_EXTENSION));
+        $mime = function_exists('finfo_open')
+            ? finfo_file(finfo_open(FILEINFO_MIME_TYPE), $tmp[$i])
+            : 'application/octet-stream';
+        if (!isset($ERLAUBTE_ANLAGEN[$endung]) || !in_array($mime, $ERLAUBTE_ANLAGEN[$endung], true)) {
+            antworten(false, 'Als Anlage sind nur PDF-, JPG- und PNG-Dateien erlaubt.');
+        }
+        $anlagen[] = [
+            'name' => preg_replace('~[^A-Za-z0-9._-]~', '_', basename($dateiname)),
+            'mime' => $mime,
+            'daten' => file_get_contents($tmp[$i]),
+        ];
     }
-    $endung = strtolower(pathinfo($datei['name'], PATHINFO_EXTENSION));
-    $mime = function_exists('finfo_open')
-        ? finfo_file(finfo_open(FILEINFO_MIME_TYPE), $datei['tmp_name'])
-        : 'application/octet-stream';
-    if (!isset($ERLAUBTE_ANLAGEN[$endung]) || !in_array($mime, $ERLAUBTE_ANLAGEN[$endung], true)) {
-        antworten(false, 'Als Anlage sind nur PDF-, JPG-, PNG- und Word-Dateien erlaubt.');
-    }
-    $anlage = [
-        'name' => preg_replace('~[^A-Za-z0-9._-]~', '_', basename($datei['name'])),
-        'mime' => $mime,
-        'daten' => file_get_contents($datei['tmp_name']),
-    ];
 }
 
 // ---------- Mail zusammenbauen ----------
@@ -142,7 +157,7 @@ $text = "Neue Nachricht über das Kontaktformular der Website:\n\n"
       . "Name:    $name\n"
       . "E-Mail:  $email\n"
       . "Thema:   $thema\n"
-      . ($anlage ? "Anlage:  {$anlage['name']}\n" : '')
+      . ($anlagen ? 'Anlagen: ' . implode(', ', array_column($anlagen, 'name')) . "\n" : '')
       . "\nNachricht:\n----------\n$nachricht\n----------\n\n"
       . 'Gesendet am ' . date('d.m.Y \u\m H:i') . " Uhr.\n"
       . "Mit \"Antworten\" geht die Mail direkt an den Absender.\n";
@@ -151,19 +166,21 @@ $header  = 'From: =?UTF-8?B?' . base64_encode($ABSENDER_NAME) . "?= <$ABSENDER>\
 $header .= 'Reply-To: =?UTF-8?B?' . base64_encode($name) . "?= <$email>\r\n";
 $header .= "MIME-Version: 1.0\r\n";
 
-if ($anlage) {
+if ($anlagen) {
     $grenze = 'tsv-' . bin2hex(random_bytes(12));
     $header .= "Content-Type: multipart/mixed; boundary=\"$grenze\"\r\n";
     $inhalt  = "--$grenze\r\n"
              . "Content-Type: text/plain; charset=UTF-8\r\n"
              . "Content-Transfer-Encoding: base64\r\n\r\n"
-             . chunk_split(base64_encode($text)) . "\r\n"
-             . "--$grenze\r\n"
-             . "Content-Type: {$anlage['mime']}; name=\"{$anlage['name']}\"\r\n"
-             . "Content-Transfer-Encoding: base64\r\n"
-             . "Content-Disposition: attachment; filename=\"{$anlage['name']}\"\r\n\r\n"
-             . chunk_split(base64_encode($anlage['daten'])) . "\r\n"
-             . "--$grenze--\r\n";
+             . chunk_split(base64_encode($text)) . "\r\n";
+    foreach ($anlagen as $anlage) {
+        $inhalt .= "--$grenze\r\n"
+                 . "Content-Type: {$anlage['mime']}; name=\"{$anlage['name']}\"\r\n"
+                 . "Content-Transfer-Encoding: base64\r\n"
+                 . "Content-Disposition: attachment; filename=\"{$anlage['name']}\"\r\n\r\n"
+                 . chunk_split(base64_encode($anlage['daten'])) . "\r\n";
+    }
+    $inhalt .= "--$grenze--\r\n";
 } else {
     $header .= "Content-Type: text/plain; charset=UTF-8\r\n";
     $header .= "Content-Transfer-Encoding: base64\r\n";

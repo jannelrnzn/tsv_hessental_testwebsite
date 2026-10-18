@@ -87,6 +87,69 @@ function initSubmenus() {
  * Auf GitHub Pages bzw. lokal ohne Server gibt es kein PHP – dort wird
  * nur eine Testmeldung angezeigt und nichts verschickt.
  */
+var ANLAGEN_MAX = 5;                        // wie in kontakt.php
+var ANLAGEN_MAX_BYTES = 15 * 1024 * 1024;   // zusammen, wie in kontakt.php
+var FOTO_MAX_PIXEL = 2400;                  // längste Seite nach dem Verkleinern
+
+/**
+ * Baut die Formulardaten: Fotos über 1,5 MB (typisch Handy, oft ~10 MB) werden vorher
+ * auf 2400 px verkleinert und als JPEG gespeichert, damit mehrere Bilder ins Limit passen.
+ */
+function anlagenVorbereiten(form) {
+  var daten = new FormData(form);
+  var dateien = daten.getAll("anlage[]").filter(function (datei) { return datei && datei.size > 0; });
+  daten.delete("anlage[]");
+
+  if (dateien.length > ANLAGEN_MAX) {
+    return Promise.reject(anlagenFehler("Bitte höchstens " + ANLAGEN_MAX + " Anlagen auswählen."));
+  }
+
+  return Promise.all(dateien.map(fotoVerkleinern)).then(function (fertig) {
+    var summe = 0;
+    fertig.forEach(function (datei) {
+      summe += datei.size;
+      daten.append("anlage[]", datei, datei.name);
+    });
+    if (summe > ANLAGEN_MAX_BYTES) {
+      throw anlagenFehler("Die Anlagen sind zusammen zu groß (höchstens 15 MB). Bitte weniger oder kleinere Dateien wählen.");
+    }
+    return daten;
+  });
+}
+
+function anlagenFehler(text) {
+  var fehler = new Error(text);
+  fehler.anlagen = true;
+  return fehler;
+}
+
+function fotoVerkleinern(datei) {
+  if (!/^image\/(jpeg|png)$/.test(datei.type) || datei.size < 1.5 * 1024 * 1024 || !window.createImageBitmap) {
+    return Promise.resolve(datei);
+  }
+  return createImageBitmap(datei, { imageOrientation: "from-image" })
+    .then(function (bild) {
+      var faktor = Math.min(1, FOTO_MAX_PIXEL / Math.max(bild.width, bild.height));
+      var canvas = document.createElement("canvas");
+      canvas.width = Math.round(bild.width * faktor);
+      canvas.height = Math.round(bild.height * faktor);
+      var ctx = canvas.getContext("2d");
+      ctx.fillStyle = "#fff"; // transparente PNG nicht schwarz werden lassen
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(bild, 0, 0, canvas.width, canvas.height);
+      return new Promise(function (fertig) {
+        canvas.toBlob(function (blob) {
+          if (!blob || blob.size >= datei.size) {
+            fertig(datei);
+            return;
+          }
+          fertig(new File([blob], datei.name.replace(/\.(png|jpe?g)$/i, "") + ".jpg", { type: "image/jpeg" }));
+        }, "image/jpeg", 0.85);
+      });
+    })
+    .catch(function () { return datei; });
+}
+
 function initContactForm() {
   var form = document.querySelector("#contact-form");
 
@@ -143,12 +206,20 @@ function initContactForm() {
     button.disabled = true;
     zeige("Nachricht wird gesendet …", true);
 
-    fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: { "X-Requested-With": "fetch" }
-    })
-      .then(function (response) { return response.json(); })
+    anlagenVorbereiten(form)
+      .then(function (daten) {
+        return fetch(form.action, {
+          method: "POST",
+          body: daten,
+          headers: { "X-Requested-With": "fetch" }
+        });
+      })
+      .then(function (response) {
+        if (response.status === 413) {
+          return { ok: false, meldung: "Die Anlagen sind zu groß. Bitte höchstens 5 Dateien mit zusammen 15 MB senden." };
+        }
+        return response.json();
+      })
       .then(function (data) {
         zeige(data.meldung, data.ok);
         if (data.ok) {
@@ -158,8 +229,9 @@ function initContactForm() {
           }
         }
       })
-      .catch(function () {
-        zeige("Ihre Nachricht konnte leider nicht gesendet werden. Bitte schreiben Sie uns direkt an verwaltung@tsv-hessental.de.", false);
+      .catch(function (fehler) {
+        zeige(fehler && fehler.anlagen ? fehler.message :
+          "Ihre Nachricht konnte leider nicht gesendet werden. Bitte schreiben Sie uns direkt an verwaltung@tsv-hessental.de.", false);
       })
       .then(function () {
         button.disabled = false;

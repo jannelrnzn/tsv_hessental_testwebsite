@@ -983,6 +983,13 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   border-color: var(--color-primary);
 }
 
+/* Abstand zwischen „Datei auswählen“ und dem Dateinamen (Hinweis Dieter Erdmann) */
+.form-field input[type="file"]::file-selector-button {
+  margin-right: 1rem;
+  padding: 0.35rem 0.9rem;
+  cursor: pointer;
+}
+
 .form-field textarea {
   resize: vertical;
   min-height: 140px;

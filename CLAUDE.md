@@ -317,7 +317,10 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   (oben in `kontakt.php` einstellbar; Absender muss eine Adresse der eigenen
   Domain bei Strato sein). Antworten gehen per Reply-To an den Besucher.
 - Spamschutz: Honeypot-Feld `website`, Mindestzeit 3 s (`ts`), max. 3 Links,
-  max. 5 Nachrichten/Stunde/IP. Anlage optional: PDF/JPG/PNG/Word, max. 5 MB.
+  max. 5 Nachrichten/Stunde/IP. Anlagen optional (`anlage[]`, mehrere): bis 5 Dateien PDF/JPG/PNG, zusammen
+  max. 15 MB (als Mail ~20 MB, passt zu Gmail). KEIN Word (Makros, Hinweis Dieter Erdmann 18.10.2026).
+  Fotos über 1,5 MB verkleinert `anlagenVorbereiten` (js/main.js) vor dem Senden auf 2400 px JPEG
+  (Handyfoto 10 MB → ca. 1 MB). Limits in kontakt.php UND js/main.js gleich halten.
 
 ## Datenschutz: externe Inhalte (2-Klick-Lösung)
 
