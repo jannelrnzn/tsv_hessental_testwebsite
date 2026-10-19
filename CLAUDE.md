@@ -222,6 +222,9 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   zufällige Reihenfolge, Wechsel alle 4 s, Pause beim Drüberfahren.
 - Bei neuen/entfallenen Werbepartnern `werbepartner.html` UND `js/sponsoren.js`
   anpassen.
+- Fußzeile: Stadtwerke-Logo (`.footer-sponsor`, max. 96 px hoch) verlinkt auf https://stadtwerke-hall.de/.
+- `werbepartner.html` Kopf: Box Markus Gerstenberg so breit, dass Name/E-Mail einzeilig sind (Schrift wie
+  „Mitglied werden“), Link „Werbepartner werden →“ links unter dem Text (`.page-header__link`).
 - `werbepartner.html` nach Klassen (Tafel, Stand 10/2026): **Hauptsponsor** Stadtwerke
   (Logo + Link), **Exklusiv-Partner** (`.partner-card`, Name + Homepage verlinkt, alle 13 mit
   Link; Bricks & Mortar → Instagram, Adresse = Firmensitz Gersthofen; Logos (alle) unter
