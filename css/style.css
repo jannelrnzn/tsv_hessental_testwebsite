@@ -1755,6 +1755,22 @@ a.partner-card__name:hover { color: var(--color-primary); }
 }
 .news-item__thumb:hover img { opacity: 0.85; }
 .news-item--teaser .news-item__body p { margin-bottom: 0.3rem; }
+/* Teaser als Karte mit rotem Rand links wie bei den Erfolgen, 2rem Abstand (Wunsch Dieter Erdmann) */
+.news-item--teaser,
+.news-item--teaser:first-child {
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-left: 5px solid var(--color-primary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+.news-item--teaser:last-child { margin-bottom: 0; border-bottom: 1px solid var(--color-gray-300); }
+@media (max-width: 720px) {
+  .news-item--teaser,
+  .news-item--teaser:first-child { padding: 1rem; }
+}
 .news-item__more { display: inline-block; font-weight: 600; }
 .news-item__tag {
   display: inline-block;
