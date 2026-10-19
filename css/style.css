@@ -879,6 +879,15 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   align-items: start;
 }
 
+/* Zwei Ansprechpartner nebeneinander (Werbepartner werden) */
+.two-col--kontakte { grid-template-columns: 1fr 1.1fr; }
+.people-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.people-grid--2 .person-card p { font-size: 0.92rem; } /* wie „Mitglied werden“, E-Mail einzeilig */
+.people-grid--2 .person-card p a { overflow-wrap: anywhere; }
+@media (max-width: 560px) {
+  .people-grid--2 { grid-template-columns: 1fr; }
+}
+
 .check-list li {
   position: relative;
   padding-left: var(--space-md);
