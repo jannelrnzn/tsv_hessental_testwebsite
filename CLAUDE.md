@@ -199,7 +199,7 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   (`data-news="spielberichte"`, 3 neueste, Bereich ausgeblendet wenn leer).
   `archiv: true` = nicht mehr auf der Startseite.
 - `archiv-mitteilungen.html` zeigt ALLE Einträge als Teaser mit Filter Alle/Mitteilungen/Spielberichte.
-- Teaser (`.news-item--teaser`) sind Karten mit rotem Rand links (wie Erfolge), 2rem Abstand (Wunsch Dieter Erdmann).
+- Teaser (`.news-item--teaser`) sind Karten wie `.partner-card` (4px roter Rand links, Schatten), 2rem Abstand (Wunsch Dieter Erdmann).
 - Links im `text` so schreiben wie von der Startseite aus (`vorstand.html`) – das Skript passt sie an.
 - Bilder unter `assets/images/mitteilungen/`. Einzelseite: erstes Bild groß in Textbreite (760 px)
   nach dem ersten Absatz (max. 80 % Bildschirmhöhe, Hochformat schmaler), weitere als
