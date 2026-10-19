@@ -173,7 +173,8 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   Antworten geht an Absender). verwaltung@ leitet um an Thilo, Marco Ebinger und Janne (seit 15.10.); „Verwerfen“ dahinter hat
   Dieter Erdmann am 17.10.2026 ergänzt. Vorher aufgelaufene Mails (ca. 250 KB, nur Kopien) im Postfach löschen –
   Passwort des Postfachs hat wohl nur Thilo.
-- GitHub Pages am 16.10.2026 abgeschaltet.
+- GitHub Pages am 16.10.2026 abgeschaltet, lief aber wieder mit („pages build and deployment“ bei jedem Push) –
+  am 19.10.2026 von Janne erneut abgeschaltet (Settings → Pages). Läuft der Job wieder, dort erneut prüfen.
 - **Entschieden (Janne):** Änderungen nach dem Go-live laufen weiter über GitHub
   und werden **automatisch per GitHub Action (SFTP) zu Strato** hochgeladen –
   bei jedem Push auf `main`, nur geänderte Dateien. Zugangsdaten trägt Janne
