@@ -121,8 +121,9 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
 8. Kalender: vorerst NICHT. Stattdessen Box „Nächste Termine“ auf der Startseite (erledigt)
 9. ~~Werbepartner werden~~ erledigt: Preisbild ersetzt durch HTML-Preistabelle + Pakete
    (Bronze/Silber/Gold/Diamant/Individual, Preise „auf Anfrage“) aus Werbevertrag 2026.
-10. Fahrradgruppe – Seite `freizeit-fahrradgruppe.html` angelegt (Platzhalter), Menü „Kurse“
-    heißt jetzt „Kurse & Freizeit“. Wartet auf Ansprechpartner, Termine, Treffpunkt.
+10. ~~Fahrradgruppe~~ erledigt (23.10.2026): `freizeit-fahrradgruppe.html` „Fit durch Radeln – E-Bike-Touren“
+    (freitags 18 Uhr Sportplatz, ca. 30 km, Einkehr), Übungsleiterin Susanne Rieck, Ansprechpartner Karl-Heinz
+    Fischer (ohne Fotos), Galerie `assets/images/fahrradgruppe/` (4 Bilder + thumbs).
 11. ~~Gasteltern-Beitrag~~ erledigt (Mitteilung 02.10.2026, U12 Bundesliga Cup, Link zur Anmeldeseite)
 
 ## Hosting / Go-live (erfolgt 16.10.2026)
