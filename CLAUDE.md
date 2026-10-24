@@ -77,7 +77,7 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
 - **Fehlende Fotos** (Platzhalter erscheint automatisch, Dateiname = vorname-nachname.jpg):
   - Trainer `assets/images/team/`: Benjamin Bradtke (D + F),
     Erik Nizezki, Johann Schwab (E), Berkan Celik, Adrian Haag, Sead Begtasevic,
-    Waldemar Fichter, Joah Bäumlisberger, Maxim Lotz, Mattias Teinert (F),
+    Waldemar Fichter, Maxim Lotz, Mattias Teinert (F),
     Andreas Schneider, Andrija Martinovic, Manuel Arcis (Bambini)
   - Schiedsrichter `assets/images/schiedsrichter/`: Erik Kronmüller, Ricardo
     Kosche, Rolf Baumann
