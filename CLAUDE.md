@@ -102,6 +102,16 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   http→https + Startseite prüfen (wirkt auch auf `/website`); `.user.ini` + `aios-bootstrap.php` zusammen löschen;
   `info.php` und `google7523512c84a3c277.html` dürfen weg; `website`, `cgi-bin`, `cgi-data`, `php.ini` (Inhalt
   noch unklar) bleiben. Danach Live-Seite prüfen, Datenbank dbs16037730 löschen, Max Mega Menu Pro kündigen.
+- **Mitglieder-/Anwesenheits-App eines Kollegen (seit 27.10.2026, Freigabe Janne):** Subdomain
+  `anmeldung.tsv-hessental.de` → A-Record 84.119.245.151 (Vodafone-Privatkunden-IP, Server vermutlich bei ihm zu
+  Hause; IP evtl. dynamisch → ggf. CNAME auf DynDNS). Dort läuft seine Web-App „TSV Hessental · Anwesenheit“
+  (nginx, leitet auf `/mitglied-werden`), gleiche App unter `https://tsv.sbitc.de/spieler`.
+  Konzept: vollständiger Mitgliedsantrag wird NUR von Trainer/Admin in der App eingeleitet (nicht extern);
+  `anmeldung.` = Mini-Variante mit Stammdaten, leitet weiter zu tsv.sbitc.de.
+  Offen (Janne klärt mit Kollege + Rainer Brandtner als Vorstand): welche Stammdaten genau, wo gespeichert
+  (Heimserver oder sbitc.de, wem gehört sbitc.de), Impressum-/Datenschutz-Links in der App, Zustimmung Vorstand,
+  Vertraulichkeit/Backups. Danach: Datenschutzerklärung ergänzen; ggf. Button „Online anmelden“ auf
+  `mitglied-werden.html` (bis dahin bleibt dort nur der PDF-Antrag). Website hat sonst nichts damit zu tun.
 - **Ganz zum Schluss (nach allem anderen):** Tarifwechsel bei Strato prüfen.
 
 ## Finale Abstimmung vor Go-live (13.10.2026) – NOCH NICHT UMSETZEN, erst Rückfragen klären
