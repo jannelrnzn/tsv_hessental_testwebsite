@@ -97,11 +97,10 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   2–4 Wochen löschen, Passwörter ändern, Max Mega Menu Pro prüfen (siehe Hosting-Abschnitt).
   Direkt nach der Umstellung gelegentlich „503“ auf tsv-hessental.de (nicht auf test.) – beobachten,
   bei Dauerproblem Strato-Support.
-- **WordPress-Reste im Webspace-Hauptverzeichnis (22.10.2026):** Dieter Erdmann löscht sie (Freigabe Janne).
-  Vorgaben: keine Domain/Subdomain mehr auf `/`; Haupt-`.htaccess` erst in `.htaccess-alt` umbenennen und
-  http→https + Startseite prüfen (wirkt auch auf `/website`); `.user.ini` + `aios-bootstrap.php` zusammen löschen;
-  `info.php` und `google7523512c84a3c277.html` dürfen weg; `website`, `cgi-bin`, `cgi-data`, `php.ini` (Inhalt
-  noch unklar) bleiben. Danach Live-Seite prüfen, Datenbank dbs16037730 löschen, Max Mega Menu Pro kündigen.
+- **WordPress-Reste im Webspace-Hauptverzeichnis:** von Dieter Erdmann gelöscht, Live-Seite am 28.10.2026 geprüft
+  (http→https, www→ohne www, Seiten, 404, .htaccess-Weiterleitung, kontakt.php/PHP ok). `wp-login.php` liefert 503
+  (Strato-eigener Schutz, harmlos). Noch offen: Datenbank dbs16037730 löschen, Max Mega Menu Pro kündigen,
+  Test-Subdomain `test` entfernen (HTTPS dort schon kaputt), FTP-/Mail-Passwörter ändern, Inhalt `php.ini` klären.
 - **Mitglieder-/Anwesenheits-App eines Kollegen (seit 27.10.2026, Freigabe Janne):** Subdomain
   `anmeldung.tsv-hessental.de` → A-Record 84.119.245.151 (Vodafone-Privatkunden-IP, Server vermutlich bei ihm zu
   Hause; IP evtl. dynamisch → ggf. CNAME auf DynDNS). Dort läuft seine Web-App „TSV Hessental · Anwesenheit“
