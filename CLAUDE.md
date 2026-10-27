@@ -122,7 +122,7 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   Postfach `anmeldung@tsv-hessental.de` bei Strato angelegt (28.10.2026, Passwort nur bei Janne/Kollege, NIE in
   Chat/Repo) – Kollege soll den App-Versand von Microsoft 365 auf Strato-SMTP (smtp.strato.de, 465/587) umstellen.
   Danach im Datenschutz-Abschnitt „Online-Mitgliedsantrag“ Microsoft 365 + USA-Satz durch Strato (AVV besteht)
-  ersetzen – ERST nach bestätigter Umstellung. Filter für das Postfach: Umleiten + Verwerfen (Dieters Muster).
+  ersetzen – ERST nach bestätigter Umstellung. Filter „Umleitung zu Sead“: alle Mails → tsv@sbitc.de, danach Verwerfen.
 - **Ganz zum Schluss (nach allem anderen):** Tarifwechsel bei Strato prüfen.
 
 ## Finale Abstimmung vor Go-live (13.10.2026) – NOCH NICHT UMSETZEN, erst Rückfragen klären
