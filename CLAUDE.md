@@ -119,7 +119,7 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   Janne/Kollege, geprüft): Betreiber SBITC GmbH, Geschwister-Scholl-Str. 21, 74523 Schwäbisch Hall (eigene Räume, AVV),
   Mailversand Microsoft 365 (DPF), WFV-Übermittlung für Spielerlaubnis, Löschfristen, Spam-Schutz (IP-Hash 2 Tage).
   Rainer Brandtner (Vorstand) informiert, Test Mailversand erfolgreich, IP fest (28.10.2026).
-  Noch offen: Impressum-/Datenschutz-Links in der App selbst (Sead).
+  Impressum-/Datenschutz-Links in der App vorhanden (Janne, 28.10.2026) – Thema abgeschlossen.
   Postfach `anmeldung@tsv-hessental.de` bei Strato angelegt (28.10.2026, Passwort nur bei Janne/Sead, NIE in
   Chat/Repo). Sead (SBITC) hat den App-Versand auf Strato-SMTP umgestellt → Datenschutz-Abschnitt nennt jetzt
   Strato statt Microsoft 365 (kein USA-Transfer mehr). Filter „Umleitung zu Sead“: alle Mails → tsv@sbitc.de, danach Verwerfen.
