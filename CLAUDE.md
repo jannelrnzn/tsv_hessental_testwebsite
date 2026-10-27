@@ -111,7 +111,10 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   Offen (Janne klärt mit Kollege + Rainer Brandtner als Vorstand): welche Stammdaten genau, wo gespeichert
   (Heimserver oder sbitc.de, wem gehört sbitc.de), Impressum-/Datenschutz-Links in der App, Zustimmung Vorstand,
   Vertraulichkeit/Backups. Danach: Datenschutzerklärung ergänzen; ggf. Button „Online anmelden“ auf
-  `mitglied-werden.html` (bis dahin bleibt dort nur der PDF-Antrag). Website hat sonst nichts damit zu tun.
+  `mitglied-werden.html`.
+  **Umgesetzt 27.10.2026 (Janne):** Buttons „Online Mitglied werden“ → https://anmeldung.tsv-hessental.de auf
+  `mitglied-werden.html` (ersetzt den PDF-Antrag, PDF gelöscht) und auf der Startseite (Hero). Menü-/Fußzeilen-Links
+  „Mitglied werden“ zeigen weiter auf `mitglied-werden.html` (Infoseite mit Ansprechpartner Thomas Thiel).
 - **Ganz zum Schluss (nach allem anderen):** Tarifwechsel bei Strato prüfen.
 
 ## Finale Abstimmung vor Go-live (13.10.2026) – NOCH NICHT UMSETZEN, erst Rückfragen klären
