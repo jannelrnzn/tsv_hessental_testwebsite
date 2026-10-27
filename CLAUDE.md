@@ -115,6 +115,10 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   **Umgesetzt 27.10.2026 (Janne):** Buttons „Online Mitglied werden“ → https://anmeldung.tsv-hessental.de auf
   `mitglied-werden.html` (ersetzt den PDF-Antrag, PDF gelöscht) und auf der Startseite (Hero). Menü-/Fußzeilen-Links
   „Mitglied werden“ zeigen weiter auf `mitglied-werden.html` (Infoseite mit Ansprechpartner Thomas Thiel).
+  **Datenschutz ergänzt 28.10.2026:** Abschnitt „Online-Mitgliedsantrag“ in `datenschutzerklaerung.html` (Text von
+  Janne/Kollege, geprüft): Betreiber SBITC GmbH, Geschwister-Scholl-Str. 21, 74523 Schwäbisch Hall (eigene Räume, AVV),
+  Mailversand Microsoft 365 (DPF), WFV-Übermittlung für Spielerlaubnis, Löschfristen, Spam-Schutz (IP-Hash 2 Tage).
+  Noch offen: Zustimmung Vorstand (Rainer), Absender-Mail tsv@sbitc.de → besser Adresse der Vereinsdomain.
 - **Ganz zum Schluss (nach allem anderen):** Tarifwechsel bei Strato prüfen.
 
 ## Finale Abstimmung vor Go-live (13.10.2026) – NOCH NICHT UMSETZEN, erst Rückfragen klären
