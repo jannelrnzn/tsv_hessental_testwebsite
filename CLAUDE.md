@@ -124,8 +124,10 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   Strato statt Microsoft 365 (kein USA-Transfer mehr). Filter „Umleitung zu Sead“: alle Mails → tsv@sbitc.de, danach Verwerfen.
   **28.10.2026:** zusätzlich Subdomain `app.tsv-hessental.de` (A-Record 84.119.245.151, für Seads App) und Postfach
   `app@tsv-hessental.de` angelegt (Passwort nur bei Sead). Stand 28.10.: DNS ok, http leitet auf https, aber HTTPS
-  noch ohne Zertifikat für app. (Sead richtet ein). Offen: Filter für app@, Zweck/Daten der App klären →
-  Datenschutzerklärung ggf. um die Anwesenheits-App erweitern.
+  noch ohne Zertifikat für app. (Sead richtet ein). Filter für app@ eingerichtet (Umleitung → tsv@sbitc.de + Verwerfen).
+  Die App unter `app.` ist noch NICHT fertig und wird nirgends verlinkt/genutzt (nur Trainer/Admins, Name noch offen).
+  OFFEN, wenn sie live geht: Datenschutzerklärung um die Vereins-App erweitern (Name, Zweck, Daten z. B. Anwesenheit,
+  Zugriff nur Trainer/Admins). Bis dahin nichts auf der Website ändern.
 - **Ganz zum Schluss (nach allem anderen):** Tarifwechsel bei Strato prüfen.
 
 ## Finale Abstimmung vor Go-live (13.10.2026) – NOCH NICHT UMSETZEN, erst Rückfragen klären
