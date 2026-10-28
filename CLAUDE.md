@@ -130,7 +130,8 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   Die App unter `app.` ist noch NICHT fertig und wird nirgends verlinkt/genutzt (nur Trainer/Admins, Name noch offen).
   OFFEN, wenn sie live geht: Datenschutzerklärung um die Vereins-App erweitern (Name, Zweck, Daten z. B. Anwesenheit,
   Zugriff nur Trainer/Admins). Bis dahin nichts auf der Website ändern.
-- **Ganz zum Schluss (nach allem anderen):** Tarifwechsel bei Strato prüfen.
+- **Tarifwechsel bei Strato: ZURÜCKGESTELLT (Janne, 28.10.2026)** – NICHT von selbst ansprechen oder daran
+  erinnern, erst wenn Janne es wieder aufbringt.
 
 ## Finale Abstimmung vor Go-live (13.10.2026) – NOCH NICHT UMSETZEN, erst Rückfragen klären
 
@@ -214,8 +215,7 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   bei jedem Push auf `main`, nur geänderte Dateien. Zugangsdaten trägt Janne
   selbst als Repository-Secrets ein (nie in Chat oder Code). Keine eigene
   Testumgebung; Änderungen vorher lokal prüfen. Action zum Go-live einrichten.
-- **Ganz am Ende erinnern:** Tarifwechsel bei Strato prüfen (alter Tarif,
-  vergleichsweise teuer) – erst wenn alles andere erledigt ist.
+- Tarifwechsel bei Strato (alter Tarif, vergleichsweise teuer): zurückgestellt, siehe Offene Punkte.
 
 ## Mitteilungen & Spielberichte
 
