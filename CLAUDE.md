@@ -101,7 +101,7 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   (Strato-eigener Schutz, harmlos). Test-Subdomain `test` von Janne entfernt (28.10.2026).
   `php.ini` im Hauptverzeichnis BLEIBT: enthält nur upload_max_filesize/post_max_size/memory_limit = 512M,
   max_execution_time = 180 (vermutlich Dieters Fix gegen Fehler 413; sichert Uploads im Kontaktformular ab).
-  Noch offen: Datenbank dbs16037730 löschen, Max Mega Menu Pro kündigen, FTP-/Mail-Passwörter ändern.
+  Max Mega Menu Pro gekündigt (Janne, 28.10.2026). Noch offen: Datenbank dbs16037730 löschen, FTP-/Mail-Passwörter ändern.
 - **Mitglieder-/Anwesenheits-App eines Kollegen (seit 27.10.2026, Freigabe Janne):** Subdomain
   `anmeldung.tsv-hessental.de` → A-Record 84.119.245.151 (Vodafone-Privatkunden-IP, Server vermutlich bei ihm zu
   Hause; IP evtl. dynamisch → ggf. CNAME auf DynDNS). Dort läuft seine Web-App „TSV Hessental · Anwesenheit“
@@ -168,7 +168,7 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   Janne ist am 14.10.2026 erfolgreich eingeloggt. Aktuelle Datenbank: dbs16037730 (Export per phpMyAdmin).
 - **Nach dem Go-live kündigen/aufräumen:** WordPress-Plugin-Abos: „Shortcodes Ultimate Pro“
   am 14.10.2026 von Dieter Erdmann gekündigt (alte Seite läuft seitdem mit Free-Version, teils
-  eingeschränkt); noch prüfen: „Max Mega Menu Pro“ (Updates bis 18.02.2027);
+  eingeschränkt); „Max Mega Menu Pro“ ebenfalls gekündigt (28.10.2026);
   übrige Plugin-/Theme-Lizenzen sind Einmalkäufe (nichts zu tun). Später alte WordPress-Dateien,
   Demo-Seite und Datenbank bei Strato löschen. FTP- und E-Mail-Passwörter ändern (Tabelle lag
   in einem geteilten Dropbox-Ordner). FuPa-Login bleibt; Google-Kalender wohl nicht mehr nötig.
