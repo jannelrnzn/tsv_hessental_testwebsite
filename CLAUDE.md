@@ -89,9 +89,8 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   Ausnahme (16.10.2026, Wunsch Janne nach Hinweis Dieter Erdmann): Vereinsjubiläen 50/75/100 Jahre
   und die übrigen Galerien (Feiern, Vatertag, Weihnachtsmarkt, Arbeitsdienst,
   Trainingslager, Stadtmeisterschaft, Pokalfinale) sind übernommen – siehe „Vereinsjubiläen“ und „Bilder“.
-- **Prüfen:** FuPa- und fussball.de-Widgets auf der Live-Seite (hier im Container
-  nicht testbar); Datenschutzerklärung gegenlesen lassen, v. a. Rechtsgrundlage
-  lit. f für die direkt eingebundenen Dienste.
+- **Prüfen:** Datenschutzerklärung gegenlesen lassen, v. a. Rechtsgrundlage lit. f für die direkt eingebundenen
+  Dienste. (FuPa-/fussball.de-Widgets live laut Janne ok, 28.10.2026; keine 503-Fehler mehr.)
 - **Go-live am 16.10.2026 erledigt** (Domain → `/website`, www/http-Weiterleitung und Kontaktformular geprüft).
   GitHub Pages abgeschaltet (16.10.). Danach noch: Test-Subdomain `test` und alte WordPress-Dateien/Datenbank nach
   2–4 Wochen löschen, Passwörter ändern, Max Mega Menu Pro prüfen (siehe Hosting-Abschnitt).
@@ -99,8 +98,10 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   bei Dauerproblem Strato-Support.
 - **WordPress-Reste im Webspace-Hauptverzeichnis:** von Dieter Erdmann gelöscht, Live-Seite am 28.10.2026 geprüft
   (http→https, www→ohne www, Seiten, 404, .htaccess-Weiterleitung, kontakt.php/PHP ok). `wp-login.php` liefert 503
-  (Strato-eigener Schutz, harmlos). Noch offen: Datenbank dbs16037730 löschen, Max Mega Menu Pro kündigen,
-  Test-Subdomain `test` entfernen (HTTPS dort schon kaputt), FTP-/Mail-Passwörter ändern, Inhalt `php.ini` klären.
+  (Strato-eigener Schutz, harmlos). Test-Subdomain `test` von Janne entfernt (28.10.2026).
+  `php.ini` im Hauptverzeichnis BLEIBT: enthält nur upload_max_filesize/post_max_size/memory_limit = 512M,
+  max_execution_time = 180 (vermutlich Dieters Fix gegen Fehler 413; sichert Uploads im Kontaktformular ab).
+  Noch offen: Datenbank dbs16037730 löschen, Max Mega Menu Pro kündigen, FTP-/Mail-Passwörter ändern.
 - **Mitglieder-/Anwesenheits-App eines Kollegen (seit 27.10.2026, Freigabe Janne):** Subdomain
   `anmeldung.tsv-hessental.de` → A-Record 84.119.245.151 (Vodafone-Privatkunden-IP, Server vermutlich bei ihm zu
   Hause; IP evtl. dynamisch → ggf. CNAME auf DynDNS). Dort läuft seine Web-App „TSV Hessental · Anwesenheit“
