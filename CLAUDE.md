@@ -101,7 +101,8 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   (Strato-eigener Schutz, harmlos). Test-Subdomain `test` von Janne entfernt (28.10.2026).
   `php.ini` im Hauptverzeichnis BLEIBT: enthält nur upload_max_filesize/post_max_size/memory_limit = 512M,
   max_execution_time = 180 (vermutlich Dieters Fix gegen Fehler 413; sichert Uploads im Kontaktformular ab).
-  Max Mega Menu Pro gekündigt (Janne, 28.10.2026). Noch offen: Datenbank dbs16037730 löschen, FTP-/Mail-Passwörter ändern.
+  Max Mega Menu Pro gekündigt (Janne, 28.10.2026). Datenbank dbs16037730 von Dieter gelöscht. FTP-/Mail-Passwörter
+  ändern: später (Janne). Webspace-Belegung 28.10.2026: 456 MB von 200 GB (für Tarifwechsel relevant).
 - **Mitglieder-/Anwesenheits-App eines Kollegen (seit 27.10.2026, Freigabe Janne):** Subdomain
   `anmeldung.tsv-hessental.de` → A-Record 84.119.245.151 (Vodafone-Privatkunden-IP, Server vermutlich bei ihm zu
   Hause; IP evtl. dynamisch → ggf. CNAME auf DynDNS). Dort läuft seine Web-App „TSV Hessental · Anwesenheit“
