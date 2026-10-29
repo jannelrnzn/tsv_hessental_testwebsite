@@ -8,7 +8,7 @@ bilder:
     beschreibung: neue Website
 teaser: Testsstratatr
 komplett: true
-archiv: true
+archiv: false
 datum_text: ''
 ---
 
