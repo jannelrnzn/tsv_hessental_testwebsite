@@ -38,7 +38,7 @@ if [ -n "$LETZTER" ] && git cat-file -e "${LETZTER}^{commit}" 2>/dev/null; then
   echo "Letzter Upload: $LETZTER – übertrage nur Änderungen"
   rm -rf staging && mkdir staging
 
-  git diff --no-renames --name-only --diff-filter=ACMT "$LETZTER" HEAD | while read -r f; do
+  git -c core.quotePath=false diff --no-renames --name-only --diff-filter=ACMT "$LETZTER" HEAD | while read -r f; do
     intern "$f" && continue
     if [ -f "dist/$f" ]; then
       mkdir -p "staging/$(dirname "$f")"
@@ -58,7 +58,7 @@ if [ -n "$LETZTER" ] && git cat-file -e "${LETZTER}^{commit}" 2>/dev/null; then
     intern "$f" && continue
     LOESCHEN="$LOESCHEN
     rm -f \"$ZIEL/$f\""
-  done < <(git diff --no-renames --name-only --diff-filter=D "$LETZTER" HEAD)
+  done < <(git -c core.quotePath=false diff --no-renames --name-only --diff-filter=D "$LETZTER" HEAD)
 
   echo "Hochladen: $(find staging -type f | wc -l) Dateien · Löschen: $(printf '%s' "$LOESCHEN" | grep -c 'rm -f' || true) Dateien"
   # Mitteilungsseiten vollständig abgleichen (gelöschte Mitteilungen verschwinden auch online)
