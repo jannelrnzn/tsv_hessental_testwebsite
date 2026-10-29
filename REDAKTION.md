@@ -35,6 +35,18 @@ Tipp: Speichere dir die Seite als Lesezeichen. Auf der Website selbst gibt es be
   Die Mitteilung bleibt dann im Archiv.
 - **Löschen:** Mitteilung öffnen, dann über das Menü (⋮) oben rechts **Löschen**.
 
+## Sicherheit – bitte unbedingt beachten
+
+- **Alles ist öffentlich.** Jede Mitteilung und jedes hochgeladene Bild ist sofort für alle im Internet sichtbar –
+  Entwürfe gibt es nicht. Gelöschte Dateien bleiben in der Versionsgeschichte erhalten.
+  Deshalb **keine vertraulichen Inhalte** hochladen (z. B. Mitgliederlisten, Adressen, Telefonnummern ohne
+  Einverständnis, interne Protokolle) und bei Fotos von Kindern das Einverständnis der Eltern beachten.
+- **Zwei-Faktor-Anmeldung (2FA) bei GitHub einschalten** (github.com → Profilbild → Settings → Password and
+  authentication). Dein GitHub-Zugang erlaubt Änderungen an der Website und sollte gut geschützt sein.
+- Nicht an fremden oder gemeinsam genutzten Rechnern anmelden – und falls doch, danach über dein Profilbild
+  oben rechts **abmelden**.
+- Kommt dir etwas merkwürdig vor (unbekannte Änderungen, seltsame Anmeldeaufforderung), melde dich bei Janne.
+
 ## Gut zu wissen
 
 - Die Sprache stellst du über dein Profilbild oben rechts → *Einstellungen* auf **Deutsch** um.

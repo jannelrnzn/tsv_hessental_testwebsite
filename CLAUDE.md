@@ -239,6 +239,14 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   (`commit_author`) bewusst NICHT (Janne 29.10.2026: war direkt nach dem Speichern leer ohne GitHub-Anzeigenamen). Änderungen über Admin-Konfiguration immer lokal mit Playwright prüfen
   (Sveltia zeigt bei Fehlern in config.yml nur eine Fehlerseite).
   Redakteure = GitHub-Konto + Einladung als Collaborator (Write) durch Janne. Kein Login-Link auf der Website.
+- **Sicherheit (29.10.2026, wie NKL):** Sveltia mit fester Version + SRI-Prüfsumme in `admin/index.html` (derzeit
+  0.254.0). **CMS-Version aktualisieren** (bewusst, alle paar Monate, TSV und NKL gemeinsam): neue Version auf
+  https://unpkg.com/@sveltia/cms/package.json nachsehen, `…/@sveltia/cms@<version>/dist/sveltia-cms.js` laden,
+  `echo sha384-$(openssl dgst -sha384 -binary sveltia-cms.js | openssl base64 -A)` → `src` und `integrity` ersetzen,
+  lokal mit Playwright testen, pushen. Redakteure: 2FA bei GitHub Pflicht, keine vertraulichen Inhalte (Repo
+  öffentlich, Hinweise in `REDAKTION.md`). Login-Token hat GitHub-Berechtigung `repo` (alle Repos der Person, läuft
+  nicht ab) → nur vertrauenswürdige Collaborators, beim Ausscheiden entfernen. Wer Schreibrechte hat, könnte über
+  die Action an die Strato-Secrets → Upload-Konto möglichst auf `/website` beschränken.
 - **Login „Mit GitHub anmelden“** (eingerichtet 29.10.2026 von Janne, gilt für alle Kundenseiten von
   JL Webservice): Cloudflare-Konto (Subdomain `jl-webservice.workers.dev`), Worker `sveltia-cms-auth`
   = https://sveltia-cms-auth.jl-webservice.workers.dev (Code per „Edit code“ aus sveltia/sveltia-cms-auth
