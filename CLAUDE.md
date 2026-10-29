@@ -235,6 +235,9 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   WebP, max. 2400 px, Dateiname ohne Leerzeichen/Umlaute). Startseite zeigt IMMER Teaser + „Weiterlesen“
   (Wunsch Janne 29.10.2026: Feld „ganzen Text zeigen“ bewusst NICHT im CMS; `komplett` wirkt nur noch,
   wenn es von Hand in der .md steht). Anleitung für Redakteure: `REDAKTION.md` (nicht hochgeladen).
+  Liste im CMS zeigt je Eintrag „geändert <Datum, Uhrzeit> von <GitHub-Name>“ (summary mit `commit_date`/`commit_author`,
+  auch sortierbar; Wunsch Janne 29.10.2026). Änderungen über Admin-Konfiguration immer lokal mit Playwright prüfen
+  (Sveltia zeigt bei Fehlern in config.yml nur eine Fehlerseite).
   Redakteure = GitHub-Konto + Einladung als Collaborator (Write) durch Janne. Kein Login-Link auf der Website.
 - **Login „Mit GitHub anmelden“** (eingerichtet 29.10.2026 von Janne, gilt für alle Kundenseiten von
   JL Webservice): Cloudflare-Konto (Subdomain `jl-webservice.workers.dev`), Worker `sveltia-cms-auth`

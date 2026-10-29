@@ -58,10 +58,11 @@ collections:
     # Dateiname = Adresse der Seite (mitteilungen/<datum>-<stichwort>.html), wird beim ersten Speichern festgelegt
     slug: "{{datum}}-{{stichwort}}"
     identifier_field: titel
-    summary: "{{datum | date('DD.MM.YYYY')}} · {{titel}}"
+    # In der Liste: Datum · Überschrift – zuletzt geändert wann und von wem (aus der GitHub-Historie)
+    summary: "{{datum | date('DD.MM.YYYY')}} · {{titel}} – geändert {{commit_date | date('DD.MM.YYYY, HH:mm')}} Uhr von {{commit_author}}"
     preview_path: mitteilungen/{{slug}}.html
     sortable_fields:
-      fields: [datum, titel]
+      fields: [datum, titel, commit_date, commit_author]
       default:
         field: datum
         direction: descending
