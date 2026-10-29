@@ -25,7 +25,9 @@ lftp_run() {
 # Dateien, die nie auf den Server gehören (siehe tools/upload-ausschluss.txt)
 intern() {
   case "$1" in
-    .git/*|.github/*|.devserver/*|.gitignore|CLAUDE.md|GO-LIVE.md|tools/*|dist/*) return 0 ;;
+    .git/*|.github/*|.devserver/*|.gitignore|CLAUDE.md|GO-LIVE.md|REDAKTION.md|tools/*|dist/*|content/*) return 0 ;;
+    # erzeugt (tools/mitteilungen.js) – werden unten immer hochgeladen bzw. abgeglichen
+    js/mitteilungen.js|mitteilungen/*) return 0 ;;
   esac
   return 1
 }
@@ -44,9 +46,11 @@ if [ -n "$LETZTER" ] && git cat-file -e "${LETZTER}^{commit}" 2>/dev/null; then
     fi
   done
 
-  # Bei jedem Build neu erzeugt (Domain/Inhalt können sich ändern) – sind klein
-  cp -p dist/sitemap.xml dist/robots.txt dist/404.html staging/
-  mkdir -p staging/mitteilungen && cp -p dist/mitteilungen/*.html staging/mitteilungen/
+  # Bei jedem Build neu erzeugt (Domain/Inhalt können sich ändern) – sind klein.
+  # index/archiv-mitteilungen tragen die Prüfsumme von js/mitteilungen.js (Cache-Busting).
+  mkdir -p staging/js
+  cp -p dist/sitemap.xml dist/robots.txt dist/404.html dist/index.html dist/archiv-mitteilungen.html staging/
+  cp -p dist/js/mitteilungen.js staging/js/
 
   LOESCHEN=""
   while read -r f; do
@@ -57,7 +61,9 @@ if [ -n "$LETZTER" ] && git cat-file -e "${LETZTER}^{commit}" 2>/dev/null; then
   done < <(git diff --no-renames --name-only --diff-filter=D "$LETZTER" HEAD)
 
   echo "Hochladen: $(find staging -type f | wc -l) Dateien · Löschen: $(printf '%s' "$LOESCHEN" | grep -c 'rm -f' || true) Dateien"
+  # Mitteilungsseiten vollständig abgleichen (gelöschte Mitteilungen verschwinden auch online)
   lftp_run "mirror --reverse --verbose=1 --parallel=4 staging/ $ZIEL/
+    mirror --reverse --delete --verbose=1 --parallel=4 dist/mitteilungen/ $ZIEL/mitteilungen/
     $LOESCHEN"
 else
   echo "Kein früherer Upload gefunden – vollständiger Abgleich"

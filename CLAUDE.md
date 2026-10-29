@@ -15,6 +15,8 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
 - Änderungen direkt auf `main` pushen → nach ca. 1 Minute live auf tsv-hessental.de (Action „Upload zu Strato“
   muss grün sein). Vorher lokal prüfen (python3 -m http.server + Playwright).
 - Antworten und Commit-Messages auf Deutsch.
+- Redakteure committen über das CMS (/admin) direkt auf `main` → vor eigener Arbeit immer erst
+  `git pull` (bzw. fetch/merge von origin/main).
 - Bilder, die über die GitHub-Weboberfläche hochgeladen werden, landen oft im
   Repo-Root oder mit Originalnamen – an die richtige Stelle verschieben,
   sinnvoll umbenennen und auf max. 2400 px Breite verkleinern.
@@ -218,28 +220,46 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   Testumgebung; Änderungen vorher lokal prüfen. Action zum Go-live einrichten.
 - Tarifwechsel bei Strato (alter Tarif, vergleichsweise teuer): zurückgestellt, siehe Offene Punkte.
 
-## Mitteilungen & Spielberichte
+## Mitteilungen & Spielberichte (CMS, Referenzmodell für JL Webservice)
 
-- Inhalt nur in `js/mitteilungen.js` (Liste `MITTEILUNGEN`, neueste zuerst). Neue Mitteilung =
-  neuer Eintrag ganz oben mit `id` (`JJJJ-MM-TT-stichwort`, später nie ändern), `datum`,
-  `titel`, `text`; optional `kategorie: "spielbericht"`, `teaser` (eigener Kurztext), `komplett: true`
-  (ganzer Text statt Teaser), `bilder`, `archiv: true`.
-  Automatischer Teaser = erste ca. 100 Zeichen (`NEWS_TEASER_LENGTH` in js/main.js).
-- **Danach immer `node tools/mitteilungen.js`** ausführen: erzeugt je Eintrag
-  `mitteilungen/<id>.html` (Kopf/Menü/Fuß aus `archiv-mitteilungen.html`, Pfade mit `../`,
-  Linkvorschau-Tags, Neuer/Älter-Navigation, „Link kopieren“) und löscht veraltete.
-  Dateien in `mitteilungen/` nie von Hand bearbeiten. Auch nach Menü-Änderungen und
-  nach dem Cache-Busting erneut ausführen.
+- **Quelle = eine Datei je Mitteilung:** `content/mitteilungen/<id>.md` (Dateiname = id = Adresse
+  `mitteilungen/<id>.html`, Muster `JJJJ-MM-TT-stichwort`, NIE umbenennen). YAML-Kopf: `titel`, `datum`
+  (JJJJ-MM-TT, sortiert, neueste zuerst), optional `datum_text` (Anzeige statt Datum, z. B. „April 2026“),
+  `kategorie` (mitteilung|spielbericht), `stichwort` (nur fürs CMS), `teaser`, `komplett`, `archiv`,
+  `bilder` (Liste `datei` + `beschreibung`, Pfade mit führendem `/`). Text = Markdown (Leerzeile = Absatz,
+  einfacher Umbruch = `<br>`, Tabellen → `.stats-table`, Bild als eigener Absatz `![alt](/pfad "Unterschrift")`
+  → Bild in Textbreite, externe Links in neuem Tab). Aufbau ausführlich oben in `tools/mitteilungen.js`.
+- **Pflege über Sveltia CMS** unter https://tsv-hessental.de/admin/ (`admin/index.html` mit noindex,
+  `admin/config.yml`; nur Sammlung „Mitteilungen & Spielberichte“). Speichern = Commit auf `main` →
+  Action „Upload zu Strato“ → live. Bilder-Uploads landen in `assets/images/mitteilungen/` (automatisch
+  WebP, max. 2400 px). Anleitung für Redakteure: `REDAKTION.md` (nicht hochgeladen).
+  Redakteure = GitHub-Konto + Einladung als Collaborator (Write) durch Janne. Kein Login-Link auf der Website.
+- **Login „Mit GitHub anmelden“** (eingerichtet 29.10.2026 von Janne, gilt für alle Kundenseiten von
+  JL Webservice): Cloudflare-Konto (Subdomain `jl-webservice.workers.dev`), Worker `sveltia-cms-auth`
+  = https://sveltia-cms-auth.jl-webservice.workers.dev (Code per „Edit code“ aus sveltia/sveltia-cms-auth
+  `src/index.js` eingefügt, weil der Git-Build an pnpm scheiterte; das GitHub-Repo jannelrnzn/sveltia-cms-auth
+  ist nur die Kopie). Runtime-Variablen (NICHT Build): `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` (Secret),
+  `ALLOWED_DOMAINS` = `tsv-hessental.de` (neue Kunden mit Komma ergänzen). GitHub OAuth-App
+  „JL Webservice CMS“ (Redirect URI `…workers.dev/callback`, Tokens laufen nicht ab). Secret NIE in Chat/Repo.
+- **Erzeugt (nicht im Repo, `.gitignore`):** `js/mitteilungen.js` (Liste `MITTEILUNGEN` für `initNews`) und
+  `mitteilungen/<id>.html` (Kopf/Menü/Fuß aus `archiv-mitteilungen.html`, Pfade mit `../`, Linkvorschau-Tags,
+  Neuer/Älter-Navigation, „Link kopieren“). `tools/build.sh` erzeugt beides bei jedem Upload, setzt
+  `js/mitteilungen.js?v=<Prüfsumme>` in index/archiv-mitteilungen und entfernt `content/`; `tools/deploy.sh`
+  lädt die Liste, index/archiv-mitteilungen immer hoch und gleicht `mitteilungen/` mit `--delete` ab.
+  Lokal zum Ansehen: `node tools/mitteilungen.js` (auch nach Menü-Änderungen/Cache-Busting).
+  Markdown/YAML-Bibliotheken liegen in `tools/vendor/` (marked 16, js-yaml 4) – keine Installation nötig.
+- `.htaccess` sperrt `.md`/`.yml`, Ausnahme `config.yml` (fürs CMS). `robots.txt`: `Disallow: /admin/`.
 - Startseite (`initNews`, Teaser mit „Weiterlesen“): „Aktuelle Mitteilungen“
   (`data-news="latest"`, 3 neueste ohne Spielberichte) und darunter „Spielberichte“
   (`data-news="spielberichte"`, 3 neueste, Bereich ausgeblendet wenn leer).
-  `archiv: true` = nicht mehr auf der Startseite.
+  `archiv: true` = nicht mehr auf der Startseite. Automatischer Teaser = erste ca. 100 Zeichen
+  (`NEWS_TEASER_LENGTH` in js/main.js).
 - `archiv-mitteilungen.html` zeigt ALLE Einträge als Teaser mit Filter Alle/Mitteilungen/Spielberichte.
 - Teaser (`.news-item--teaser`) sind Karten wie `.partner-card` (4px roter Rand links, Schatten), 2rem Abstand (Wunsch Dieter Erdmann).
-- Links im `text` so schreiben wie von der Startseite aus (`vorstand.html`) – das Skript passt sie an.
-- Bilder unter `assets/images/mitteilungen/`. Einzelseite: erstes Bild groß in Textbreite (760 px)
-  nach dem ersten Absatz (max. 80 % Bildschirmhöhe, Hochformat schmaler), weitere als
-  Raster am Ende; Klick = Großansicht. Startseite/Archiv: kleines Vorschaubild neben dem Teaser.
+- Links im Text so schreiben wie von der Startseite aus (`vorstand.html`) – das Skript passt sie an.
+- Einzelseite: erstes Bild groß in Textbreite (760 px) nach dem ersten Absatz (max. 80 % Bildschirmhöhe,
+  Hochformat schmaler), weitere als Raster am Ende; Klick = Großansicht. Startseite/Archiv: kleines
+  Vorschaubild neben dem Teaser.
 - `SITE_URL` oben in `tools/mitteilungen.js` = Adresse für Linkvorschau (Umgebungsvariable
   SITE_URL überschreibt; `tools/build.sh` setzt die echte Domain).
 

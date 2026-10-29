@@ -6,3 +6,4 @@
 ./GO-LIVE.md
 ./dist
 ./tsv-website-upload.zip
+./REDAKTION.md

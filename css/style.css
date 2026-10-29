@@ -1818,6 +1818,7 @@ a.partner-card__name:hover { color: var(--color-primary); }
 /* Text und Bilder gleich breit (wie eine Zeitungsspalte) */
 .news-detail { max-width: 760px; }
 .news-detail__text { font-size: 1.05rem; }
+.news-detail__text :is(ul, ol) { margin: 0 0 var(--space-sm); padding-left: 1.4rem; color: var(--color-gray-700); }
 .news-detail__figure { margin: var(--space-md) 0 var(--space-lg, 2rem); }
 .news-detail__figure img {
   display: block;
@@ -1860,7 +1861,8 @@ a.partner-card__name:hover { color: var(--color-primary); }
 .stats-table th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); border-bottom-width: 2px; }
 .stats-table td:nth-child(n+2), .stats-table th:nth-child(n+2) { text-align: right; width: 5.5rem; font-variant-numeric: tabular-nums; }
 .stats-table tbody tr:nth-child(even) { background: var(--color-gray-100); }
-.stats-note { font-size: 0.85rem; color: var(--color-gray-700); margin-top: calc(-1 * var(--space-sm)); }
+.stats-note, .stats-table + p:has(> em:only-child) { font-size: 0.85rem; color: var(--color-gray-700); margin-top: calc(-1 * var(--space-sm)); }
+.stats-table + p > em:only-child { font-style: normal; }
 
 /* VIP-Karten der vergangenen Jahre (vip-karte.html) */
 .vip-history { margin: var(--space-lg) 0 0; max-width: 900px; }

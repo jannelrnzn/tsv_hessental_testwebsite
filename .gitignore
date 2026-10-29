@@ -5,3 +5,7 @@ dist/
 tsv-website-upload.zip
 staging/
 .deploy-sha-neu
+
+# Erzeugt aus content/mitteilungen (node tools/mitteilungen.js, beim Upload automatisch)
+/js/mitteilungen.js
+/mitteilungen/
