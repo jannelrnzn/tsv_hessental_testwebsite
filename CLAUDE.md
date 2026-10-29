@@ -8,8 +8,9 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
 
 - **Cache-Busting:** CSS/JS werden mit `?v=JJJJMMTTHHMM` eingebunden. Nach JEDER Änderung an
   `css/` oder `js/` die Version in allen HTML-Seiten erhöhen:
-  `V=$(date -u +%Y%m%d%H%M); sed -i -E "s/\?v=[0-9]{12}/?v=$V/g" *.html && node tools/mitteilungen.js`
-  (sponsoren.js übernimmt die Version von main.js automatisch).
+  `V=$(date -u +%Y%m%d%H%M); [ ${#V} -eq 12 ] && sed -i -E "s#((css|js)/[a-z]+\.(css|js))\?v=[0-9]*\"#\1?v=$V\"#g" *.html && node tools/mitteilungen.js`
+  (sponsoren.js übernimmt die Version von main.js automatisch). Danach prüfen, dass kein `?v="` (leer) übrig ist –
+  vom 20. bis 29.10.2026 waren alle Versionen versehentlich leer. Favicon/Icons (`?v=3`/`?v=4`) nicht anfassen.
 
 - Änderungen direkt auf `main` pushen → nach ca. 1 Minute live auf tsv-hessental.de (Action „Upload zu Strato“
   muss grün sein). Vorher lokal prüfen (python3 -m http.server + Playwright).
