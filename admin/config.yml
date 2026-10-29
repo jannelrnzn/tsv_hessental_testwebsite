@@ -58,11 +58,12 @@ collections:
     # Dateiname = Adresse der Seite (mitteilungen/<datum>-<stichwort>.html), wird beim ersten Speichern festgelegt
     slug: "{{datum}}-{{stichwort}}"
     identifier_field: titel
-    # In der Liste: Datum · Überschrift – zuletzt geändert wann und von wem (aus der GitHub-Historie)
-    summary: "{{datum | date('DD.MM.YYYY')}} · {{titel}} – geändert {{commit_date | date('DD.MM.YYYY, HH:mm')}} Uhr von {{commit_author}}"
+    # In der Liste: Datum · Überschrift – zuletzt geändert (aus der GitHub-Historie; „von wem“ bewusst weggelassen,
+    # Sveltia zeigt den Namen direkt nach dem Speichern nur mit GitHub-Anzeigenamen)
+    summary: "{{datum | date('DD.MM.YYYY')}} · {{titel}} – geändert {{commit_date | date('DD.MM.YYYY, HH:mm')}} Uhr"
     preview_path: mitteilungen/{{slug}}.html
     sortable_fields:
-      fields: [datum, titel, commit_date, commit_author]
+      fields: [datum, titel, commit_date]
       default:
         field: datum
         direction: descending
