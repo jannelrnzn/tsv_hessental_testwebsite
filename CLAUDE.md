@@ -232,7 +232,9 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
 - **Pflege über Sveltia CMS** unter https://tsv-hessental.de/admin/ (`admin/index.html` mit noindex,
   `admin/config.yml`; nur Sammlung „Mitteilungen & Spielberichte“). Speichern = Commit auf `main` →
   Action „Upload zu Strato“ → live. Bilder-Uploads landen in `assets/images/mitteilungen/` (automatisch
-  WebP, max. 2400 px). Anleitung für Redakteure: `REDAKTION.md` (nicht hochgeladen).
+  WebP, max. 2400 px, Dateiname ohne Leerzeichen/Umlaute). Startseite zeigt IMMER Teaser + „Weiterlesen“
+  (Wunsch Janne 29.10.2026: Feld „ganzen Text zeigen“ bewusst NICHT im CMS; `komplett` wirkt nur noch,
+  wenn es von Hand in der .md steht). Anleitung für Redakteure: `REDAKTION.md` (nicht hochgeladen).
   Redakteure = GitHub-Konto + Einladung als Collaborator (Write) durch Janne. Kein Login-Link auf der Website.
 - **Login „Mit GitHub anmelden“** (eingerichtet 29.10.2026 von Janne, gilt für alle Kundenseiten von
   JL Webservice): Cloudflare-Konto (Subdomain `jl-webservice.workers.dev`), Worker `sveltia-cms-auth`

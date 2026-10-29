@@ -25,6 +25,9 @@ media_folder: /assets/images/mitteilungen
 public_folder: /assets/images/mitteilungen
 
 media_libraries:
+  all:
+    # Dateinamen ohne Leerzeichen/Umlaute („Foto Spiel.jpg“ -> foto-spiel.webp)
+    slugify_filename: true
   default:
     config:
       max_file_size: 26214400 # 25 MB
@@ -121,11 +124,6 @@ collections:
         hint: Ohne Eingabe werden automatisch die ersten Zeilen des Textes verwendet.
         widget: text
         required: false
-      - name: komplett
-        label: Auf Startseite den ganzen Text zeigen
-        widget: boolean
-        required: false
-        default: false
       - name: archiv
         label: Nicht mehr auf der Startseite zeigen (nur noch im Archiv)
         widget: boolean
