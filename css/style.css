@@ -354,7 +354,12 @@ p { margin: 0 0 var(--space-sm); color: var(--color-gray-700); }
   align-items: center;
   color: var(--color-white);
   overflow: hidden;
-  background: linear-gradient(160deg, var(--color-primary-dark) 10%, var(--color-primary) 60%, var(--color-anthracite) 100%);
+  background-color: var(--color-primary-dark);
+  background-image:
+    linear-gradient(100deg, rgba(156, 12, 35, 0.92) 0%, rgba(200, 16, 46, 0.74) 45%, rgba(34, 38, 43, 0.58) 100%),
+    url("../assets/images/hero-sportgelaende.jpg");
+  background-size: cover;
+  background-position: center 65%;
 }
 
 .hero__content { padding-block: var(--space-xl); } /* volle Breite: Überschrift einzeilig (Wunsch Dieter Erdmann) */
