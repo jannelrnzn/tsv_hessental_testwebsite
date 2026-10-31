@@ -14,6 +14,46 @@ Redirect 301 /archiv-jubilaeumszeitschriften.html /archiv-vereinsjubilaeen.html
   # www.tsv-hessental.de -> tsv-hessental.de
   RewriteCond %{HTTP_HOST} ^www\.(tsv-hessental\.de)$ [NC]
   RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+  # ---- Alte Adressen der WordPress-Seite (bis 16.10.2026) -> neue Seiten ----
+  # Google & Co. und Links auf anderen Seiten zeigen noch darauf. Reihenfolge: genau vor allgemein.
+  # WordPress-Kurzlinks (?p=123, ?page_id=…, ?cat=…)
+  RewriteCond %{QUERY_STRING} (^|&)(p|page_id|cat|tag|s)= [NC]
+  RewriteRule ^$ / [R=301,L,QSD]
+  RewriteRule ^(page/[0-9]+|termine)(/.*)?$ / [R=301,L,NC]
+  RewriteRule ^der-verein(/.*)?$ /#verein [R=301,L,NE,NC]
+  RewriteRule ^der-vorstand(/.*)?$ /vorstand.html [R=301,L,NC]
+  RewriteRule ^kontakt/mitgliederverwaltung(/.*)?$ /mitgliederverwaltung.html [R=301,L,NC]
+  RewriteRule ^(kontakt|kontaktformular)(/.*)?$ /kontaktformular.html [R=301,L,NC]
+  RewriteRule ^(impressum|datenschutzerklaerung|datenschutz|anfahrt|mitglied-werden)/?$ /$1.html [R=301,L,NC]
+  RewriteRule ^(ehrenamt|engagement)(/.*)?$ /engagement-ehrenamt.html [R=301,L,NC]
+  RewriteRule ^partner-vip/(werbepartner-werden|vip-karte|fan-bande)(/.*)?$ /$1.html [R=301,L,NC]
+  RewriteRule ^partner-vip(/.*)?$ /werbepartner.html [R=301,L,NC]
+  RewriteRule ^fussball-herren/hessental-2(/.*)?$ /fussball-herren-2.html [R=301,L,NC]
+  RewriteRule ^fussball-herren/senioren(/.*)?$ /fussball-herren-senioren.html [R=301,L,NC]
+  RewriteRule ^fussball-herren/(stadionhefte|fanpost)(/.*)?$ /fussball-herren-stadionhefte.html [R=301,L,NC]
+  RewriteRule ^fussball-herren/schiedsrichter(/.*)?$ /fussball-herren-schiedsrichter.html [R=301,L,NC]
+  RewriteRule ^fussball-herren/abteilungsleitung(/.*)?$ /fussball-herren-abteilungsleitung.html [R=301,L,NC]
+  RewriteRule ^fussball-herren(/.*)?$ /fussball-herren-1.html [R=301,L,NC]
+  RewriteRule ^fussball-jugend/([a-f])[0-9]?-junioren(/.*)?$ /fussball-jugend-$1.html [R=301,L,NC]
+  RewriteRule ^fussball-jugend/(bambini|g-junioren)(/.*)?$ /fussball-jugend-bambini.html [R=301,L,NC]
+  RewriteRule ^fussball-jugend(/.*)?$ /fussball-jugend-abteilungsleitung.html [R=301,L,NC]
+  RewriteRule ^turnen/(kinderturnen|eltern-kind-turnen)(/.*)?$ /turnen-kinderturnen.html [R=301,L,NC]
+  RewriteRule ^turnen/(fitnessgruppe|frauengruppe-50)(/.*)?$ /turnen-$1.html [R=301,L,NC]
+  RewriteRule ^turnen(/.*)?$ /turnen-abteilungsleitung.html [R=301,L,NC]
+  RewriteRule ^kurse/(step-aerobic|anni-fit)(/.*)?$ /kurse-$1.html [R=301,L,NC]
+  RewriteRule ^dart/scorpions-2(/.*)?$ /dart-scorpions-2.html [R=301,L,NC]
+  RewriteRule ^dart(/.*)?$ /dart-scorpions-1.html [R=301,L,NC]
+  RewriteRule ^vereinsjubilaeen/100-jahre(/.*)?$ /archiv-jubilaeum-2023.html [R=301,L,NC]
+  RewriteRule ^vereinsjubilaeen/75-jahre(/.*)?$ /archiv-jubilaeum-1998.html [R=301,L,NC]
+  RewriteRule ^vereinsjubilaeen/50-jahre(/.*)?$ /archiv-jubilaeum-1973.html [R=301,L,NC]
+  RewriteRule ^vereinsjubilaeen(/.*)?$ /archiv-vereinsjubilaeen.html [R=301,L,NC]
+  RewriteRule ^diverses/archiv-nachrichten(/.*)?$ /archiv-mitteilungen.html [R=301,L,NC]
+  RewriteRule ^(diverses/)?(archiv-erfolge|erfolge)(/.*)?$ /archiv-erfolge.html [R=301,L,NC]
+  # Alles andere im alten Ordner-Stil (endet auf „/“, gibt es hier nicht) -> Startseite statt Fehlerseite
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^[^.]+/$ / [R=301,L]
 </IfModule>
 
 # Interne Dateien nie ausliefern (Ausnahme: admin/config.yml für das CMS)

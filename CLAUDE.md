@@ -219,6 +219,10 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   selbst als Repository-Secrets ein (nie in Chat oder Code). Keine eigene
   Testumgebung; Änderungen vorher lokal prüfen. Action zum Go-live einrichten.
 - Tarifwechsel bei Strato (alter Tarif, vergleichsweise teuer): zurückgestellt, siehe Offene Punkte.
+- **Alte WordPress-Adressen** (z. B. `/fussball-herren/hessental-1/das-team/`, noch bei Google) leitet `.htaccess`
+  per 301 auf die neuen Seiten um (31.10.2026, Liste aus Google-Treffern); übrige alte Ordner-Adressen (enden auf
+  „/“, existieren nicht) → Startseite. `.htaccess`-Änderungen vorher lokal mit Apache testen
+  (`apt-get install apache2`, vHost auf `dist/` mit `AllowOverride All`, mod_rewrite/expires/headers).
 
 ## Mitteilungen & Spielberichte (CMS, Referenzmodell für JL Webservice)
 
