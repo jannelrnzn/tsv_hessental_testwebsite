@@ -116,7 +116,14 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   (Heimserver oder sbitc.de, wem gehört sbitc.de), Impressum-/Datenschutz-Links in der App, Zustimmung Vorstand,
   Vertraulichkeit/Backups. Danach: Datenschutzerklärung ergänzen; ggf. Button „Online anmelden“ auf
   `mitglied-werden.html`.
-  **Umgesetzt 27.10.2026 (Janne):** Buttons „Online Mitglied werden“ → https://anmeldung.tsv-hessental.de auf
+  **ZURÜCKGENOMMEN 02.11.2026 (Mail Thilo, Wunsch Janne):** Online-Anmeldung NICHT mehr verlinkt (Unklarheiten,
+  rechtliche Fragen; künftig evtl. über SPG-Software der Sparkasse, https://spg-direkt.de/funktionen/kostenlose-erweiterungen,
+  als iFrame; Demo-Seite mit Passwort gewünscht – alles NOCH OFFEN, Janne bespricht es später). Wieder PDF-Antrag
+  `assets/downloads/mitgliedsantrag.pdf` (neue Version von Thilo, 2 Seiten) auf `mitglied-werden.html`, Startseiten-
+  Button „Mitglied werden“ → `mitglied-werden.html`. PDF soll dauerhaft angeboten werden (auch neben späterer
+  Online-Lösung); Idee Thilo: Hinweis/kleine Anleitung zum Ausfüllen am PC. Datenschutz-Abschnitt „Online-
+  Mitgliedsantrag“ steht noch drin (mit Janne klären).
+  Früher – **Umgesetzt 27.10.2026 (Janne):** Buttons „Online Mitglied werden“ → https://anmeldung.tsv-hessental.de auf
   `mitglied-werden.html` (ersetzt den PDF-Antrag, PDF gelöscht) und auf der Startseite (Hero). Menü-/Fußzeilen-Links
   „Mitglied werden“ zeigen weiter auf `mitglied-werden.html` (Infoseite mit Ansprechpartner Thomas Thiel).
   **Datenschutz ergänzt 28.10.2026:** Abschnitt „Online-Mitgliedsantrag“ in `datenschutzerklaerung.html` (Text von
@@ -220,7 +227,7 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   Testumgebung; Änderungen vorher lokal prüfen. Action zum Go-live einrichten.
 - Tarifwechsel bei Strato (alter Tarif, vergleichsweise teuer): zurückgestellt, siehe Offene Punkte.
 - **Alte WordPress-Adressen** (z. B. `/fussball-herren/hessental-1/das-team/`, noch bei Google) leitet `.htaccess`
-  per 301 auf die neuen Seiten um (31.10.2026, Liste aus Google-Treffern); übrige alte Ordner-Adressen (enden auf
+  per 301 auf die neuen Seiten um (31.10.2026, Liste aus Google-Treffern; Pilates → Step Aerobic, Wunsch Janne); übrige alte Ordner-Adressen (enden auf
   „/“, existieren nicht) → Startseite. `.htaccess`-Änderungen vorher lokal mit Apache testen
   (`apt-get install apache2`, vHost auf `dist/` mit `AllowOverride All`, mod_rewrite/expires/headers).
 

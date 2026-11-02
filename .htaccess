@@ -42,6 +42,7 @@ Redirect 301 /archiv-jubilaeumszeitschriften.html /archiv-vereinsjubilaeen.html
   RewriteRule ^turnen/(fitnessgruppe|frauengruppe-50)(/.*)?$ /turnen-$1.html [R=301,L,NC]
   RewriteRule ^turnen(/.*)?$ /turnen-abteilungsleitung.html [R=301,L,NC]
   RewriteRule ^kurse/(step-aerobic|anni-fit)(/.*)?$ /kurse-$1.html [R=301,L,NC]
+  RewriteRule ^kurse/pilates(/.*)?$ /kurse-step-aerobic.html [R=301,L,NC]
   RewriteRule ^dart/scorpions-2(/.*)?$ /dart-scorpions-2.html [R=301,L,NC]
   RewriteRule ^dart(/.*)?$ /dart-scorpions-1.html [R=301,L,NC]
   RewriteRule ^vereinsjubilaeen/100-jahre(/.*)?$ /archiv-jubilaeum-2023.html [R=301,L,NC]
