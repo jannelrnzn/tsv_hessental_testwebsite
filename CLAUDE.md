@@ -123,6 +123,10 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   Button „Mitglied werden“ → `mitglied-werden.html`. PDF soll dauerhaft angeboten werden (auch neben späterer
   Online-Lösung); Idee Thilo: Hinweis/kleine Anleitung zum Ausfüllen am PC. Datenschutz-Abschnitt „Online-
   Mitgliedsantrag“ steht noch drin (mit Janne klären).
+  **13.11.2026 (Mail Thilo):** ausfüllbare PDF-Version (AcroForm, von Dieter überarbeitet) ersetzt die alte; Hinweis
+  „ausfüllbar“, Versand an verwaltung@, Kündigung/Änderungen über Kontaktformular oder verwaltung@; Beitragsbild
+  `assets/downloads/mitgliedsbeitraege.png` aktualisiert, Satz darüber entfernt. Bei neuer Datei unter gleichem Namen
+  `?v=JJJJMMTT` am Link erhöhen (PDF/PNG werden 1 Monat gecacht).
   Früher – **Umgesetzt 27.10.2026 (Janne):** Buttons „Online Mitglied werden“ → https://anmeldung.tsv-hessental.de auf
   `mitglied-werden.html` (ersetzt den PDF-Antrag, PDF gelöscht) und auf der Startseite (Hero). Menü-/Fußzeilen-Links
   „Mitglied werden“ zeigen weiter auf `mitglied-werden.html` (Infoseite mit Ansprechpartner Thomas Thiel).
