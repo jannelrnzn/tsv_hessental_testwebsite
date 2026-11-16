@@ -127,6 +127,9 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   „ausfüllbar“, Versand an verwaltung@, Kündigung/Änderungen über Kontaktformular oder verwaltung@; Beitragsbild
   `assets/downloads/mitgliedsbeitraege.png` aktualisiert, Satz darüber entfernt. Bei neuer Datei unter gleichem Namen
   `?v=JJJJMMTT` am Link erhöhen (PDF/PNG werden 1 Monat gecacht).
+  16.11.2026 (Thilo): Satz lautet jetzt „Widerruf, Kündigung und Änderungen …“. Offen: Demo-Seite mit Passwort für den
+  SPG-Online-Mitgliedsantrag als iFrame (https://hilfe44.spg-direkt.de/books/spg-onlineform-mitgliederantrag) – Thilo
+  möchte sie, Janne entscheidet; hat laut Thilo nichts mit Seads App zu tun.
   Früher – **Umgesetzt 27.10.2026 (Janne):** Buttons „Online Mitglied werden“ → https://anmeldung.tsv-hessental.de auf
   `mitglied-werden.html` (ersetzt den PDF-Antrag, PDF gelöscht) und auf der Startseite (Hero). Menü-/Fußzeilen-Links
   „Mitglied werden“ zeigen weiter auf `mitglied-werden.html` (Infoseite mit Ansprechpartner Thomas Thiel).
