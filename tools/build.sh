@@ -27,11 +27,18 @@ rm -rf dist/tools dist/content
 MV=$(md5sum dist/js/mitteilungen.js | cut -c1-12)
 sed -i -E "s#js/mitteilungen\.js\?v=[0-9a-f]*\"#js/mitteilungen.js?v=$MV\"#" dist/index.html dist/archiv-mitteilungen.html
 
+# Demo-Seite mitglied-werden-demo.php: Passwort-Hash aus dem GitHub-Secret DEMO_PASSWORT
+# (das Passwort selbst steht nie im Repository; ohne Secret bleibt die Demo-Seite gesperrt)
+if [ -n "${DEMO_PASSWORT:-}" ]; then
+  php -r '$h = password_hash(getenv("DEMO_PASSWORT"), PASSWORD_DEFAULT);
+    file_put_contents("dist/.demo-passwort.php", "<?php return " . var_export($h, true) . ";\n");'
+fi
+
 # 404-Seite: Pfade immer ab der Startseite auflösen (auch bei /alte/adresse/…)
 sed -i 's|<head>|<head>\n  <base href="/">|' dist/404.html
 
 # robots.txt und sitemap.xml
-printf 'User-agent: *\nAllow: /\nDisallow: /admin/\n\nSitemap: %ssitemap.xml\n' "$SITE_URL" > dist/robots.txt
+printf 'User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /mitglied-werden-demo.php\n\nSitemap: %ssitemap.xml\n' "$SITE_URL" > dist/robots.txt
 {
   echo '<?xml version="1.0" encoding="UTF-8"?>'
   echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'

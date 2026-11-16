@@ -51,6 +51,8 @@ if [ -n "$LETZTER" ] && git cat-file -e "${LETZTER}^{commit}" 2>/dev/null; then
   mkdir -p staging/js
   cp -p dist/sitemap.xml dist/robots.txt dist/404.html dist/index.html dist/archiv-mitteilungen.html staging/
   cp -p dist/js/mitteilungen.js staging/js/
+  # Passwort-Hash der Demo-Seite (bei jedem Build neu aus dem Secret DEMO_PASSWORT)
+  [ -f dist/.demo-passwort.php ] && cp -p dist/.demo-passwort.php staging/
 
   LOESCHEN=""
   while read -r f; do

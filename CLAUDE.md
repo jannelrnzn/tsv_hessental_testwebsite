@@ -129,7 +129,14 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   `?v=JJJJMMTT` am Link erhöhen (PDF/PNG werden 1 Monat gecacht).
   16.11.2026 (Thilo): Satz lautet jetzt „Widerruf, Kündigung und Änderungen …“. Offen: Demo-Seite mit Passwort für den
   SPG-Online-Mitgliedsantrag als iFrame (https://hilfe44.spg-direkt.de/books/spg-onlineform-mitgliederantrag) – Thilo
-  möchte sie, Janne entscheidet; hat laut Thilo nichts mit Seads App zu tun.
+  möchte sie, Janne: einrichten; hat laut Thilo nichts mit Seads App zu tun.
+  **Demo-Seite eingerichtet 16.11.2026:** `mitglied-werden-demo.php` (Root, nicht verlinkt, noindex + robots-Disallow,
+  nicht in sitemap). Login-Formular (PHP-Session, kein Basic Auth wegen PHP-CGI bei Strato), Passwort-Hash aus
+  GitHub-Secret `DEMO_PASSWORT` → `tools/build.sh` schreibt `dist/.demo-passwort.php` (Punktdatei, per .htaccess
+  gesperrt), `deploy.sh` lädt sie immer hoch; ohne Secret ist die Seite gesperrt. SPG-Link oben in der Datei bei
+  `$SPG_LINK` eintragen: `https://online.spg-direkt.de/start/<SPG-Onlineform-ID>` (ID kommt per Mail nach Freischaltung
+  auf spg-direkt.de → Service → SPG-Onlineform-Mitgliederantrag; Doku hilfe44.spg-direkt.de). Kopf/Menü/Fuß = Kopie von
+  mitglied-werden.html. Bei Übernahme auf die echte Seite: Datenschutzerklärung um SPG (Sparkasse/Anbieter) ergänzen.
   Früher – **Umgesetzt 27.10.2026 (Janne):** Buttons „Online Mitglied werden“ → https://anmeldung.tsv-hessental.de auf
   `mitglied-werden.html` (ersetzt den PDF-Antrag, PDF gelöscht) und auf der Startseite (Hero). Menü-/Fußzeilen-Links
   „Mitglied werden“ zeigen weiter auf `mitglied-werden.html` (Infoseite mit Ansprechpartner Thomas Thiel).
