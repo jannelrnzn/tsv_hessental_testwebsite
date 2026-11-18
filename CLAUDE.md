@@ -137,6 +137,8 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   `$SPG_LINK` eintragen: `https://online.spg-direkt.de/start/<SPG-Onlineform-ID>` (ID kommt per Mail nach Freischaltung
   auf spg-direkt.de → Service → SPG-Onlineform-Mitgliederantrag; Doku hilfe44.spg-direkt.de). Kopf/Menü/Fuß = Kopie von
   mitglied-werden.html. Bei Übernahme auf die echte Seite: Datenschutzerklärung um SPG (Sparkasse/Anbieter) ergänzen.
+  SPG-Link eingetragen 18.11.2026 (von Thilo, „noch Testphase“): https://online.spg-direkt.de/start/b18795e9-6f65-4d38-bc04-a09f67aeeedb
+  (lässt sich einbetten, kein X-Frame-Options). Secret DEMO_PASSWORT von Janne gesetzt (17.11.2026).
   Früher – **Umgesetzt 27.10.2026 (Janne):** Buttons „Online Mitglied werden“ → https://anmeldung.tsv-hessental.de auf
   `mitglied-werden.html` (ersetzt den PDF-Antrag, PDF gelöscht) und auf der Startseite (Hero). Menü-/Fußzeilen-Links
   „Mitglied werden“ zeigen weiter auf `mitglied-werden.html` (Infoseite mit Ansprechpartner Thomas Thiel).

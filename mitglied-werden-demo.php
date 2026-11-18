@@ -10,7 +10,7 @@
  * beim Upload daraus .demo-passwort.php (nur der Hash) an. Ohne Secret ist die Seite gesperrt.
  * Kopf/Menü/Fuß sind eine Kopie von mitglied-werden.html (Stand 16.11.2026) – bei Übernahme in die echte Seite neu bauen.
  */
-$SPG_LINK = '';
+$SPG_LINK = 'https://online.spg-direkt.de/start/b18795e9-6f65-4d38-bc04-a09f67aeeedb';
 
 header('X-Robots-Tag: noindex, nofollow');
 header('Cache-Control: no-store');
