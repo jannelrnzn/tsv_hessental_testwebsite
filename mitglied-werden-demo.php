@@ -48,8 +48,8 @@ $angemeldet = !empty($_SESSION['demo']);
   <link rel="apple-touch-icon" href="assets/images/icons/apple-touch-icon.png?v=4">
   <link rel="manifest" href="site.webmanifest?v=4">
   <meta name="theme-color" content="#c8102e">
-  <link rel="stylesheet" href="css/style.css?v=202611170843">
-  <script src="js/main.js?v=202611170843" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=202611251521">
+  <script src="js/main.js?v=202611251521" defer></script>
 </head>
 <body>
 

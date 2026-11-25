@@ -17,6 +17,11 @@ var TERMINE = [
     info: "Abfahrt 17:30 Uhr · Sportplatz Hessental · 15 € · Anmeldung bis 16.10. bei Marcel Fischer"
   },
   {
+    datum: "2026-12-05",
+    titel: "Adventsmarkt auf dem Sportgelände",
+    info: "14 bis 20 Uhr · Posaunenchor 16 Uhr · Kinderchor 17 Uhr · Nikolaus 17:30 Uhr · Weihnachtsbaumverkauf"
+  },
+  {
     datum: "2026-12-12",
     titel: "U12 Bundesliga Cup",
     info: "12. und 13. Dezember · Schenkenseehalle Schwäbisch Hall"
