@@ -139,6 +139,9 @@ also nur geprüfte Änderungen pushen. GitHub Pages ist seit 16.10.2026 abgescha
   mitglied-werden.html. Bei Übernahme auf die echte Seite: Datenschutzerklärung um SPG (Sparkasse/Anbieter) ergänzen.
   SPG-Link eingetragen 18.11.2026 (von Thilo, „noch Testphase“): https://online.spg-direkt.de/start/b18795e9-6f65-4d38-bc04-a09f67aeeedb
   (lässt sich einbetten, kein X-Frame-Options). Secret DEMO_PASSWORT von Janne gesetzt (17.11.2026).
+  26.11.2026 (Mail Thilo 20.11.): finale Antrags-PDF (1 Seite, ausfüllbar, `?v=20261126`), Thilo importiert PDFs in SPG.
+  Demo-Seite: iFrame 1100 px, kein „in neuem Fenster“-Link, Texte allgemein („Demo-Seite … nur zum Testen“), damit
+  dort auch andere Dinge getestet werden können.
   Früher – **Umgesetzt 27.10.2026 (Janne):** Buttons „Online Mitglied werden“ → https://anmeldung.tsv-hessental.de auf
   `mitglied-werden.html` (ersetzt den PDF-Antrag, PDF gelöscht) und auf der Startseite (Hero). Menü-/Fußzeilen-Links
   „Mitglied werden“ zeigen weiter auf `mitglied-werden.html` (Infoseite mit Ansprechpartner Thomas Thiel).
