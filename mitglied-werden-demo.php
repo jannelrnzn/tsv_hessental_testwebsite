@@ -192,9 +192,8 @@ $angemeldet = !empty($_SESSION['demo']);
     <header class="page-header">
       <div class="container">
         <span class="eyebrow">Nur zum Testen</span>
-        <h1>Demo: Online-Mitgliedsantrag</h1>
-        <p>Diese Seite ist nicht öffentlich und nur für den Test der Anbindung an SPG-Verein gedacht.<br>
-          Bitte hier keine echten Anträge stellen.</p>
+        <h1>Demo-Seite</h1>
+        <p>Diese Seite ist nicht öffentlich und nur zum Testen gedacht.</p>
       </div>
     </header>
 
@@ -214,10 +213,8 @@ $angemeldet = !empty($_SESSION['demo']);
           <button type="submit" class="btn btn--primary">Anmelden</button>
         </form>
 <?php else: ?>
-        <p class="hinweis-marker">Demo – Testumgebung für den SPG-Online-Mitgliedsantrag. Es wird nichts auf der öffentlichen Website angezeigt.</p>
 <?php if ($SPG_LINK): ?>
-        <iframe src="<?= htmlspecialchars($SPG_LINK) ?>" title="Online-Mitgliedsantrag (SPG-Verein)" style="width: 100%; height: 1400px; border: 1px solid var(--color-gray-300); border-radius: 8px;" loading="lazy"></iframe>
-        <p class="download-link" style="margin-top: var(--space-sm);"><a href="<?= htmlspecialchars($SPG_LINK) ?>" target="_blank" rel="noopener">Antrag in neuem Fenster öffnen ↗</a></p>
+        <iframe src="<?= htmlspecialchars($SPG_LINK) ?>" title="Online-Mitgliedsantrag (SPG-Verein)" style="width: 100%; height: 1100px; border: 1px solid var(--color-gray-300); border-radius: 8px;" loading="lazy"></iframe>
 <?php else: ?>
         <p>Hier erscheint der Online-Antrag, sobald der SPG-Link eingetragen ist (SPG-Onlineform-ID aus der Freischaltungs-E-Mail von SPG).</p>
 <?php endif; ?>
